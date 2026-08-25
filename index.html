@@ -199,37 +199,36 @@
   .hero-actions,.hero-meta{display:none !important}
   .hero-cta-mobile{display:flex !important;flex-direction:column;gap:8px;width:100%;margin-bottom:14px;align-items:flex-start}
   .hero-cta-mobile .hero-cta-row{display:flex;align-items:center;gap:8px;width:100%;flex-wrap:nowrap}
-  .hero-cta-mobile .hero-cta-row--1 .btn{flex:1 1 0;min-width:0;white-space:nowrap;justify-content:center;padding:10px 14px !important;font-size:11px !important;letter-spacing:0.06em !important}
-  .hero-cta-mobile .hero-cta-row--2{gap:7px}
-  .hero-cta-mobile .hero-cta-row--2 .btn{flex:0 0 auto;white-space:nowrap;padding:9px 14px !important;font-size:11px !important;letter-spacing:0.06em !important}
-  .hero-cta-mobile .hero-cta-row--2 .meta-pill{flex:0 1 auto;min-width:0;white-space:nowrap;font-size:9px !important;padding:7px 10px !important;letter-spacing:0.11em !important}
+  .hero-cta-mobile .hero-cta-row--1 .btn{flex:1 1 0;min-width:0;white-space:nowrap;justify-content:center;padding:14px 14px !important;font-size:11px !important;letter-spacing:0.06em !important}
+  .hero-cta-mobile .hero-cta-row--2{gap:8px}
+  .hero-cta-mobile .hero-cta-row--2 .btn{flex:1 1 0;min-width:0;white-space:nowrap;justify-content:center;padding:14px 14px !important;font-size:11px !important;letter-spacing:0.06em !important}
   .hero-cta-mobile .hero-cta-row--3 .meta-pill{white-space:nowrap;font-size:9px !important;padding:7px 12px !important;letter-spacing:0.11em !important}
+  .hero-cta-mobile .hero-cta-dotted{border-style:dotted !important;border-width:1.5px !important}
+  .hero-cta-mobile .hero-cta-dotted:hover{border-style:solid !important}
 }
 @media(max-width:385px){
   .hero-cta-mobile{gap:7px !important}
   .hero-cta-mobile .hero-cta-row{gap:6px !important}
-  .hero-cta-mobile .hero-cta-row--1 .btn{padding:9px 12px !important;font-size:10.5px !important}
-  .hero-cta-mobile .hero-cta-row--2 .btn{padding:8px 12px !important;font-size:10px !important}
-  .hero-cta-mobile .hero-cta-row--2 .meta-pill{font-size:8.5px !important;padding:6px 9px !important}
+  .hero-cta-mobile .hero-cta-row--1 .btn{padding:12px 12px !important;font-size:10.5px !important}
+  .hero-cta-mobile .hero-cta-row--2 .btn{padding:12px 12px !important;font-size:10.5px !important}
   .hero-cta-mobile .hero-cta-row--3 .meta-pill{font-size:8.5px !important;padding:6px 10px !important}
 }
 @media(max-width:360px){
   .hero-cta-mobile{gap:6px !important}
   .hero-cta-mobile .hero-cta-row{gap:5px !important}
-  .hero-cta-mobile .hero-cta-row--1 .btn{padding:8px 10px !important;font-size:9.5px !important;letter-spacing:0.05em !important}
-  .hero-cta-mobile .hero-cta-row--2 .btn{padding:7px 10px !important;font-size:9.5px !important}
-  .hero-cta-mobile .hero-cta-row--2 .meta-pill{font-size:8px !important;padding:5px 7px !important;letter-spacing:0.09em !important}
+  .hero-cta-mobile .hero-cta-row--1 .btn{padding:11px 10px !important;font-size:9.5px !important;letter-spacing:0.05em !important}
+  .hero-cta-mobile .hero-cta-row--2 .btn{padding:11px 10px !important;font-size:9.5px !important;letter-spacing:0.05em !important}
   .hero-cta-mobile .hero-cta-row--3 .meta-pill{font-size:8px !important;padding:5px 9px !important}
 }
-/* ── MOBILE-ONLY: hide Let’s Talk / Our Team / 20+ / 98% — keep Explore Services + Our Portfolio ── */
+/* ── MOBILE-ONLY: keep Explore Services/Our Portfolio + Let's Talk/Our Team; hide 20+/98% ── */
 @media(max-width:768px){
   /* desktop CTA blocks stay hidden on mobile (replaced by hero-cta-mobile) */
   .hero-actions,
   .hero-meta{display:none !important}
-  /* keep hero-cta-mobile and Row 1 (Explore Services + Our Portfolio) visible */
+  /* keep hero-cta-mobile visible with two rows */
   .hero-cta-mobile{display:flex !important;flex-direction:column;gap:8px;width:100%;margin-bottom:14px;align-items:flex-start}
-  /* hide only the rows that contain the 4 elements to remove */
-  .hero-cta-mobile .hero-cta-row--2,
+  .hero-cta-mobile .hero-cta-row--2{display:flex !important;height:auto !important;margin-bottom:0 !important;padding:0 !important;overflow:visible !important;visibility:visible !important;pointer-events:auto !important}
+  /* hide only the 20+/98% row */
   .hero-cta-mobile .hero-cta-row--3{display:none !important;height:0 !important;margin:0 !important;padding:0 !important;overflow:hidden !important;visibility:hidden !important;pointer-events:none !important}
   .hero-content .hero-sub{margin-top:16px !important}
 }
@@ -460,9 +459,8 @@
           <a href="works.html" class="btn btn-magnetic btn-ghost">Our Portfolio ↗</a>
         </div>
         <div class="hero-cta-row hero-cta-row--2">
-          <a href="contact.html" class="btn btn-magnetic btn-outline">Let's Talk</a>
-          <a href="team.html" class="meta-pill" style="text-decoration:none;color:var(--soft);border-color:var(--soft)">Our Team →</a>
-          <span class="meta-pill">✦ 20+ Projects Delivered</span>
+          <a href="contact.html" class="btn btn-magnetic btn-outline hero-cta-dotted">Let's Talk</a>
+          <a href="team.html" class="btn btn-magnetic btn-outline hero-cta-dotted">Our Team →</a>
         </div>
         <div class="hero-cta-row hero-cta-row--3">
           <span class="meta-pill">✦ 98% Client Satisfaction</span>
