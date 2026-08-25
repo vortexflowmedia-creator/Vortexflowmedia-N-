@@ -221,14 +221,17 @@
   .hero-cta-mobile .hero-cta-row--2 .meta-pill{font-size:8px !important;padding:5px 7px !important;letter-spacing:0.09em !important}
   .hero-cta-mobile .hero-cta-row--3 .meta-pill{font-size:8px !important;padding:5px 9px !important}
 }
-/* ── MOBILE-ONLY REMOVAL: hide specified hero CTA elements and let content close up ── */
+/* ── MOBILE-ONLY: hide Let’s Talk / Our Team / 20+ / 98% — keep Explore Services + Our Portfolio ── */
 @media(max-width:768px){
+  /* desktop CTA blocks stay hidden on mobile (replaced by hero-cta-mobile) */
   .hero-actions,
-  .hero-meta,
-  .hero-cta-mobile{display:none !important; height:0 !important; margin:0 !important; padding:0 !important; overflow:hidden !important; visibility:hidden !important; pointer-events:none !important}
-  .hero-content .hero-sub{margin-top:0 !important}
-  /* collapse any residual gap from the hidden CTA block */
-  .hero-content{gap:0 !important}
+  .hero-meta{display:none !important}
+  /* keep hero-cta-mobile and Row 1 (Explore Services + Our Portfolio) visible */
+  .hero-cta-mobile{display:flex !important;flex-direction:column;gap:8px;width:100%;margin-bottom:14px;align-items:flex-start}
+  /* hide only the rows that contain the 4 elements to remove */
+  .hero-cta-mobile .hero-cta-row--2,
+  .hero-cta-mobile .hero-cta-row--3{display:none !important;height:0 !important;margin:0 !important;padding:0 !important;overflow:hidden !important;visibility:hidden !important;pointer-events:none !important}
+  .hero-content .hero-sub{margin-top:16px !important}
 }
 /* BELOW-HERO REVEAL — invisible at load, fade+rise on scroll (mobile priority, no flash) */
 .below-hero-reveal{opacity:0; transform:translateY(24px); transition:opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); will-change:opacity, transform}
