@@ -189,35 +189,60 @@
     card.style.transform = `perspective(1100px) rotate(${base})`;
   });
 
-  // MAGNETIC BUTTONS
+  // MAGNETIC BUTTONS — restored premium physics (desktop + tablet + mobile touch)
   const magBtns = document.querySelectorAll('.btn-magnetic, .nav-cta');
   magBtns.forEach(btn => {
     let raf2 = 0;
-    btn.addEventListener('mousemove', e => {
-      if (isTouch) return;
-      const r = btn.getBoundingClientRect();
-      const x = e.clientX - r.left, y = e.clientY - r.top;
-      const cx = r.width / 2, cy = r.height / 2;
+    const isPrimary = btn.classList.contains('hero-cta-primary');
+    const baseRotate = isPrimary ? 'rotate(-1.4deg) ' : '';
+    const baseTransform = isPrimary ? 'rotate(-1.4deg)' : '';
+    const applyTranslate = (x, y, w, h) => {
+      const cx = w / 2, cy = h / 2;
       const dx = (x - cx) * 0.18;
       const dy = (y - cy) * 0.28;
-      const mx = (x / r.width) * 100, my = (y / r.height) * 100;
+      const mx = (x / w) * 100, my = (y / h) * 100;
       btn.style.setProperty('--mx', mx + '%');
       btn.style.setProperty('--my', my + '%');
       cancelAnimationFrame(raf2);
       raf2 = requestAnimationFrame(() => {
-        btn.style.transform = `translate(${dx}px, ${dy}px)`;
+        btn.style.transform = `${baseRotate}translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px)`;
       });
+    };
+    btn.addEventListener('mousemove', e => {
+      const r = btn.getBoundingClientRect();
+      applyTranslate(e.clientX - r.left, e.clientY - r.top, r.width, r.height);
     });
+    btn.addEventListener('touchmove', e => {
+      if(!e.touches || !e.touches[0]) return;
+      const r = btn.getBoundingClientRect();
+      const t = e.touches[0];
+      applyTranslate(t.clientX - r.left, t.clientY - r.top, r.width, r.height);
+    }, {passive:true});
     btn.addEventListener('mouseleave', () => {
       cancelAnimationFrame(raf2);
-      btn.style.transform = '';
+      btn.style.transform = baseTransform;
+      setTimeout(()=>{ if(!btn.matches(':hover')) btn.style.transform = baseTransform; }, 80);
     });
+    btn.addEventListener('touchend', () => {
+      cancelAnimationFrame(raf2);
+      btn.style.transform = baseTransform;
+    }, {passive:true});
+    btn.addEventListener('touchcancel', () => {
+      cancelAnimationFrame(raf2);
+      btn.style.transform = baseTransform;
+    }, {passive:true});
     btn.addEventListener('mousedown', () => {
-      btn.style.transform = 'scale(0.96)';
+      btn.style.transform = `${baseRotate}scale(0.96)`;
     });
+    btn.addEventListener('touchstart', () => {
+      btn.style.transform = `${baseRotate}scale(0.97)`;
+    }, {passive:true});
     btn.addEventListener('mouseup', () => {
-      btn.style.transform = '';
+      cancelAnimationFrame(raf2);
+      btn.style.transform = baseTransform;
     });
+    // ensure base tilt present on load for primary
+    if(isPrimary) btn.style.transform = baseTransform;
   });
 
   // NAV link subtle lift already via CSS, add tiny purple dot follower
