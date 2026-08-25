@@ -238,17 +238,23 @@
   .hero-cta-mobile .hero-cta-row--3 .meta-pill{font-size:8px !important;padding:5px 9px !important}
   .hero-team-pill-mobile{font-size:7.5px !important;padding:5px 10px !important}
 }
-/* ── Explore Services orbit — premium pink dot + comet tail (mobile only) ── */
-.hero-cta-orbit,.hero-cta-orbit-dot{display:none}
-@media(max-width:768px){
-  .hero-cta-primary{overflow:visible !important}
-  .hero-cta-orbit{display:block !important;position:absolute;inset:-3px;border-radius:100px;pointer-events:none;overflow:visible}
-  .hero-cta-orbit-dot{display:block !important;position:absolute;width:6px;height:6px;background:#FF8AF5;border-radius:50%;box-shadow:0 0 6px #FF8AF5, 0 0 12px rgba(255,138,245,0.58);offset-path:inset(0 round 100px);offset-rotate:auto;animation:heroOrbit 6.8s linear infinite;will-change:offset-distance}
-  .hero-cta-orbit-dot::after{content:'';position:absolute;width:64px;height:3.2px;right:5px;top:50%;transform:translateY(-50%);background:linear-gradient(90deg, rgba(255,138,245,0) 0%, rgba(255,138,245,0.08) 14%, rgba(255,138,245,0.20) 32%, rgba(255,138,245,0.38) 56%, rgba(255,138,245,0.62) 82%, rgba(255,138,245,0.92) 100%);border-radius:100px;filter:blur(0.6px);opacity:0.96;clip-path:polygon(0 42%, 100% 0%, 100% 100%, 0 58%);pointer-events:none}
-  @keyframes heroOrbit{0%{offset-distance:0%}100%{offset-distance:100%}}
-}
+/* ── Explore Services orbit — path-following comet (all devices, responsive) ── */
+.hero-cta-primary{overflow:visible !important}
+.hero-cta-orbit{display:block !important;position:absolute;inset:-3px;border-radius:100px;pointer-events:none;overflow:visible}
+.hero-cta-orbit-dot{display:block !important;position:absolute;width:6px;height:6px;background:#FF8AF5;border-radius:50%;box-shadow:0 0 6px #FF8AF5, 0 0 12px rgba(255,138,245,0.58), 0 0 18px rgba(255,138,245,0.32);offset-path:inset(0 round 100px);offset-rotate:auto;animation:heroOrbit 6.8s linear infinite;will-change:offset-distance;z-index:2}
+.hero-cta-orbit-tail{position:absolute;inset:0;pointer-events:none;overflow:visible;z-index:1}
+.tail-seg{position:absolute;border-radius:50%;background:#FF8AF5;offset-path:inset(0 round 100px);offset-rotate:auto;animation:heroOrbit 6.8s linear infinite;will-change:offset-distance;pointer-events:none}
+.tail-seg.s1{width:5px;height:5px;opacity:0.72;box-shadow:0 0 5px #FF8AF5, 0 0 9px rgba(255,138,245,0.42);animation-delay:-0.18s}
+.tail-seg.s2{width:4.6px;height:4.6px;opacity:0.58;box-shadow:0 0 5px #FF8AF5, 0 0 8px rgba(255,138,245,0.36);animation-delay:-0.36s}
+.tail-seg.s3{width:4.2px;height:4.2px;opacity:0.46;box-shadow:0 0 4px #FF8AF5, 0 0 7px rgba(255,138,245,0.30);animation-delay:-0.54s}
+.tail-seg.s4{width:3.6px;height:3.6px;opacity:0.34;box-shadow:0 0 4px rgba(255,138,245,0.9), 0 0 6px rgba(255,138,245,0.24);animation-delay:-0.72s}
+.tail-seg.s5{width:3px;height:3px;opacity:0.24;box-shadow:0 0 3px rgba(255,138,245,0.8);animation-delay:-0.90s}
+.tail-seg.s6{width:2.4px;height:2.4px;opacity:0.16;box-shadow:0 0 3px rgba(255,138,245,0.6);animation-delay:-1.08s}
+.tail-seg.s7{width:1.9px;height:1.9px;opacity:0.10;box-shadow:0 0 2px rgba(255,138,245,0.5);animation-delay:-1.26s}
+.tail-seg.s8{width:1.4px;height:1.4px;opacity:0.06;box-shadow:0 0 2px rgba(255,138,245,0.4);animation-delay:-1.44s}
+@keyframes heroOrbit{0%{offset-distance:0%}100%{offset-distance:100%}}
 @media(prefers-reduced-motion:reduce){
-  .hero-cta-orbit-dot{animation:none !important}
+  .hero-cta-orbit-dot,.tail-seg{animation:none !important}
 }
 /* ── MOBILE-ONLY: keep Explore Services/Our Portfolio + Let's Talk/Our Team; hide 20+/98% ── */
 @media(max-width:768px){
@@ -485,7 +491,7 @@
       <!-- Mobile-only CTA layout -->
       <div class="hero-cta-mobile" aria-label="Hero calls to action">
         <div class="hero-cta-row hero-cta-row--1">
-          <a href="services.html" class="btn btn-magnetic btn-primary hero-cta-primary">Explore Services →<span class="hero-cta-orbit" aria-hidden="true"><span class="hero-cta-orbit-dot"></span></span></a>
+          <a href="services.html" class="btn btn-magnetic btn-primary hero-cta-primary">Explore Services →<span class="hero-cta-orbit" aria-hidden="true"><span class="hero-cta-orbit-dot"></span><span class="hero-cta-orbit-tail" aria-hidden="true"><span class="tail-seg s1"></span><span class="tail-seg s2"></span><span class="tail-seg s3"></span><span class="tail-seg s4"></span><span class="tail-seg s5"></span><span class="tail-seg s6"></span><span class="tail-seg s7"></span><span class="tail-seg s8"></span></span></span></a>
         </div>
         <div class="hero-cta-row hero-cta-row--2">
           <a href="works.html" class="btn btn-magnetic btn-ghost hero-cta-dotted">Our Portfolio ↗</a>
