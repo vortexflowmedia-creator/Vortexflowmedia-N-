@@ -194,22 +194,31 @@
 }
 @media(max-width:385px){ .hero-split{max-width:100%; width:100%} .hero-sub{font-size:13px !important} .hero-actions .btn{padding:9px 14px !important; font-size:10.5px !important} .hero-meta .meta-pill{font-size:8.5px !important; padding:5px 9px !important} }
 @media(max-width:360px){ .hero-split{max-width:100%; width:100%} .hero-sub{font-size:12px !important} .hero-actions{gap:6px !important; flex-wrap:nowrap !important} .hero-actions .btn{padding:7px 10px !important; font-size:9px !important; white-space:nowrap !important} .hero-meta .meta-pill{font-size:8px !important; padding:5px 8px !important} }
-.hero-cta-mobile{display:none}
-.hero-team-pill-mobile{display:none}
+/* ── CTA hierarchy — all screen sizes (Explore primary 2/3, Portfolio+Talk second row, Team pill) ── */
+.hero-actions,.hero-meta{display:none !important}
+.hero-cta-mobile{display:flex !important;flex-direction:column;gap:10px;width:100%;max-width:480px;margin-bottom:18px;align-items:flex-start}
+.hero-cta-mobile .hero-cta-row{display:flex;align-items:center;gap:10px;width:100%;flex-wrap:nowrap}
+.hero-cta-mobile .hero-cta-row--1 .btn{flex:1 1 0;min-width:0;white-space:nowrap;justify-content:center}
+.hero-cta-mobile .hero-cta-row--1 .hero-cta-primary{flex:0 0 66% !important;max-width:66% !important;width:66% !important;padding:17px 28px !important;font-size:14px !important;letter-spacing:0.06em !important;transform:rotate(-0.9deg) !important;transform-origin:center !important;will-change:transform !important}
+.hero-cta-mobile .hero-cta-row--1 .hero-cta-primary:active,.hero-cta-mobile .hero-cta-row--1 .hero-cta-primary.touch-active{transform:rotate(-0.9deg) scale(0.97) !important}
+.hero-cta-mobile .hero-cta-row--2{gap:10px}
+.hero-cta-mobile .hero-cta-row--2 .btn{flex:1 1 0;min-width:0;white-space:nowrap;justify-content:center;padding:14px 18px !important;font-size:12.5px !important;letter-spacing:0.06em !important}
+.hero-cta-mobile .hero-cta-row--3{display:none !important}
+.hero-cta-mobile .hero-cta-dotted{border-style:dotted !important;border-width:1.5px !important}
+.hero-cta-mobile .hero-cta-dotted:hover{border-style:solid !important}
+.hero-team-pill-mobile{display:flex !important;align-items:center;justify-content:center;gap:6px;margin:16px auto 0 !important;padding:7px 16px !important;border-radius:100px;background:rgba(26,18,48,0.45) !important;border:1px dotted rgba(185,140,255,0.32) !important;font-family:var(--font-display) !important;font-size:9.5px !important;font-weight:700 !important;letter-spacing:0.14em !important;text-transform:uppercase !important;color:var(--muted) !important;text-decoration:none !important;white-space:nowrap !important;line-height:1 !important;width:fit-content !important;max-width:100% !important;align-self:center !important}
+.hero-team-pill-mobile:hover{color:#fff !important;border-color:rgba(185,140,255,0.42) !important;background:rgba(26,18,48,0.65) !important}
+@media(max-width:1024px){
+  .hero-cta-mobile{max-width:440px;gap:9px;margin-bottom:16px}
+  .hero-cta-mobile .hero-cta-row--1 .hero-cta-primary{padding:16px 22px !important;font-size:13px !important}
+  .hero-cta-mobile .hero-cta-row--2 .btn{padding:13px 16px !important;font-size:12px !important}
+}
 @media(max-width:768px){
-  .hero-actions,.hero-meta{display:none !important}
-  .hero-cta-mobile{display:flex !important;flex-direction:column;gap:8px;width:100%;margin-bottom:14px;align-items:flex-start}
-  .hero-cta-mobile .hero-cta-row{display:flex;align-items:center;gap:8px;width:100%;flex-wrap:nowrap}
-  .hero-cta-mobile .hero-cta-row--1 .btn{flex:1 1 0;min-width:0;white-space:nowrap;justify-content:center;padding:14px 14px !important;font-size:11px !important;letter-spacing:0.06em !important}
-  .hero-cta-mobile .hero-cta-row--1 .hero-cta-primary{flex:0 0 66% !important;max-width:66% !important;width:66% !important;padding:16px 20px !important;font-size:12.5px !important;letter-spacing:0.06em !important;transform:rotate(-0.9deg) !important;transform-origin:center !important;will-change:transform !important}
-  .hero-cta-mobile .hero-cta-row--1 .hero-cta-primary:active,.hero-cta-mobile .hero-cta-row--1 .hero-cta-primary.touch-active{transform:rotate(-0.9deg) scale(0.97) !important}
-  .hero-cta-mobile .hero-cta-row--2{gap:8px}
-  .hero-cta-mobile .hero-cta-row--2 .btn{flex:1 1 0;min-width:0;white-space:nowrap;justify-content:center;padding:14px 14px !important;font-size:11px !important;letter-spacing:0.06em !important}
-  .hero-cta-mobile .hero-cta-row--3 .meta-pill{white-space:nowrap;font-size:9px !important;padding:7px 12px !important;letter-spacing:0.11em !important}
-  .hero-cta-mobile .hero-cta-dotted{border-style:dotted !important;border-width:1.5px !important}
-  .hero-cta-mobile .hero-cta-dotted:hover{border-style:solid !important}
-  .hero-team-pill-mobile{display:flex !important;align-items:center;justify-content:center;gap:6px;margin:14px auto 0 !important;padding:7px 14px !important;border-radius:100px;background:rgba(26,18,48,0.45) !important;border:1px dotted rgba(185,140,255,0.32) !important;font-family:var(--font-display) !important;font-size:9px !important;font-weight:700 !important;letter-spacing:0.14em !important;text-transform:uppercase !important;color:var(--muted) !important;text-decoration:none !important;white-space:nowrap !important;line-height:1 !important;width:fit-content !important;max-width:100% !important;align-self:center !important}
-  .hero-team-pill-mobile:hover{color:#fff !important;border-color:rgba(185,140,255,0.42) !important;background:rgba(26,18,48,0.65) !important}
+  .hero-cta-mobile{max-width:100%;gap:8px;margin-bottom:14px}
+  .hero-cta-mobile .hero-cta-row{gap:8px}
+  .hero-cta-mobile .hero-cta-row--1 .hero-cta-primary{padding:16px 20px !important;font-size:12.5px !important}
+  .hero-cta-mobile .hero-cta-row--2 .btn{padding:14px 14px !important;font-size:11px !important}
+  .hero-team-pill-mobile{padding:7px 14px !important;font-size:9px !important;margin:14px auto 0 !important}
 }
 @media(max-width:385px){
   .hero-cta-mobile{gap:7px !important}
@@ -730,73 +739,8 @@
 <script src="whatsapp-float.js"></script>
 <script src="assets/vortex-interactions.js"></script>
 <script>
-// Home: Welcome to Vortex scroll — fresh only on reload or logo click; hamburger return suppresses intro
-(function(){
-  try{
-    var KEY_DONE='vfm_home_welcome_done';
-    var KEY_SCROLL='vfm_home_scrollY';
-    var KEY_FORCE='vfm_logo_home';
-    var outer=document.getElementById('heroPinOuter');
-    // Detect reload vs normal navigation
-    var isReload=false;
-    try{
-      var navEntries=performance.getEntriesByType && performance.getEntriesByType('navigation');
-      if(navEntries && navEntries[0]) isReload = navEntries[0].type === 'reload';
-      else if(performance.navigation) isReload = performance.navigation.type === 1;
-    }catch(e){}
-    var forceFresh=false;
-    try{ forceFresh = sessionStorage.getItem(KEY_FORCE) === '1'; }catch(e){}
-    if(forceFresh){
-      try{ sessionStorage.removeItem(KEY_FORCE); }catch(e){}
-      try{ sessionStorage.removeItem(KEY_DONE); sessionStorage.removeItem(KEY_SCROLL); }catch(e){}
-      if('scrollRestoration' in history) history.scrollRestoration='auto';
-    } else if(isReload){
-      try{ sessionStorage.removeItem(KEY_DONE); sessionStorage.removeItem(KEY_SCROLL); }catch(e){}
-      if('scrollRestoration' in history) history.scrollRestoration='auto';
-    } else {
-      // Internal hamburger/back navigation: restore last scroll without intro
-      var done=null, saved=null;
-      try{ done=sessionStorage.getItem(KEY_DONE); saved=sessionStorage.getItem(KEY_SCROLL); }catch(e){}
-      if(done && saved!==null){
-        var y=parseInt(saved,10);
-        if(!isNaN(y) && y>0){
-          if('scrollRestoration' in history) history.scrollRestoration='manual';
-          requestAnimationFrame(function(){
-            requestAnimationFrame(function(){
-              window.scrollTo(0, y);
-              var hint=document.getElementById('scrollHint');
-              if(hint && y>16){ hint.style.opacity='0'; hint.style.display='none'; }
-              window.dispatchEvent(new Event('scroll'));
-            });
-          });
-        } else {
-          if('scrollRestoration' in history) history.scrollRestoration='manual';
-        }
-      } else {
-        if('scrollRestoration' in history) history.scrollRestoration='auto';
-      }
-    }
-    // Save scroll + mark done when Welcome completed (raw >=0.75) — only for future hamburger returns
-    var tick=false;
-    function save(){
-      try{ sessionStorage.setItem(KEY_SCROLL, String(window.scrollY||0)); }catch(e){}
-      if(outer){
-        var total=Math.max(1, outer.offsetHeight - window.innerHeight);
-        var raw=Math.max(0, Math.min(1, -outer.getBoundingClientRect().top / total));
-        if(raw >= 0.75){
-          try{ sessionStorage.setItem(KEY_DONE,'1'); }catch(e){}
-        }
-      }
-    }
-    window.addEventListener('scroll', function(){
-      if(tick) return;
-      tick=true;
-      requestAnimationFrame(function(){ tick=false; save(); });
-    }, {passive:true});
-    window.addEventListener('beforeunload', save);
-    window.addEventListener('pagehide', save);
-  }catch(e){}
-})();
+// Scroll animation persistence removed — animation now plays on every fresh page load
+if('scrollRestoration' in history) history.scrollRestoration='auto';
 </script>
 </body>
 </html>
