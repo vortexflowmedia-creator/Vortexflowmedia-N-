@@ -194,6 +194,33 @@
 }
 @media(max-width:385px){ .hero-split{max-width:100%; width:100%} .hero-sub{font-size:13px !important} .hero-actions .btn{padding:9px 14px !important; font-size:10.5px !important} .hero-meta .meta-pill{font-size:8.5px !important; padding:5px 9px !important} }
 @media(max-width:360px){ .hero-split{max-width:100%; width:100%} .hero-sub{font-size:12px !important} .hero-actions{gap:6px !important; flex-wrap:nowrap !important} .hero-actions .btn{padding:7px 10px !important; font-size:9px !important; white-space:nowrap !important} .hero-meta .meta-pill{font-size:8px !important; padding:5px 8px !important} }
+.hero-cta-mobile{display:none}
+@media(max-width:768px){
+  .hero-actions,.hero-meta{display:none !important}
+  .hero-cta-mobile{display:flex !important;flex-direction:column;gap:8px;width:100%;margin-bottom:14px;align-items:flex-start}
+  .hero-cta-mobile .hero-cta-row{display:flex;align-items:center;gap:8px;width:100%;flex-wrap:nowrap}
+  .hero-cta-mobile .hero-cta-row--1 .btn{flex:1 1 0;min-width:0;white-space:nowrap;justify-content:center;padding:10px 14px !important;font-size:11px !important;letter-spacing:0.06em !important}
+  .hero-cta-mobile .hero-cta-row--2{gap:7px}
+  .hero-cta-mobile .hero-cta-row--2 .btn{flex:0 0 auto;white-space:nowrap;padding:9px 14px !important;font-size:11px !important;letter-spacing:0.06em !important}
+  .hero-cta-mobile .hero-cta-row--2 .meta-pill{flex:0 1 auto;min-width:0;white-space:nowrap;font-size:9px !important;padding:7px 10px !important;letter-spacing:0.11em !important}
+  .hero-cta-mobile .hero-cta-row--3 .meta-pill{white-space:nowrap;font-size:9px !important;padding:7px 12px !important;letter-spacing:0.11em !important}
+}
+@media(max-width:385px){
+  .hero-cta-mobile{gap:7px !important}
+  .hero-cta-mobile .hero-cta-row{gap:6px !important}
+  .hero-cta-mobile .hero-cta-row--1 .btn{padding:9px 12px !important;font-size:10.5px !important}
+  .hero-cta-mobile .hero-cta-row--2 .btn{padding:8px 12px !important;font-size:10px !important}
+  .hero-cta-mobile .hero-cta-row--2 .meta-pill{font-size:8.5px !important;padding:6px 9px !important}
+  .hero-cta-mobile .hero-cta-row--3 .meta-pill{font-size:8.5px !important;padding:6px 10px !important}
+}
+@media(max-width:360px){
+  .hero-cta-mobile{gap:6px !important}
+  .hero-cta-mobile .hero-cta-row{gap:5px !important}
+  .hero-cta-mobile .hero-cta-row--1 .btn{padding:8px 10px !important;font-size:9.5px !important;letter-spacing:0.05em !important}
+  .hero-cta-mobile .hero-cta-row--2 .btn{padding:7px 10px !important;font-size:9.5px !important}
+  .hero-cta-mobile .hero-cta-row--2 .meta-pill{font-size:8px !important;padding:5px 7px !important;letter-spacing:0.09em !important}
+  .hero-cta-mobile .hero-cta-row--3 .meta-pill{font-size:8px !important;padding:5px 9px !important}
+}
 /* BELOW-HERO REVEAL — invisible at load, fade+rise on scroll (mobile priority, no flash) */
 .below-hero-reveal{opacity:0; transform:translateY(24px); transition:opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); will-change:opacity, transform}
 .below-hero-reveal.visible{opacity:1; transform:translateY(0)}
@@ -413,6 +440,21 @@
         <a href="team.html" class="meta-pill" style="text-decoration:none;color:var(--soft);border-color:var(--soft)">Our Team →</a>
         <span class="meta-pill">✦ 20+ Projects Delivered</span>
         <span class="meta-pill">✦ 98% Client Satisfaction</span>
+      </div>
+      <!-- Mobile-only 3-row CTA layout -->
+      <div class="hero-cta-mobile" aria-label="Hero calls to action">
+        <div class="hero-cta-row hero-cta-row--1">
+          <a href="services.html" class="btn btn-magnetic btn-primary">Explore Services →</a>
+          <a href="works.html" class="btn btn-magnetic btn-ghost">Our Portfolio ↗</a>
+        </div>
+        <div class="hero-cta-row hero-cta-row--2">
+          <a href="contact.html" class="btn btn-magnetic btn-outline">Let's Talk</a>
+          <a href="team.html" class="meta-pill" style="text-decoration:none;color:var(--soft);border-color:var(--soft)">Our Team →</a>
+          <span class="meta-pill">✦ 20+ Projects Delivered</span>
+        </div>
+        <div class="hero-cta-row hero-cta-row--3">
+          <span class="meta-pill">✦ 98% Client Satisfaction</span>
+        </div>
       </div>
       <p class="lead hero-sub" style="margin-top:16px">Where <strong>bold vision meets flawless execution</strong>. A premium creative studio built for brands that refuse to be ordinary. No templates, just identity.</p>
     </div>
