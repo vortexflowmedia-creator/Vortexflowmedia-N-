@@ -221,6 +221,15 @@
   .hero-cta-mobile .hero-cta-row--2 .meta-pill{font-size:8px !important;padding:5px 7px !important;letter-spacing:0.09em !important}
   .hero-cta-mobile .hero-cta-row--3 .meta-pill{font-size:8px !important;padding:5px 9px !important}
 }
+/* ── MOBILE-ONLY REMOVAL: hide specified hero CTA elements and let content close up ── */
+@media(max-width:768px){
+  .hero-actions,
+  .hero-meta,
+  .hero-cta-mobile{display:none !important; height:0 !important; margin:0 !important; padding:0 !important; overflow:hidden !important; visibility:hidden !important; pointer-events:none !important}
+  .hero-content .hero-sub{margin-top:0 !important}
+  /* collapse any residual gap from the hidden CTA block */
+  .hero-content{gap:0 !important}
+}
 /* BELOW-HERO REVEAL — invisible at load, fade+rise on scroll (mobile priority, no flash) */
 .below-hero-reveal{opacity:0; transform:translateY(24px); transition:opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); will-change:opacity, transform}
 .below-hero-reveal.visible{opacity:1; transform:translateY(0)}
