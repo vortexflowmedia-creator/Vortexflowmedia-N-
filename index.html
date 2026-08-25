@@ -201,32 +201,33 @@
   .hero-cta-mobile{display:flex !important;flex-direction:column;gap:8px;width:100%;margin-bottom:14px;align-items:flex-start}
   .hero-cta-mobile .hero-cta-row{display:flex;align-items:center;gap:8px;width:100%;flex-wrap:nowrap}
   .hero-cta-mobile .hero-cta-row--1 .btn{flex:1 1 0;min-width:0;white-space:nowrap;justify-content:center;padding:14px 14px !important;font-size:11px !important;letter-spacing:0.06em !important}
-  .hero-cta-mobile .hero-cta-row--1 .hero-cta-primary{padding:16px 20px !important;font-size:12.5px !important;letter-spacing:0.06em !important}
+  .hero-cta-mobile .hero-cta-row--1 .hero-cta-primary{flex:0 0 66% !important;max-width:66% !important;width:66% !important;padding:16px 20px !important;font-size:12.5px !important;letter-spacing:0.06em !important;transform:rotate(-0.9deg) !important;transform-origin:center !important;will-change:transform !important}
+  .hero-cta-mobile .hero-cta-row--1 .hero-cta-primary:active,.hero-cta-mobile .hero-cta-row--1 .hero-cta-primary.touch-active{transform:rotate(-0.9deg) scale(0.97) !important}
   .hero-cta-mobile .hero-cta-row--2{gap:8px}
   .hero-cta-mobile .hero-cta-row--2 .btn{flex:1 1 0;min-width:0;white-space:nowrap;justify-content:center;padding:14px 14px !important;font-size:11px !important;letter-spacing:0.06em !important}
   .hero-cta-mobile .hero-cta-row--3 .meta-pill{white-space:nowrap;font-size:9px !important;padding:7px 12px !important;letter-spacing:0.11em !important}
   .hero-cta-mobile .hero-cta-dotted{border-style:dotted !important;border-width:1.5px !important}
   .hero-cta-mobile .hero-cta-dotted:hover{border-style:solid !important}
-  .hero-team-pill-mobile{display:inline-flex !important;align-items:center;gap:6px;margin-top:10px;padding:5px 10px !important;border-radius:100px;background:rgba(26,18,48,0.45) !important;border:1px solid rgba(185,140,255,0.22) !important;font-family:var(--font-display) !important;font-size:8px !important;font-weight:700 !important;letter-spacing:0.14em !important;text-transform:uppercase !important;color:var(--muted) !important;text-decoration:none !important;white-space:nowrap !important;line-height:1 !important}
-  .hero-team-pill-mobile:hover{color:#fff !important;border-color:rgba(185,140,255,0.35) !important;background:rgba(26,18,48,0.65) !important}
+  .hero-team-pill-mobile{display:flex !important;align-items:center;justify-content:center;gap:6px;margin:14px auto 0 !important;padding:7px 14px !important;border-radius:100px;background:rgba(26,18,48,0.45) !important;border:1px dotted rgba(185,140,255,0.32) !important;font-family:var(--font-display) !important;font-size:9px !important;font-weight:700 !important;letter-spacing:0.14em !important;text-transform:uppercase !important;color:var(--muted) !important;text-decoration:none !important;white-space:nowrap !important;line-height:1 !important;width:fit-content !important;max-width:100% !important;align-self:center !important}
+  .hero-team-pill-mobile:hover{color:#fff !important;border-color:rgba(185,140,255,0.42) !important;background:rgba(26,18,48,0.65) !important}
 }
 @media(max-width:385px){
   .hero-cta-mobile{gap:7px !important}
   .hero-cta-mobile .hero-cta-row{gap:6px !important}
   .hero-cta-mobile .hero-cta-row--1 .btn{padding:12px 12px !important;font-size:10.5px !important}
-  .hero-cta-mobile .hero-cta-row--1 .hero-cta-primary{padding:13px 14px !important;font-size:11.5px !important}
+  .hero-cta-mobile .hero-cta-row--1 .hero-cta-primary{flex:0 0 66% !important;max-width:66% !important;width:66% !important;padding:13px 14px !important;font-size:11.5px !important;transform:rotate(-0.9deg) !important}
   .hero-cta-mobile .hero-cta-row--2 .btn{padding:12px 12px !important;font-size:10.5px !important}
   .hero-cta-mobile .hero-cta-row--3 .meta-pill{font-size:8.5px !important;padding:6px 10px !important}
-  .hero-team-pill-mobile{font-size:7.5px !important;padding:4px 9px !important}
+  .hero-team-pill-mobile{font-size:8px !important;padding:6px 12px !important}
 }
 @media(max-width:360px){
   .hero-cta-mobile{gap:6px !important}
   .hero-cta-mobile .hero-cta-row{gap:5px !important}
   .hero-cta-mobile .hero-cta-row--1 .btn{padding:11px 10px !important;font-size:9.5px !important;letter-spacing:0.05em !important}
-  .hero-cta-mobile .hero-cta-row--1 .hero-cta-primary{padding:12px 12px !important;font-size:10.5px !important;letter-spacing:0.05em !important}
+  .hero-cta-mobile .hero-cta-row--1 .hero-cta-primary{flex:0 0 66% !important;max-width:66% !important;width:66% !important;padding:12px 12px !important;font-size:10.5px !important;letter-spacing:0.05em !important;transform:rotate(-0.9deg) !important}
   .hero-cta-mobile .hero-cta-row--2 .btn{padding:11px 10px !important;font-size:9.5px !important;letter-spacing:0.05em !important}
   .hero-cta-mobile .hero-cta-row--3 .meta-pill{font-size:8px !important;padding:5px 9px !important}
-  .hero-team-pill-mobile{font-size:7px !important;padding:3px 8px !important}
+  .hero-team-pill-mobile{font-size:7.5px !important;padding:5px 10px !important}
 }
 /* ── MOBILE-ONLY: keep Explore Services/Our Portfolio + Let's Talk/Our Team; hide 20+/98% ── */
 @media(max-width:768px){
