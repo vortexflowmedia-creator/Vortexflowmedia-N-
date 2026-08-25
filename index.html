@@ -238,12 +238,13 @@
   .hero-cta-mobile .hero-cta-row--3 .meta-pill{font-size:8px !important;padding:5px 9px !important}
   .hero-team-pill-mobile{font-size:7.5px !important;padding:5px 10px !important}
 }
-/* ── Explore Services orbit — premium pink dot (mobile only) ── */
+/* ── Explore Services orbit — premium pink dot + comet tail (mobile only) ── */
 .hero-cta-orbit,.hero-cta-orbit-dot{display:none}
 @media(max-width:768px){
   .hero-cta-primary{overflow:visible !important}
   .hero-cta-orbit{display:block !important;position:absolute;inset:-3px;border-radius:100px;pointer-events:none;overflow:visible}
-  .hero-cta-orbit-dot{display:block !important;position:absolute;width:6px;height:6px;background:#FF8AF5;border-radius:50%;box-shadow:0 0 6px #FF8AF5, 0 0 12px rgba(255,138,245,0.58), -7px 0 9px rgba(255,138,245,0.32), -13px 0 12px rgba(255,138,245,0.14);offset-path:inset(0 round 100px);offset-rotate:auto;animation:heroOrbit 2.9s linear infinite;will-change:offset-distance}
+  .hero-cta-orbit-dot{display:block !important;position:absolute;width:6px;height:6px;background:#FF8AF5;border-radius:50%;box-shadow:0 0 6px #FF8AF5, 0 0 12px rgba(255,138,245,0.58);offset-path:inset(0 round 100px);offset-rotate:auto;animation:heroOrbit 6.8s linear infinite;will-change:offset-distance}
+  .hero-cta-orbit-dot::after{content:'';position:absolute;width:64px;height:3.2px;right:5px;top:50%;transform:translateY(-50%);background:linear-gradient(90deg, rgba(255,138,245,0) 0%, rgba(255,138,245,0.08) 14%, rgba(255,138,245,0.20) 32%, rgba(255,138,245,0.38) 56%, rgba(255,138,245,0.62) 82%, rgba(255,138,245,0.92) 100%);border-radius:100px;filter:blur(0.6px);opacity:0.96;clip-path:polygon(0 42%, 100% 0%, 100% 100%, 0 58%);pointer-events:none}
   @keyframes heroOrbit{0%{offset-distance:0%}100%{offset-distance:100%}}
 }
 @media(prefers-reduced-motion:reduce){
