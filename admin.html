@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+<title>Admin. VortexFlow Media</title>
+<meta name="description" content="VortexFlow Media Admin Panel — Manage site content, pricing, and statistics.">
+<link rel="canonical" href="https://vortexflowmedia.vercel.app/admin.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vortexflowmedia.vercel.app/admin.html">
+<meta property="og:title" content="Admin — VortexFlow Media">
+<meta property="og:description" content="VortexFlow Media Admin Panel — Manage site content, pricing, and statistics.">
+<meta property="og:image" content="https://vortexflowmedia.vercel.app/assets/projects/vortex-1.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"VortexFlow Media Admin","url":"https://vortexflowmedia.vercel.app/admin.html"}</script>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#09070F;--surface:#120D1F;--elev:#1A1230;--primary:#7B2FFF;--bright:#9D5CFF;--soft:#B98CFF;--deep:#4C1D95;--muted:#B8AEC8;--accent:#FF3AF2;--border:rgba(123,47,255,0.24);--text:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{min-height:100vh;background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;display:flex;align-items:center;justify-content:center;padding:24px;position:relative;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background:
+  radial-gradient(ellipse 700px 500px at 20% 15%, rgba(123,47,255,0.14), transparent 65%),
+  radial-gradient(ellipse 600px 600px at 85% 85%, rgba(157,92,255,0.08), transparent 60%),
+  radial-gradient(circle, rgba(123,47,255,0.18) 1px, transparent 1px);
+  background-size:auto,auto,24px 24px;opacity:0.85}
+.bg-word{position:fixed;font-family:'Outfit',sans-serif;font-weight:900;letter-spacing:-0.05em;color:var(--bright);opacity:0.035;pointer-events:none;user-select:none;text-transform:uppercase;z-index:-1}
+#login-screen{width:100%;max-width:420px;text-align:center;position:relative}
+.login-card{background:rgba(26,18,48,0.88);backdrop-filter:blur(14px);border:3px solid var(--primary);border-radius:24px;box-shadow:8px 8px 0 var(--deep), 0 0 36px rgba(123,47,255,0.18);padding:32px 28px;position:relative;overflow:hidden}
+.login-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg, transparent, rgba(185,140,255,0.6), transparent)}
+.logo-mini{display:inline-flex;align-items:center;gap:8px;margin-bottom:14px;font-family:'Outfit',sans-serif;font-weight:800;letter-spacing:-0.03em;color:#fff;font-size:16px}
+.logo-mini img{height:20px;filter:drop-shadow(0 0 10px rgba(123,47,255,0.4))}
+#login-screen h1{font-family:'Outfit',sans-serif;font-weight:900;letter-spacing:-0.04em;font-size:24px;margin-bottom:4px}
+#login-screen p.sub{color:var(--muted);font-size:13px;margin-bottom:22px}
+.admin-input{width:100%;padding:14px 16px;border-radius:14px;border:1.5px solid var(--border);background:rgba(9,7,15,0.85);color:#fff;font-size:14px;outline:none;transition:all 0.2s}
+.admin-input:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(123,47,255,0.14)}
+.admin-input-wrap{position:relative;width:100%;margin-bottom:12px}
+.admin-input-wrap .admin-input{margin-bottom:0;padding-right:46px}
+.pw-toggle{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:rgba(123,47,255,0.12);border:1px solid var(--border);color:var(--muted);cursor:pointer;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-size:14px}
+.pw-toggle:hover{color:#fff;border-color:var(--soft)}
+#login-btn{width:100%;padding:14px;border-radius:100px;border:3px solid var(--soft);background:linear-gradient(135deg,#7B2FFF,#9D5CFF);color:#fff;font-family:'Outfit',sans-serif;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;font-size:13px;cursor:pointer;box-shadow:4px 4px 0 var(--deep), 0 0 20px rgba(123,47,255,0.28);transition:all 0.2s}
+#login-btn:hover{transform:translate(-1px,-1px);box-shadow:6px 6px 0 var(--deep), 0 0 28px rgba(123,47,255,0.38)}
+#login-btn:disabled{opacity:0.6;cursor:not-allowed;transform:none}
+#login-error{color:#ff6b8a;font-size:12px;margin-top:12px;min-height:16px;font-weight:600}
+#dashboard{width:100%;max-width:760px;position:relative}
+.vf-hidden{display:none!important}
+.dash-card{background:rgba(26,18,48,0.82);backdrop-filter:blur(12px);border:1.5px solid var(--border);border-radius:20px;padding:20px;margin-bottom:16px;box-shadow:0 8px 24px rgba(0,0,0,0.24)}
+#dash-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;gap:12px;flex-wrap:wrap}
+#dash-header h1{font-family:'Outfit',sans-serif;font-weight:900;letter-spacing:-0.03em;font-size:18px}
+#logout-btn{background:rgba(26,18,48,0.7);border:1.5px solid var(--border);color:var(--muted);padding:8px 14px;border-radius:100px;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s}
+#logout-btn:hover{color:#fff;border-color:var(--soft)}
+.vf-section{background:rgba(26,18,48,0.88);border:1.5px solid var(--border);border-radius:20px;padding:22px;margin-bottom:16px;box-shadow:0 6px 20px rgba(0,0,0,0.18)}
+.vf-section h2{font-family:'Outfit',sans-serif;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;font-size:11px;color:var(--soft);margin:0 0 14px}
+.vf-field{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid rgba(123,47,255,0.08)}
+.vf-field:last-child{border-bottom:none}
+.vf-field label{font-size:13px;color:var(--muted);flex:1;font-weight:500}
+.vf-field input{flex:1;max-width:240px;padding:10px 12px;border-radius:10px;border:1.5px solid var(--border);background:rgba(9,7,15,0.85);color:#fff;font-size:13px;outline:none;transition:all 0.2s}
+.vf-field input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(123,47,255,0.14)}
+#save-bar{position:sticky;bottom:0;display:flex;justify-content:flex-end;align-items:center;gap:12px;padding:16px 0;background:linear-gradient(180deg, transparent, rgba(9,7,15,0.92) 40%);backdrop-filter:blur(8px);margin-top:12px;border-radius:16px}
+#save-status{font-size:12px;color:var(--muted);font-weight:600}
+#save-status.success{color:#4ade80}
+#save-status.error{color:#ff6b8a}
+#save-btn{padding:12px 22px;border-radius:100px;border:2.5px solid var(--soft);background:linear-gradient(135deg,#7B2FFF,#9D5CFF);color:#fff;font-family:'Outfit',sans-serif;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;font-size:12px;cursor:pointer;box-shadow:4px 4px 0 var(--deep);transition:all 0.2s}
+#save-btn:hover{transform:translate(-1px,-1px);box-shadow:6px 6px 0 var(--deep)}
+#save-btn:disabled{opacity:0.6;cursor:not-allowed;transform:none}
+#loading-state{text-align:center;color:var(--muted);padding:40px 0;font-size:13px}
+.back-link{display:inline-flex;align-items:center;gap:6px;color:var(--muted);text-decoration:none;font-size:12px;font-weight:700;letter-spacing:0.04em;padding:8px 14px;border-radius:100px;background:rgba(26,18,48,0.6);border:1px solid var(--border);transition:all 0.2s}
+.back-link:hover{color:#fff;border-color:var(--soft)}
+</style>
+</head>
+<body>
+<div class="bg-word" style="top:8%;left:-2%;transform:rotate(-3deg);font-size:10rem">ADMIN</div>
+<div class="bg-word" style="bottom:6%;right:-4%;font-size:8rem;opacity:0.025">SECURE</div>
+
+<div id="login-screen">
+  <div class="login-card">
+    <div class="logo-mini"><img src="white%20logo%20no%20bg.png" alt="" onerror="this.style.display='none'"> vortexflow media</div>
+    <h1>VortexFlow Admin</h1>
+    <p class="sub">Premium purple • Secure access</p>
+    <input type="text" id="username-input" class="admin-input" placeholder="Username or Email" autocomplete="off"></input>
+    <div class="admin-input-wrap">
+      <input type="password" id="password-input" class="admin-input" placeholder="Password" autocomplete="off"></input>
+      <button type="button" id="toggle-pw" class="pw-toggle" aria-label="Show password">👁</button>
+    </div>
+    <button id="login-btn">Unlock →</button>
+    <div id="login-error"></div>
+  </div>
+  <div style="margin-top:12px"><a href="/" class="back-link">← View site</a></div>
+</div>
+
+<div id="dashboard" class="vf-hidden">
+  <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:10px">
+      <img src="white%20logo%20no%20bg.png" alt="vortexflow media" height="18" onerror="this.style.display='none'">
+      <span style="font-family:'Outfit',sans-serif;font-weight:800;letter-spacing:-0.02em;font-size:14px;color:#fff">vortexflow media</span>
+      <span style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;font-weight:800;color:var(--soft);background:rgba(123,47,255,0.14);border:1px solid var(--border);padding:4px 8px;border-radius:100px">Admin</span>
+    </div>
+    <a href="/" class="back-link">← View site</a>
+  </div>
+
+  <div id="dash-header" class="dash-card">
+    <h1>Manage Content</h1>
+    <button id="logout-btn">Log out</button>
+  </div>
+
+  <div id="loading-state" class="dash-card">Loading current content…</div>
+
+  <div id="dash-body" class="vf-hidden">
+    <div class="vf-section" style="border-left:3px solid var(--primary)">
+      <h2>Service Pricing</h2>
+      <div class="vf-field"><label for="service_webdesign_price">Web Design & Website Creation</label><input type="text" id="service_webdesign_price"></input></div>
+      <div class="vf-field"><label for="service_video_price">Video Editing</label><input type="text" id="service_video_price"></input></div>
+      <div class="vf-field"><label for="service_writing_price">Creative Writing & Editing</label><input type="text" id="service_writing_price"></input></div>
+      <div class="vf-field"><label for="service_thumbnail_price">Thumbnail Design</label><input type="text" id="service_thumbnail_price"></input></div>
+      <div class="vf-field"><label for="service_logo_price">Logo Design</label><input type="text" id="service_logo_price"></input></div>
+      <div class="vf-field"><label for="service_social_price">Social Media Design</label><input type="text" id="service_social_price"></input></div>
+    </div>
+    <div class="vf-section" style="border-style:dashed">
+      <h2>Contact Info</h2>
+      <div class="vf-field"><label for="contact_phone">Phone / WhatsApp</label><input type="text" id="contact_phone"></input></div>
+      <div class="vf-field"><label for="contact_email">Email</label><input type="text" id="contact_email"></input></div>
+    </div>
+    <div class="vf-section">
+      <h2>Homepage Stats</h2>
+      <div class="vf-field"><label for="stat_projects_done">Projects done</label><input type="text" id="stat_projects_done"></input></div>
+      <div class="vf-field"><label for="stat_client_satisfaction">Client satisfaction</label><input type="text" id="stat_client_satisfaction"></input></div>
+    </div>
+  </div>
+
+  <div id="save-bar" class="vf-hidden">
+    <span id="save-status"></span>
+    <button id="save-btn">Save changes →</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script>
+(function () {
+  const API_BASE = '/api';
+  const TOKEN_KEY = 'vf_admin_token';
+  const EXPIRY_KEY = 'vf_admin_token_expiry';
+  const loginScreen = document.getElementById('login-screen');
+  const dashboard = document.getElementById('dashboard');
+  const usernameInput = document.getElementById('username-input');
+  const passwordInput = document.getElementById('password-input');
+  const loginBtn = document.getElementById('login-btn');
+  const loginError = document.getElementById('login-error');
+  const togglePw = document.getElementById('toggle-pw');
+  const logoutBtn = document.getElementById('logout-btn');
+  const loadingState = document.getElementById('loading-state');
+  const dashBody = document.getElementById('dash-body');
+  const saveBar = document.getElementById('save-bar');
+  const saveBtn = document.getElementById('save-btn');
+  const saveStatus = document.getElementById('save-status');
+  const FIELD_IDS = [
+    'service_webdesign_price', 'service_video_price', 'service_writing_price',
+    'service_thumbnail_price', 'service_logo_price', 'service_social_price',
+    'contact_phone', 'contact_email',
+    'stat_projects_done', 'stat_client_satisfaction'
+  ];
+  const supabase = window.supabase.createClient(
+    'https://bucelcptyosulatkkpuw.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ1Y2VsY3B0eW9zdWxhdGtrcHV3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE3ODczODAsImV4cCI6MjA5NzM2MzM4MH0.ESuc1IPVr6HBgFZ492MyJdZKkij8Oev5HwrwNnDqfQE'
+  );
+  function getToken() {
+    const token = sessionStorage.getItem(TOKEN_KEY);
+    const expiry = Number(sessionStorage.getItem(EXPIRY_KEY) || 0);
+    if (!token || Date.now() > expiry) return null;
+    return token;
+  }
+  function setSession(token, expiresAt) {
+    sessionStorage.setItem(TOKEN_KEY, token);
+    sessionStorage.setItem(EXPIRY_KEY, String(expiresAt));
+  }
+  function clearSession() {
+    sessionStorage.removeItem(TOKEN_KEY);
+    sessionStorage.removeItem(EXPIRY_KEY);
+  }
+  function showDashboard() {
+    loginScreen.classList.add('vf-hidden');
+    dashboard.classList.remove('vf-hidden');
+    loadContent();
+  }
+  function showLogin() {
+    dashboard.classList.add('vf-hidden');
+    loginScreen.classList.remove('vf-hidden');
+    passwordInput.value = '';
+    passwordInput.focus();
+  }
+  async function attemptLogin() {
+    const username = usernameInput.value.trim();
+    const password = passwordInput.value;
+    if (!username || !password) return;
+    loginBtn.disabled = true;
+    loginError.textContent = '';
+    try {
+      const res = await fetch(`${API_BASE}/admin/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        loginError.textContent = data.error || 'Login failed';
+        return;
+      }
+      setSession(data.token, data.expiresAt);
+      showDashboard();
+    } catch (err) {
+      loginError.textContent = 'Connection error — please try again';
+    } finally {
+      loginBtn.disabled = false;
+    }
+  }
+  loginBtn.addEventListener('click', attemptLogin);
+  usernameInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') passwordInput.focus(); });
+  passwordInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') attemptLogin(); });
+  togglePw.addEventListener('click', () => {
+    const isPw = passwordInput.type === 'password';
+    passwordInput.type = isPw ? 'text' : 'password';
+    togglePw.innerHTML = isPw ? '🙈' : '👁';
+    togglePw.setAttribute('aria-label', isPw ? 'Hide password' : 'Show password');
+  });
+  logoutBtn.addEventListener('click', () => {
+    clearSession();
+    showLogin();
+  });
+  async function loadContent() {
+    loadingState.classList.remove('vf-hidden');
+    dashBody.classList.add('vf-hidden');
+    saveBar.classList.add('vf-hidden');
+    try {
+      const { data, error } = await supabase.from('site_content').select('key, value');
+      if (error) throw error;
+      const content = {};
+      data.forEach((row) => { content[row.key] = row.value; });
+      FIELD_IDS.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el && content[id] !== undefined) el.value = content[id];
+      });
+      loadingState.classList.add('vf-hidden');
+      dashBody.classList.remove('vf-hidden');
+      saveBar.classList.remove('vf-hidden');
+    } catch (err) {
+      loadingState.textContent = 'Failed to load content. Please refresh.';
+    }
+  }
+  async function saveChanges() {
+    const token = getToken();
+    if (!token) { showLogin(); return; }
+    const updates = {};
+    FIELD_IDS.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) updates[id] = el.value;
+    });
+    saveBtn.disabled = true;
+    saveStatus.textContent = 'Saving…';
+    saveStatus.className = '';
+    try {
+      const res = await fetch(`${API_BASE}/content`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`,
+        },
+        body: JSON.stringify({ updates }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        if (res.status === 401) {
+          clearSession();
+          showLogin();
+          return;
+        }
+        saveStatus.textContent = data.error || 'Save failed';
+        saveStatus.className = 'error';
+        return;
+      }
+      saveStatus.textContent = 'Saved ✓';
+      saveStatus.className = 'success';
+      setTimeout(() => { saveStatus.textContent = ''; saveStatus.className = ''; }, 3000);
+    } catch (err) {
+      saveStatus.textContent = 'Connection error';
+      saveStatus.className = 'error';
+    } finally {
+      saveBtn.disabled = false;
+    }
+  }
+  saveBtn.addEventListener('click', saveChanges);
+  if (getToken()) {
+    showDashboard();
+  } else {
+    showLogin();
+  }
+})();
+</script>
+<script src="whatsapp-float.js"></script>
+<script src="assets/vortex-interactions.js"></script>
+</body>
+</html>

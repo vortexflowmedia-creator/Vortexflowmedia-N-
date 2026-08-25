@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact. VortexFlow Media</title>
+<meta name="description" content="Get in touch with VortexFlow Media for your creative project. WhatsApp: +91 7815880701, Email: vortexflowmedia@gmail.com, Instagram: @vortexflowmedia. Based in India. Respond within 24h.">
+<link rel="canonical" href="https://vortexflowmedia.vercel.app/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vortexflowmedia.vercel.app/contact.html">
+<meta property="og:title" content="Contact — VortexFlow Media">
+<meta property="og:description" content="Get in touch for your creative project. WhatsApp, Email, Instagram. Respond within 24h.">
+<meta property="og:image" content="https://vortexflowmedia.vercel.app/assets/projects/vortex-1.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"VortexFlow Media","url":"https://vortexflowmedia.vercel.app/","logo":"https://vortexflowmedia.vercel.app/assets/projects/vortex-1.png","sameAs":["https://instagram.com/vortexflowmedia","https://wa.me/917815880701"],"contactPoint":{"@type":"ContactPoint","telephone":"+91-7815880701","contactType":"customer service","availableLanguage":["English","Hindi"]}}</script>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@400;500;600;700;800;900&family=Unbounded:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vortex.css">
+<style>
+.contact-grid{display:grid;grid-template-columns:0.95fr 1.05fr;gap:28px;align-items:start;max-width:1160px;margin:0 auto}
+.contact-pill{display:flex;align-items:center;gap:12px;padding:14px 18px;border-radius:100px;background:rgba(26,18,48,0.78);border:1.5px solid var(--g-border);text-decoration:none;transition:all var(--fast);position:relative}
+.contact-pill:hover{border-color:var(--soft);transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--deep)}
+.contact-pill .icon{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--bright));display:grid;place-items:center;color:#fff;flex-shrink:0;font-size:16px;box-shadow:0 4px 14px rgba(123,47,255,0.35)}
+.contact-pill h4{font-family:var(--font-display);font-weight:800;font-size:13px;letter-spacing:-0.02em;color:#fff;line-height:1}
+.contact-pill p{font-size:12px;color:var(--muted);margin-top:2px}
+.phone-row{display:flex;align-items:center;gap:10px;cursor:pointer;padding:6px 10px;border-radius:100px;transition:all var(--fast);font-size:13px;color:var(--muted)}
+.phone-row:hover{background:rgba(123,47,255,0.12);color:#fff}
+.price-control{display:flex;align-items:center;gap:12px;background:rgba(9,7,15,0.7);border:1.5px solid var(--g-border);border-radius:16px;padding:8px 12px;max-width:280px}
+.price-btn{width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.12);background:transparent;color:#fff;font-size:22px;cursor:pointer;display:grid;place-items:center;transition:all var(--fast);font-weight:600;line-height:1}
+.price-btn:hover{background:var(--primary);border-color:var(--primary);transform:scale(1.05)}
+.price-btn:disabled{opacity:0.28;pointer-events:none}
+.price-display{flex:1;text-align:center;font-family:var(--font-display);font-weight:900;font-size:32px;letter-spacing:-0.03em;color:#fff}
+.price-display small{font-family:var(--font-body);font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--soft)}
+.form-wrap{background:rgba(26,18,48,0.82);backdrop-filter:blur(14px);border:3px solid var(--primary);border-radius:24px;box-shadow:8px 8px 0 var(--deep), 0 0 40px rgba(123,47,255,0.18);padding:28px 24px;position:relative;overflow:hidden}
+.form-wrap::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg, transparent, rgba(185,140,255,0.6), transparent)}
+@media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:20px}}
+@media(max-width:768px){.form-wrap{padding:22px 16px}.price-display{font-size:28px}}
+</style>
+</head>
+<body>
+<div class="bg-layers" aria-hidden="true"></div>
+<div id="aurora-bg" style="position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:0.45"></div>
+
+<div class="nav-shell">
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html" class="nav-brand"><img src="new%20logo-Photoroom.png" alt="vortexflow media" width="220" height="32" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="nav-brand-fallback" style="display:none">vortexflow <em>media</em></span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="works.html">Our Portfolio</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="team.html">Our Team</a></li>
+    </ul>
+    <div class="nav-actions"><a href="contact.html" class="nav-cta">Start a Project</a>
+    </div>
+    <button class="m-menu-btn" id="mMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mMenu"><span class="m-menu-btn__box" aria-hidden="true"><span class="m-menu-btn__line"></span><span class="m-menu-btn__line"></span><span class="m-menu-btn__line"></span></span></button>
+  </nav>
+</div>
+<div class="m-menu" id="mMenu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="m-menu__backdrop" data-close></div>
+  <div class="m-menu__panel" role="document">
+    <div class="m-menu__head"><span class="m-menu__eyebrow">Navigation</span><span class="m-menu__sub">VortexFlow Media • Premium Studio</span></div>
+    <nav class="m-menu__nav" aria-label="Mobile primary">
+      <a class="m-link" href="index.html"><span class="m-link__num">01</span><span class="m-link__text">Home</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="services.html"><span class="m-link__num">02</span><span class="m-link__text">Services</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="works.html"><span class="m-link__num">03</span><span class="m-link__text">Our Portfolio</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link is-active" href="contact.html"><span class="m-link__num">04</span><span class="m-link__text">Contact</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="team.html"><span class="m-link__num">05</span><span class="m-link__text">Our Team</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="privacy-policy.html"><span class="m-link__num">06</span><span class="m-link__text">Privacy Policy</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="terms.html"><span class="m-link__num">07</span><span class="m-link__text">Terms and Conditions</span><span class="m-link__arrow">↗</span></a>
+    </nav>
+    <div class="m-menu__foot"><a class="m-menu__cta" href="contact.html">Start a Project →</a><div class="m-menu__meta"><span>✦ 20+ Projects</span><span>✦ 98% Satisfaction</span><a href="https://wa.me/917815880701" target="_blank" rel="noopener">WhatsApp ↗</a></div></div>
+  </div>
+</div>
+
+<section class="hero" style="min-height:52vh;padding-bottom:28px">
+  <div class="hero-bg" aria-hidden="true"><div class="hero-orb a"></div><div class="hero-orb b"></div></div>
+  <div class="bg-word" style="top:10%;left:-2%;--base:-3deg;transform:rotate(var(--base))">CONTACT</div>
+  <div class="section-inner" style="text-align:center;max-width:760px">
+    <div class="eyebrow" style="margin-bottom:14px"><i></i> Get in Touch. Responds in 24h</div>
+    <h1 class="h-1">LET’S <span class="accent-text">TALK</span></h1>
+    <p class="lead" style="margin:14px auto 0;text-align:center">Have a project in mind? We’d love to hear about it. Reach out and let’s create something extraordinary together.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:22px;padding-bottom:80px">
+  <div class="contact-grid">
+    <!-- LEFT -->
+    <div>
+      <div class="eyebrow" style="margin-bottom:14px">Connect With Us</div>
+      <h2 class="h-2" style="font-size:clamp(28px,4vw,44px);margin-bottom:12px">Tell us about<br><span class="accent-text">your vision</span></h2>
+      <p style="color:var(--muted);line-height:1.7;margin-bottom:18px">Every great project starts with a conversation. Whether you have a clear brief or just a spark of an idea. We’re here to help bring it to life. Choose your lane.</p>
+
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-family:var(--font-display);font-size:10px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted)">Contact Info</div>
+
+        <a href="https://wa.me/917815880701?text=Hey%20VortexFlow%20Media!%20I'd%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" class="contact-pill tilt-card" style="--base:-0.4deg;transform:rotate(var(--base))">
+          <span class="icon"><svg viewbox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></span>
+          <div><h4>WhatsApp. Chat with us</h4><p>Tap to open • Fastest reply</p></div>
+          <span style="margin-left:auto;color:var(--soft);font-weight:800">→</span>
+        </a>
+
+        <a href="mailto:vortexflowmedia@gmail.com?subject=Project%20Inquiry" class="contact-pill tilt-card" style="--base:0.4deg;transform:rotate(var(--base))">
+          <span class="icon" style="background:linear-gradient(135deg,#4C1D95,#7B2FFF)">✉</span>
+          <div><h4>Email</h4><p>vortexflowmedia@gmail.com</p></div>
+        </a>
+
+        <a href="https://instagram.com/vortexflowmedia" target="_blank" rel="noopener" class="contact-pill tilt-card">
+          <span class="icon" style="background:linear-gradient(135deg,var(--primary),var(--accent))">◎</span>
+          <div><h4>Instagram</h4><p>@vortexflowmedia</p></div>
+        </a>
+
+        <div class="contact-pill tilt-card" style="cursor:default;--base:-0.3deg;transform:rotate(var(--base))">
+          <span class="icon" style="background:rgba(255,58,242,0.18);color:var(--accent);border:1px solid rgba(255,58,242,0.25)">⚡</span>
+          <div><h4>Response</h4><p>Within 24h. Every time</p></div>
+          <span style="margin-left:auto;background:var(--accent);color:#fff;font-family:var(--font-display);font-weight:900;font-size:9px;letter-spacing:0.08em;padding:5px 8px;border-radius:100px">LIVE</span>
+        </div>
+
+        <div class="contact-pill tilt-card" style="cursor:default;flex-wrap:wrap;gap:8px;justify-content:space-between">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span class="icon">📞</span>
+            <div><h4>Phone</h4><p>Direct line</p></div>
+          </div>
+          <div class="phone-row" onclick="copyText(this,'+91 7815880701')" role="button" tabindex="0" aria-label="Copy phone number">
+            <span>+91 7815880701</span>
+            <span style="width:22px;height:22px;border-radius:50%;background:rgba(123,47,255,0.15);display:grid;place-items:center;border:1px solid var(--g-border)">⎘</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;display:flex;gap:8px;flex-wrap:wrap">
+        <span class="pill">✦ Based in India. Remote worldwide</span>
+        <span class="pill" style="border-style:dashed">✦ No discovery call needed. Async okay</span>
+      </div>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <div class="form-wrap" id="contactForm">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px">
+        <div style="font-family:var(--font-display);font-weight:800;letter-spacing:-0.02em;font-size:18px">Send us a message</div>
+        <span class="eyebrow" style="font-size:9px;padding:5px 10px">Avg. Reply 6h</span>
+      </div>
+      <form id="contactFormElement">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div><label class="label">Your Name</label><input class="input" type="text" name="from_name" placeholder="ex: Vastav" required></div>
+          <div><label class="label">Email</label><input class="input" type="email" name="from_email" placeholder="example@gmail.com" required></div>
+        </div>
+        <div style="margin-top:14px"><label class="label">Project Type</label>
+          <select class="select" name="project_type">
+            <option>Web Design &amp; Website Creation</option>
+            <option>Video Editing</option>
+            <option>Creative Writing &amp; Editing</option>
+            <option>Thumbnail Design</option>
+            <option>Logo Design</option>
+            <option>Social Media Design</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div style="margin-top:14px"><label class="label">What you prefer. Budget</label>
+          <div class="price-control">
+            <button type="button" class="price-btn btn-magnetic" id="priceMinus" aria-label="Decrease">−</button>
+            <div class="price-display"><span style="color:var(--soft)">₹</span> <span id="priceValue">0</span> <small>onwards</small></div>
+            <button type="button" class="price-btn btn-magnetic" id="pricePlus" aria-label="Increase">+</button>
+            <input type="hidden" name="budget_range" id="budgetHidden" value="">
+          </div>
+          <div style="font-size:11px;color:var(--muted);margin-top:6px">Base price fills automatically from your selected service. Use +/− to adjust in ₹100 steps.</div>
+        </div>
+        <div style="margin-top:14px"><label class="label">Project Details</label><textarea class="textarea" name="message" placeholder="Tell us about your project, goals, and timeline..." required></textarea></div>
+        <button type="submit" class="btn btn-magnetic btn-primary" style="width:100%;margin-top:16px;justify-content:center">Send Message →</button>
+        <div style="margin-top:10px;display:none" class="mobile-phone"><label class="label">Phone Number</label><input class="input" type="tel" name="phone" placeholder="+91 98765 43210"></div>
+        <div style="margin-top:10px;font-size:11px;color:var(--muted);text-align:center">By sending, you agree to our <a href="privacy-policy.html" style="color:var(--soft)">Privacy Policy</a> • No spam, ever.</div>
+      </form>
+      <div class="ring dashed" style="width:140px;height:140px;bottom:-20px;right:-20px;opacity:0.35"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding:48px 24px;text-align:center;border-top:1px solid var(--g-border);background:linear-gradient(180deg, transparent, rgba(18,13,31,0.82))">
+  <h2 class="h-2" style="font-size:clamp(26px,4vw,44px);margin-bottom:10px">Prefer to start<br><span class="accent-text">right away?</span></h2>
+  <p style="color:var(--muted);margin-bottom:18px">Check out our services and pricing, or browse our portfolio for inspiration.</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <a href="services.html" class="btn btn-magnetic btn-primary">View Services</a>
+    <a href="works.html" class="btn btn-magnetic btn-ghost">View Our Work</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="brand-mini"><img src="white%20logo%20no%20bg.png" alt="" onerror="this.style.display='none'"> vortexflow media</div>
+  <p>&copy; 2026 VortexFlow Media. <a href="index.html">Home</a> · <a href="services.html">Services</a> · <a href="works.html">Our Portfolio</a> · <a href="contact.html">Contact</a> · <a href="team.html">Our Team</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="admin.html" class="admin-link" aria-label="Admin">⚙</a></p>
+</footer>
+
+<script>
+
+// reveal
+const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target)}})},{threshold:0.12});
+document.querySelectorAll('.contact-pill, .form-wrap').forEach(el=>{el.classList.add('reveal');ro.observe(el)});
+// copy
+function copyText(el,txt){
+  navigator.clipboard.writeText(txt);
+  const orig=el.innerHTML;
+  el.innerHTML='<span style="color:var(--accent);font-weight:800;font-size:12px">✓ Copied</span>';
+  setTimeout(()=>el.innerHTML=orig,1400);
+}
+document.querySelector('.phone-row')?.addEventListener('keydown',e=>{if(e.key==='Enter') copyText(e.currentTarget,'+91 7815880701')});
+// price control (preserve exact logic)
+const PRICE_MAP={'Web Design & Website Creation':3799,'Video Editing':499,'Creative Writing & Editing':299,'Thumbnail Design':149,'Logo Design':149,'Social Media Design':499,'Other':0};
+const sel=document.querySelector('select[name="project_type"]'),pv=document.getElementById('priceValue'),ph=document.getElementById('budgetHidden'),pm=document.getElementById('priceMinus');
+let cp=0,base=0;
+function upd(v){cp=Math.max(0,v);pv.textContent=cp.toLocaleString('en-IN');ph.value='₹ '+cp.toLocaleString('en-IN');pm.disabled=cp<=base}
+upd(base=PRICE_MAP[sel.value]||0);
+sel.addEventListener('change',function(){upd(base=PRICE_MAP[this.value]||0)});
+document.getElementById('pricePlus').addEventListener('click',()=>upd(cp+100));
+pm.addEventListener('click',function(){if(!this.disabled) upd(cp-100)});
+// EmailJS (preserve)
+(function(){emailjs.init('Qcmbtuh_3qGfcuHcu')})();
+document.getElementById('contactFormElement').addEventListener('submit',function(e){
+  e.preventDefault();
+  const btn=this.querySelector('button[type="submit"]');
+  const orig=btn.textContent;
+  const msg=this.querySelector('textarea[name="message"]');
+  const svc=this.querySelector('select[name="project_type"]');
+  const bgt=document.getElementById('budgetHidden').value;
+  const origMsg=msg.value;
+  msg.value='[Service: '+svc.value+'] [Budget: '+bgt+']\n\n'+origMsg;
+  btn.textContent='Sending…';btn.disabled=true;
+  emailjs.sendForm('service_fusimo5','template_lc4xrfy',this).then(()=>{
+    btn.textContent='✓ Message Sent!';btn.style.background='linear-gradient(135deg,#9D5CFF,#FF3AF2)';setTimeout(()=>{btn.textContent=orig;btn.style.background='';btn.disabled=false;msg.value=origMsg},3000);
+  },()=>{
+    btn.textContent='✗ Failed — try again';btn.style.background='#ef4444';setTimeout(()=>{btn.textContent=orig;btn.style.background='';btn.disabled=false;msg.value=origMsg},3000);
+  });
+});
+</script>
+<script src="assets/aurora.js"></script>
+<script>(function(){var el=document.getElementById('aurora-bg'); if(el && window.Aurora) new Aurora(el,{colorStops:['#7B2FFF','#9D5CFF','#FF3AF2'],amplitude:0.8,blend:0.38,speed:0.7});})();</script>
+<script src="whatsapp-float.js"></script>
+<script src="assets/vortex-interactions.js"></script>
+<script>
+// subtle auto-scroll: hero → next section on page open (same as Services)
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const hero = document.querySelector('section.hero');
+  const target = document.querySelector('section.hero + section.section');
+  if(!hero || !target) return;
+  let cancelled = false;
+  const cancel = ()=>{ cancelled = true; };
+  window.addEventListener('wheel', cancel, {passive:true, once:true});
+  window.addEventListener('touchstart', cancel, {passive:true, once:true});
+  window.addEventListener('keydown', cancel, {once:true});
+  window.addEventListener('load', ()=>{
+    setTimeout(()=>{
+      if(cancelled) return;
+      if(window.scrollY > 40) return;
+      const navH = 68;
+      const top = target.getBoundingClientRect().top + window.scrollY - navH;
+      window.scrollTo({top, behavior:'smooth'});
+    }, 1100);
+  });
+})();
+</script>
+</body>
+</html>
+

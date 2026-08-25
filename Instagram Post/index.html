@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080, initial-scale=1.0">
+<title>UP / GRADE — 1080x1440</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#09070F;
+    --primary:#7B2FFF;
+    --accent:#FF3AF2;
+    --deep:#4C1D95;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#0a0814;margin:0;padding:0}
+  body{display:flex;align-items:center;justify-content:center;min-height:100vh;background:#0d0b14}
+  /* Exact 1080 x 1440 */
+  .post{
+    width:1080px;
+    height:1440px;
+    background:var(--bg);
+    position:relative;
+    overflow:hidden;
+    isolation:isolate;
+    font-family:'Outfit',system-ui,sans-serif;
+  }
+  /* Welcome Tour background — subtle, minimal */
+  .post::before{
+    content:'';
+    position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(ellipse 820px 520px at 22% 18%, rgba(123,47,255,0.15) 0%, transparent 62%),
+      radial-gradient(ellipse 720px 640px at 88% 78%, rgba(255,58,242,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 640px 540px at 50% 45%, rgba(76,29,149,0.16) 0%, transparent 66%),
+      var(--bg);
+  }
+  .dots{
+    position:absolute;inset:0;z-index:0;pointer-events:none;
+    background-image: radial-gradient(circle, rgba(123,47,255,0.20) 1.1px, transparent 1.1px);
+    background-size:26px 26px;
+    opacity:0.28;
+    mask-image: radial-gradient(ellipse at 50% 30%, black 45%, transparent 85%);
+    -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 45%, transparent 85%);
+  }
+  .stripes{
+    position:absolute;inset:0;z-index:0;pointer-events:none;
+    background-image: repeating-linear-gradient(44deg, transparent, transparent 13px, rgba(123,47,255,0.04) 13px, rgba(123,47,255,0.04) 26px);
+    opacity:0.32;
+  }
+  .orbs{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+  .orb{position:absolute;border-radius:50%;filter:blur(62px);opacity:0.38}
+  .orb.a{width:640px;height:640px;background:radial-gradient(circle, rgba(123,47,255,0.16), transparent 70%);left:-120px;top:-80px}
+  .orb.b{width:560px;height:560px;background:radial-gradient(circle, rgba(255,58,242,0.08), transparent 70%);right:-100px;bottom:-60px}
+
+  /* Composition — left aligned, same start, no gap, continuous */
+  .composition{
+    position:absolute;
+    z-index:2;
+    left:48px;
+    right:56px;
+    top:52%;
+    transform:translateY(-50%) rotate(-0.9deg);
+    transform-origin:left center;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0;
+  }
+  /* Extremely thick, bold typography */
+  .word-up{
+    font-family:'Outfit',sans-serif;
+    font-weight:900;
+    font-size:438px;
+    line-height:0.82;
+    letter-spacing:-0.065em;
+    color:#fff;
+    white-space:nowrap;
+    text-shadow:
+      5px 5px 0 #7B2FFF,
+      10px 10px 0 #FF3AF2,
+      0 10px 36px rgba(123,47,255,0.28);
+    display:block;
+    margin:0;
+    padding-right:14px;
+  }
+  .word-grade-wrap{
+    position:relative;
+    display:inline-block;
+    width:fit-content;
+    margin-top:-12px;
+    line-height:0.82;
+  }
+  .word-grade-shadow{
+    position:absolute;inset:0;
+    font-family:'Outfit',sans-serif;font-weight:900;
+    font-size:292px;letter-spacing:-0.065em;line-height:0.82;white-space:nowrap;
+    color:var(--deep);
+    transform:translate(5px,5px);
+    opacity:0.98;
+    pointer-events:none;
+    text-shadow:0 0 28px rgba(123,47,255,0.32), 0 0 56px rgba(255,58,242,0.14);
+  }
+  .word-grade{
+    position:relative;
+    font-family:'Outfit',sans-serif;font-weight:900;
+    font-size:292px;
+    line-height:0.82;
+    letter-spacing:-0.065em;
+    white-space:nowrap;
+    background:linear-gradient(135deg, #B98CFF 0%, #9D5CFF 22%, #7B2FFF 56%, #FF3AF2 88%, #FF8AF5 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+    filter:drop-shadow(0 0 16px rgba(157,92,255,0.32));
+    display:block;
+    padding-right:12px;
+  }
+  .soon{
+    position:absolute;
+    left:50%;
+    top:100%;
+    transform:translateX(-50%);
+    margin-top:18px;
+    font-family:'Outfit',sans-serif;
+    font-weight:600;
+    font-size:13px;
+    letter-spacing:0.42em;
+    line-height:1;
+    color:rgba(232,224,248,0.62);
+    white-space:nowrap;
+    text-transform:uppercase;
+    pointer-events:none;
+    user-select:none;
+  }
+</style>
+</head>
+<body>
+  <div class="post" id="post">
+    <div class="dots" aria-hidden="true"></div>
+    <div class="stripes" aria-hidden="true"></div>
+    <div class="orbs" aria-hidden="true">
+      <div class="orb a"></div>
+      <div class="orb b"></div>
+    </div>
+    <div class="composition" aria-label="UP GRADE">
+      <div class="word-up">UP</div>
+      <div class="word-grade-wrap">
+        <div class="word-grade-shadow" aria-hidden="true">GRADE</div>
+        <div class="word-grade">GRADE</div>
+        <div class="soon" aria-label="SOON">SOON...</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

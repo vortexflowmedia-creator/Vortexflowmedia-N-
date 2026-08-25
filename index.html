@@ -1,0 +1,742 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VortexFlow Media. Premium Creative Studio</title>
+<meta name="description" content="VortexFlow Media — Premium creative studio for web design, video editing, thumbnail design, logo design, creative writing & social media design. High end design. Bold visuals. Flawless execution.">
+<link rel="canonical" href="https://vortexflowmedia.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vortexflowmedia.vercel.app/">
+<meta property="og:title" content="VortexFlow Media">
+<meta property="og:description" content="Premium creative studio for web design, video editing, thumbnail design, logo design, creative writing & social media design.">
+<meta property="og:image" content="https://vortexflowmedia.vercel.app/assets/projects/vortex-1.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://vortexflowmedia.vercel.app/">
+<meta name="twitter:title" content="VortexFlow Media">
+<meta name="twitter:description" content="Premium creative studio for web design, video editing, thumbnail design, logo design, creative writing & social media design.">
+<meta name="twitter:image" content="https://vortexflowmedia.vercel.app/assets/projects/vortex-1.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"VortexFlow Media","url":"https://vortexflowmedia.vercel.app/","logo":"https://vortexflowmedia.vercel.app/assets/projects/vortex-1.png","sameAs":["https://instagram.com/vortexflowmedia","https://wa.me/917815880701"],"contactPoint":{"@type":"ContactPoint","telephone":"+91-7815880701","contactType":"customer service","availableLanguage":["English","Hindi"]}}</script>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@400;500;600;700;800;900&family=Unbounded:wght@700;800;900&family=Lobster&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vortex.css">
+<!-- Nav Dynamic Island — home first-paint: circle (logo only) before any JS, no flash -->
+<style>html{--nav-progress:0} :root{--nav-progress:0}</style>
+<style>
+.hero-title-word{font-family:var(--font-display);font-weight:900;letter-spacing:-0.055em;line-height:0.88;font-size:clamp(56px,10vw,118px)}
+.hero-title-word .soft{color:var(--soft);font-style:italic}
+.hero-flip{font-family:var(--font-display);font-weight:800;letter-spacing:-0.04em;font-size:clamp(18px,2.4vw,24px);color:var(--muted);text-transform:uppercase}
+.hero-brand-lock{margin-top:8px;display:flex;align-items:center;gap:10px}
+.hero-brand-lock img{height:42px;width:auto;object-fit:contain;filter:drop-shadow(0 0 18px rgba(123,47,255,0.45))}
+@media(max-width:768px){.hero-brand-lock img{height:30px}}
+/* MEGA HERO — dominant : WELCOME TO + logo — locked composition, maximalist centerpiece */
+.hero-mega{
+  font-family:var(--font-display);
+  font-weight:900;
+  letter-spacing:-0.055em;
+  line-height:0.82;
+  text-transform:uppercase;
+  margin-bottom:2px;
+  position:relative;
+}
+.hero-mega .line{display:block;white-space:nowrap;overflow:visible}
+.hero-mega .line-welcome-to{
+  font-size:clamp(82px, 12.8vw, 236px);
+  letter-spacing:-0.068em;
+  line-height:0.88;
+  white-space:nowrap;
+  display:flex;
+  align-items:baseline;
+  justify-content:center;
+  gap:0.14em;
+  flex-wrap:nowrap;
+  text-shadow:0 4px 32px rgba(123,47,255,0.22), 0 0 60px rgba(123,47,255,0.14);
+}
+.hero-mega .line-welcome-to .welcome{color:#fff}
+.hero-mega .line-welcome-to .to{
+  color:var(--soft);
+  font-style:italic;
+  background:linear-gradient(135deg, #B98CFF 0%, #9D5CFF 35%, #FF3AF2 78%, #FF8AF5 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  filter:drop-shadow(0 0 20px rgba(255,58,242,0.42)) drop-shadow(0 0 36px rgba(157,92,255,0.32));
+  transform:rotate(-1deg);
+  display:inline-block;
+}
+.hero-logo-wrap{
+  margin-top:4px;
+  display:block;
+  width:100%;
+  line-height:0;
+  position:relative;
+  opacity:0;
+  transform:translateY(14px) scale(0.96);
+  animation:heroLogoEnter 0.92s cubic-bezier(0.16,1,0.3,1) 0.42s forwards;
+}
+@keyframes heroLogoEnter{to{opacity:1;transform:translateY(0) scale(1)}}
+@media(prefers-reduced-motion:reduce){.hero-logo-wrap{animation:none;opacity:1;transform:none}}
+.hero-logo-wrap::before{
+  content:'';
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:92%;
+  height:72%;
+  background:radial-gradient(ellipse at center, rgba(123,47,255,0.22), transparent 68%), radial-gradient(ellipse at 60% 40%, rgba(255,58,242,0.14), transparent 62%);
+  filter:blur(22px);
+  pointer-events:none;
+  z-index:-1;
+}
+.hero-logo{
+  display:block;
+  width:96vw;
+  max-width:1320px;
+  max-width:100%;
+  height:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 0 40px rgba(123,47,255,0.55)) drop-shadow(0 0 86px rgba(123,47,255,0.32)) drop-shadow(0 0 130px rgba(255,58,242,0.16));
+  transition:filter var(--fast), transform var(--fast);
+}
+.hero-logo-wrap--legacy{
+  margin-top:4px;
+  display:none !important;
+  width:100%;
+  line-height:0;
+  position:relative;
+  opacity:0;
+  pointer-events:none;
+}
+.hero-logo-wrap--legacy .hero-logo{display:none !important}
+/* SPLIT-LOGO HERO — C1 1312 + C2 860 = 2172x724 :: 3:1 :: scales as ONE unit */
+.hero-split{
+  margin:6px auto 0;
+  width:100%;
+  max-width:min(96vw, 1320px);
+  position:relative;
+  line-height:0;
+  display:block;
+  overflow:visible;
+  aspect-ratio:2172 / 724;
+  isolation:isolate;
+}
+.hero-split::before{
+  content:'';
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
+  width:92%; height:78%;
+  background:radial-gradient(ellipse at center, rgba(123,47,255,0.22), transparent 68%), radial-gradient(ellipse at 60% 40%, rgba(255,58,242,0.14), transparent 62%);
+  filter:blur(22px);
+  pointer-events:none;
+  z-index:-1;
+  opacity:1;
+}
+.hero-split-track{
+  display:grid;
+  grid-template-columns:1312fr 860fr;
+  gap:0;
+  align-items:stretch;
+  width:100%;
+  height:100%;
+  will-change:transform;
+}
+.hero-split-half{
+  position:relative;
+  line-height:0;
+  overflow:visible;
+  will-change:transform, opacity;
+  transform:translateZ(0);
+  backface-visibility:hidden;
+}
+.hero-split-half img{
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:100%;
+  object-fit:contain;
+  object-position:center;
+  will-change:transform, opacity;
+  transform:translateZ(0);
+  backface-visibility:hidden;
+  filter:drop-shadow(0 0 40px rgba(123,47,255,0.55)) drop-shadow(0 0 86px rgba(123,47,255,0.32)) drop-shadow(0 0 130px rgba(255,58,242,0.16));
+}
+.hero-split-half.half-vortex{transform:translate3d(0,0,0)}
+.hero-split-half.half-media{transform:translate3d(0,0,0)}
+.hero-split-track{grid-gap:0; column-gap:0}
+.hero-split-half img{margin:0}
+@media(prefers-reduced-motion:reduce){
+  .hero-split-half{transform:none !important; opacity:1 !important}
+  .welcome-to-wrap{animation:none !important; opacity:1 !important; transform:rotate(-1.6deg) !important}
+}
+/* PIN — sticky scoped to outer, nav always on top */
+#heroPinOuter{position:relative; height:300vh; min-height:300vh; overflow:visible; z-index:auto}
+#heroPinSticky{position:sticky; top:0; height:100vh; height:100dvh; display:flex; align-items:flex-start; justify-content:center; overflow:visible; z-index:auto; padding-top:var(--nav-h,68px)}
+.hero--pinned{width:100%; min-height:100vh; min-height:100dvh; height:auto; min-height:100vh; overflow:visible !important; padding:0 24px 32px !important; display:block !important; padding-top:calc(var(--nav-h,68px) + 28px) !important}
+.hero--pinned .hero-inner{width:100%; max-width:1320px; margin:0 auto; padding-top:12px}
+@media(max-width:1024px){ #heroPinOuter{height:300vh; min-height:300vh} }
+@media(max-width:768px){
+  .hero{overflow:visible !important}
+  .hero-split{max-width:100%; width:100%; aspect-ratio:2172 / 724}
+  .hero-split-half img{filter:drop-shadow(0 0 28px rgba(123,47,255,0.42)) drop-shadow(0 0 52px rgba(123,47,255,0.24))}
+  #heroPinSticky{height:100vh; height:100dvh; align-items:flex-start; padding-top:var(--nav-h,68px)}
+  .hero--pinned{padding:0 16px 24px !important; padding-top:calc(var(--nav-h,68px) + 18px) !important}
+  .hero-sub{font-size:14px !important; line-height:1.55 !important; max-width:320px !important}
+  /* mobile buttons — a bit smaller */
+  .hero-actions{gap:8px !important; margin-bottom:14px !important}
+  .hero-actions .btn{padding:10px 16px !important; font-size:11px !important; letter-spacing:0.06em !important}
+  .hero-meta{gap:8px !important}
+  .hero-meta .meta-pill{font-size:9px !important; padding:6px 10px !important; letter-spacing:0.11em !important}
+}
+@media(max-width:385px){ .hero-split{max-width:100%; width:100%} .hero-sub{font-size:13px !important} .hero-actions .btn{padding:9px 14px !important; font-size:10.5px !important} .hero-meta .meta-pill{font-size:8.5px !important; padding:5px 9px !important} }
+@media(max-width:360px){ .hero-split{max-width:100%; width:100%} .hero-sub{font-size:12px !important} .hero-actions{gap:6px !important; flex-wrap:nowrap !important} .hero-actions .btn{padding:7px 10px !important; font-size:9px !important; white-space:nowrap !important} .hero-meta .meta-pill{font-size:8px !important; padding:5px 8px !important} }
+/* BELOW-HERO REVEAL — invisible at load, fade+rise on scroll (mobile priority, no flash) */
+.below-hero-reveal{opacity:0; transform:translateY(24px); transition:opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); will-change:opacity, transform}
+.below-hero-reveal.visible{opacity:1; transform:translateY(0)}
+.hero-scroll-reveal{opacity:0; transform:translateY(24px); transition:opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); will-change:opacity, transform}
+.hero-scroll-reveal.visible{opacity:1; transform:translateY(0)}
+@media(max-width:768px){
+  .below-hero-reveal{transform:translateY(18px); transition-duration:0.7s}
+  .hero-scroll-reveal{transform:translateY(18px); transition-duration:0.7s}
+}
+@media(prefers-reduced-motion:reduce){
+  .below-hero-reveal{opacity:1; transform:none; transition:none}
+  .hero-scroll-reveal{opacity:1; transform:none; transition:none}
+}
+/* Scroll hint — plain text, centered middle of page, only at initial load */
+.scroll-hint{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:5; font-family:var(--font-display); font-size:11px; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; color:var(--muted); background:none; border:none; padding:0; border-radius:0; backdrop-filter:none; opacity:1; transition:opacity 0.5s ease; pointer-events:none; display:block; text-align:center}
+.scroll-hint::after{content:' ↓'; font-size:11px; opacity:0.8}
+@media(max-width:768px){ .scroll-hint{top:50%; font-size:10px} }
+.hero-logo:hover{filter:drop-shadow(0 0 52px rgba(123,47,255,0.68)) drop-shadow(0 0 104px rgba(157,92,255,0.38))}
+/* HERO TYPOGRAPHY — WELCOME + TO directly positioned: TO tucks across lower C/O — entrance */
+.welcome-to-wrap{
+  position:relative;
+  width:fit-content;
+  max-width:100%;
+  margin-inline:auto;
+  display:block;
+  line-height:0.82;
+  white-space:nowrap;
+  margin-bottom:2px;
+  filter:drop-shadow(0 8px 32px rgba(123,47,255,0.22));
+  opacity:0;
+  transform:translateY(18px) scale(0.96) rotate(-1.6deg);
+  animation:heroEnter 0.92s cubic-bezier(0.16,1,0.3,1) 0.18s forwards;
+}
+@keyframes heroEnter{to{opacity:1;transform:translateY(0) scale(1) rotate(-1.6deg)}}
+@media(prefers-reduced-motion:reduce){.welcome-to-wrap{animation:none;opacity:1;transform:rotate(-1.6deg)}}
+.welcome-to-wrap .welcome{
+  position:relative;
+  z-index:1;
+  display:block;
+  font-family:"Outfit", sans-serif;
+  font-size:clamp(78px, 12.2vw, 232px);
+  font-weight:900;
+  color:#fff;
+  letter-spacing:-0.062em;
+  line-height:0.88;
+  text-transform:uppercase;
+  transform:rotate(-2deg);
+  white-space:nowrap;
+  text-shadow:3px 3px 0 #7B2FFF, 6px 6px 0 #FF3AF2;
+}
+.welcome-to-wrap .to{
+  position:absolute;
+  z-index:2;
+  left:68%;
+  top:58%;
+  display:inline-block;
+  font-family:"Lobster", cursive;
+  font-size:clamp(72px, 11vw, 200px);
+  font-weight:400;
+  line-height:0.8;
+  letter-spacing:0.015em;
+  color:#7B2FFF;
+  background:linear-gradient(135deg, #B98CFF 0%, #9D5CFF 30%, #7B2FFF 62%, #FF3AF2 92%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  transform:rotate(-8deg);
+  transform-origin:center;
+  filter:drop-shadow(0 0 18px rgba(123,47,255,0.48)) drop-shadow(0 4px 24px rgba(0,0,0,0.42));
+  white-space:nowrap;
+  pointer-events:none;
+}
+@media(max-width:900px){
+  .welcome-to-wrap .welcome{font-size:clamp(68px, 11.5vw, 176px)}
+  .welcome-to-wrap .to{font-size:clamp(64px, 11vw, 162px); left:68%; top:58%}
+}
+@media(max-width:768px){
+  .welcome-to-wrap .welcome{font-size:clamp(78px, 17vw, 178px)}
+  .welcome-to-wrap .to{font-size:clamp(76px, 16vw, 168px); left:68%; top:58%}
+}
+@media(max-width:430px){
+  .welcome-to-wrap{width:100%; padding-inline:12px; box-sizing:border-box}
+  .welcome-to-wrap .welcome{font-size:clamp(68px, 20vw, 116px); white-space:nowrap}
+  .welcome-to-wrap .to{left:66%; top:57%; font-size:clamp(64px, 18.5vw, 106px)}
+}
+@media(max-width:385px){
+  .welcome-to-wrap .welcome{font-size:clamp(64px, 17vw, 110px)}
+  .welcome-to-wrap .to{font-size:clamp(60px, 16vw, 104px); left:66%; top:57%}
+}
+@media(max-width:360px){
+  .welcome-to-wrap .welcome{font-size:60px}
+  .welcome-to-wrap .to{font-size:58px; left:66%; top:57%}
+}
+.eyebrow-hero{
+  font-size:14px !important;
+  letter-spacing:0.18em !important;
+  padding:10px 18px !important;
+  font-weight:800 !important;
+  border-width:1.5px !important;
+  background:rgba(123,47,255,0.14) !important;
+  box-shadow:0 0 20px rgba(123,47,255,0.12);
+}
+.eyebrow-hero i{width:8px;height:8px}
+@media(max-width:900px){
+  .hero-mega .line-welcome-to{font-size:clamp(62px, 11.5vw, 160px)}
+  .hero-logo{width:94vw;max-width:868px}
+}
+@media(max-width:768px){
+  .hero-mega{line-height:0.9}
+  .hero-mega .line-welcome-to{white-space:nowrap;font-size:clamp(68px, 14vw, 148px)}
+  .hero-logo{width:94vw;max-width:736px;margin-top:14px}
+  .eyebrow-hero{font-size:12px !important;letter-spacing:0.14em !important;padding:8px 14px !important}
+}
+@media(max-width:385px){
+  .hero-mega .line-welcome-to{font-size:clamp(60px, 13.5vw, 96px)}
+  .hero-logo{width:92vw;max-width:353px}
+}
+@media(max-width:360px){
+  .hero-mega .line-welcome-to{font-size:58px;white-space:nowrap}
+  .hero-logo{width:92vw;max-width:328px}
+}
+</style>
+</head>
+<body>
+<div class="bg-layers" aria-hidden="true"></div>
+<div id="aurora-bg" style="position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:0.68"></div>
+
+<!-- NAV -->
+<div class="nav-shell">
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html" class="nav-brand" aria-label="VortexFlow Media Home">
+      <img src="new%20logo-Photoroom.png" alt="vortexflow media" width="220" height="32" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="nav-brand-fallback" style="display:none">vortexflow <em>media</em></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="works.html">Our Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="team.html">Our Team</a></li>
+    </ul>
+    <div class="nav-actions"><a href="contact.html" class="nav-cta">Start a Project</a>
+    </div>
+    <button class="m-menu-btn" id="mMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mMenu"><span class="m-menu-btn__box" aria-hidden="true"><span class="m-menu-btn__line"></span><span class="m-menu-btn__line"></span><span class="m-menu-btn__line"></span></span></button>
+  </nav>
+</div>
+<div class="m-menu" id="mMenu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="m-menu__backdrop" data-close></div>
+  <div class="m-menu__panel" role="document">
+    <div class="m-menu__head"><span class="m-menu__eyebrow">Navigation</span><span class="m-menu__sub">VortexFlow Media • Premium Studio</span></div>
+    <nav class="m-menu__nav" aria-label="Mobile primary">
+      <a class="m-link is-active" href="index.html"><span class="m-link__num">01</span><span class="m-link__text">Home</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="services.html"><span class="m-link__num">02</span><span class="m-link__text">Services</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="works.html"><span class="m-link__num">03</span><span class="m-link__text">Our Portfolio</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="contact.html"><span class="m-link__num">04</span><span class="m-link__text">Contact</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="team.html"><span class="m-link__num">05</span><span class="m-link__text">Our Team</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="privacy-policy.html"><span class="m-link__num">06</span><span class="m-link__text">Privacy Policy</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="terms.html"><span class="m-link__num">07</span><span class="m-link__text">Terms and Conditions</span><span class="m-link__arrow">↗</span></a>
+    </nav>
+    <div class="m-menu__foot"><a class="m-menu__cta" href="contact.html">Start a Project →</a><div class="m-menu__meta"><span>✦ 20+ Projects</span><span>✦ 98% Satisfaction</span><a href="https://wa.me/917815880701" target="_blank" rel="noopener">WhatsApp ↗</a></div></div>
+  </div>
+</div>
+
+<!-- HERO — PINNED SCROLL animation (C1 left / C2 right → WELCOME TO) -->
+<div id="heroPinOuter">
+<div id="heroPinSticky">
+<section class="hero hero--pinned">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-orb a"></div>
+    <div class="hero-orb b"></div>
+    <div class="hero-orb c"></div>
+  </div>
+  <div class="bg-word" style="top:8%;left:-2%;--base:-3deg;transform:rotate(var(--base))">VORTEX</div>
+  <div class="bg-word" style="bottom:4%;right:-4%;--base:2deg;font-size:13rem;opacity:0.035;transform:rotate(var(--base))">FLOW</div>
+  <div class="bg-word" style="top:50%;left:50%;transform:translate(-50%,-50%) rotate(-2deg);font-size:26rem;opacity:0.018;letter-spacing:-0.07em">MAXIMAL</div>
+  <div class="ring" style="width:420px;height:420px;left:-80px;top:120px;border-color:rgba(123,47,255,0.09)"></div>
+  <div class="ring dashed" style="width:260px;height:260px;right:22%;top:8%;"></div>
+  <div class="ring" style="width:340px;height:340px;right:8%;bottom:12%;border-color:rgba(157,92,255,0.07)"></div>
+  <div class="ring dashed" style="width:180px;height:180px;left:18%;top:22%;opacity:0.45"></div>
+  <div class="cross" style="right:12%;top:18%"></div>
+  <div class="cross" style="left:14%;bottom:18%;opacity:0.5"></div>
+  <div class="star" style="left:6%;top:62%">✦</div>
+  <div class="star" style="right:18%;top:72%;font-size:10px">✦</div>
+  <div class="star" style="left:22%;top:16%;font-size:18px;opacity:0.45">✦</div>
+  <div class="star" style="right:42%;top:28%;font-size:12px;opacity:0.35">✦</div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 820px 520px at 28% 18%, rgba(123,47,255,0.14), transparent 66%), radial-gradient(ellipse 720px 620px at 88% 78%, rgba(157,92,255,0.11), transparent 68%), radial-gradient(ellipse 500px 500px at 50% 55%, rgba(76,29,149,0.16), transparent 70%);pointer-events:none;opacity:0.9"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 0%, rgba(185,140,255,0.08), transparent 42%);pointer-events:none"></div>
+
+  <div class="hero-inner">
+    <div class="hero-headline" style="grid-column:1/-1;text-align:center;width:100%;max-width:1320px;margin:0 auto 12px;position:relative;z-index:1;overflow:visible">
+      <div class="welcome-to-wrap" id="welcomeToHero" aria-label="Welcome to" style="will-change:transform,opacity">
+        <span class="welcome">WELCOME</span><span class="to">TO</span>
+      </div>
+      <div class="hero-split" id="heroSplit" aria-label="VortexFlow Media logo — split reveal" style="will-change:transform">
+        <div class="hero-split-track" id="heroSplitTrack">
+          <div class="hero-split-half half-vortex" id="halfVortex">
+            <img src="white%20logo%20no%20bg_r1_c1.png" alt="Vortex" width="1312" height="724" loading="eager" decoding="async" fetchpriority="high">
+          </div>
+          <div class="hero-split-half half-media" id="halfMedia">
+            <img src="white%20logo%20no%20bg_r1_c2.png" alt="Media" width="860" height="724" loading="eager" decoding="async" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+      <!-- TEMP HID — original single white logo preserved
+      <div class="hero-logo-wrap hero-logo-wrap--legacy" aria-label="VortexFlow Media logo (hidden)" aria-hidden="true" style="margin:6px auto 0;max-width:2040px">
+        <img src="white%20logo%20no%20bg.png" alt="vortexflow media" class="hero-logo" width="2040" height="360" loading="eager" decoding="async" fetchpriority="high" style="margin:0 auto">
+      </div>
+      -->
+    </div>
+    <div class="hero-content below-hero-reveal" style="grid-column:1">
+      <div class="hero-actions">
+        <a href="services.html" class="btn btn-magnetic btn-primary">Explore Services →</a>
+        <a href="works.html" class="btn btn-magnetic btn-ghost">Our Portfolio ↗</a>
+        <a href="contact.html" class="btn btn-magnetic btn-outline">Let's Talk</a>
+      </div>
+      <div class="hero-meta">
+        <a href="team.html" class="meta-pill" style="text-decoration:none;color:var(--soft);border-color:var(--soft)">Our Team →</a>
+        <span class="meta-pill">✦ 20+ Projects Delivered</span>
+        <span class="meta-pill">✦ 98% Client Satisfaction</span>
+      </div>
+      <p class="lead hero-sub" style="margin-top:16px">Where <strong>bold vision meets flawless execution</strong>. A premium creative studio built for brands that refuse to be ordinary. No templates, just identity.</p>
+    </div>
+
+    <div class="hero-visual below-hero-reveal" aria-hidden="true">
+      <div class="hero-card-stack">
+        <!-- card 1 -->
+        <div class="vf-card tilt-card c1">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+            <span class="eyebrow" style="font-size:9px;padding:5px 10px">Featured. VAS Edits</span>
+            <span style="font-family:var(--font-display);font-weight:800;font-size:10px;letter-spacing:0.12em;color:var(--soft)">01 / 03</span>
+          </div>
+          <div class="hero-thumb"><img src="assets/projects/vas-1.png" alt="VAS Edits project" loading="eager"></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:12px">
+            <div>
+              <div style="font-family:var(--font-display);font-weight:800;font-size:14px;letter-spacing:-0.02em">VAS Edits. Video Portfolio</div>
+              <div style="font-size:12px;color:var(--muted)">Premium editing • Cinematic</div>
+            </div>
+            <span style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--bright));display:grid;place-items:center;color:#fff;font-size:14px">↗</span>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="vf-card tilt-card c2 elevated" style="border-style:dashed">
+          <div style="display:flex;gap:12px;align-items:center">
+            <img src="assets/projects/gym1.png" alt="Epic Gym" style="width:92px;height:92px;border-radius:14px;object-fit:cover;border:1.5px solid var(--g-border);flex-shrink:0" loading="lazy">
+            <div style="flex:1">
+              <div style="font-size:10px;letter-spacing:0.14em;text-transform:uppercase;font-weight:800;color:var(--soft)">Web Design</div>
+              <div style="font-family:var(--font-display);font-weight:800;font-size:16px;margin:2px 0 4px;letter-spacing:-0.02em">Epic Gym</div>
+              <div style="font-size:12px;color:var(--muted);line-height:1.4">Premium fitness destination. Memberships, trainers, transformations.</div>
+            </div>
+            <a href="project.html?project=gym" style="width:36px;height:36px;border-radius:50%;background:rgba(123,47,255,0.15);border:1px solid var(--g-border);display:grid;place-items:center;text-decoration:none;color:#fff">→</a>
+          </div>
+          <div style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap">
+            <span class="pill" style="font-size:11px;padding:6px 10px">Visit Website ↗</span>
+            <span style="font-size:11px;color:var(--muted);align-self:center">★ 6 live projects</span>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="vf-card tilt-card c3" style="border-width:3px">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div>
+              <div style="font-family:var(--font-display);font-weight:900;font-size:22px;letter-spacing:-0.03em;line-height:0.9">LET’S</div>
+              <div style="font-family:var(--font-display);font-weight:900;font-size:22px;letter-spacing:-0.03em;line-height:0.9;color:var(--soft)">BUILD</div>
+              <div style="font-size:12px;color:var(--muted);margin-top:6px">Your brand, amplified. Start in 24h.</div>
+              <a href="contact.html" class="btn btn-magnetic btn-primary btn-sm" style="margin-top:10px">Start →</a>
+            </div>
+            <div style="position:relative">
+              <img src="assets/projects/vortex-1.png" alt="VortexFlow" style="width:100%;height:118px;object-fit:cover;border-radius:14px;border:1.5px solid var(--g-border)">
+              <div style="position:absolute;bottom:-8px;right:-8px;background:var(--accent);color:#fff;font-family:var(--font-display);font-weight:900;font-size:10px;letter-spacing:0.08em;padding:6px 10px;border-radius:100px;box-shadow:3px 3px 0 var(--deep)">NEW WORK</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="scroll-hint" id="scrollHint" aria-hidden="true">Scroll</div>
+</div>
+</div>
+
+<div class="marquee below-hero-reveal" aria-hidden="true" style="margin-top:500px">
+  <div class="marquee-track">
+    <span><i>✦</i> Web Design</span><span>•</span><span><i>✦</i> Video Editing</span><span>•</span><span><i>✦</i> Thumbnail Design</span><span>•</span><span><i>✦</i> Logo Design</span><span>•</span><span><i>✦</i> Social Media</span><span>•</span><span><i>✦</i> Creative Writing</span><span>•</span>
+    <span><i>✦</i> Web Design</span><span>•</span><span><i>✦</i> Video Editing</span><span>•</span><span><i>✦</i> Thumbnail Design</span><span>•</span><span><i>✦</i> Logo Design</span><span>•</span><span><i>✦</i> Social Media</span><span>•</span><span><i>✦</i> Creative Writing</span><span>•</span>
+  </div>
+</div>
+
+<!-- TRUST -->
+<section class="trust below-hero-reveal" style="margin-top:32px">
+  <div class="bg-word" style="top:50%;left:50%;transform:translate(-50%,-50%);font-size:18rem;opacity:0.03">CRAFT</div>
+  <div class="trust-inner">
+    <div class="eyebrow" style="margin-bottom:16px">Why VortexFlow</div>
+    <h2 class="trust-quote">Crafted with <span class="accent-text">precision</span>.<br>Designed to <span class="accent-text">stand out</span>.</h2>
+    <p class="lead" style="margin:0 auto 36px;text-align:center">We don't just create content. We build brand experiences. Every pixel, every transition, every detail is intentional. Our work speaks for itself. And our clients trust us to deliver nothing less than exceptional.</p>
+    <div class="metrics" style="justify-content:center;max-width:520px;margin:0 auto">
+      <div class="metric tilt-card asym">
+        <div class="metric-num" id="stat-projects">20+</div>
+        <div class="metric-label">Projects Done</div>
+        <div style="margin-top:8px;height:3px;border-radius:100px;background:linear-gradient(90deg,var(--primary),transparent)"></div>
+      </div>
+      <div class="metric tilt-card asym r" style="--base:0.8deg;transform:rotate(var(--base))">
+        <div class="metric-num" id="stat-satisfaction">98%</div>
+        <div class="metric-label">Client Satisfaction</div>
+        <div style="margin-top:8px;height:3px;border-radius:100px;background:linear-gradient(90deg,var(--accent),transparent);opacity:0.6"></div>
+      </div>
+    </div>
+    <div style="margin-top:28px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+      <a href="works.html" class="btn btn-magnetic btn-primary btn-sm">View Live Work →</a>
+      <a href="services.html" class="btn btn-magnetic btn-ghost btn-sm">Services & Pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section below-hero-reveal" style="padding-top:60px;padding-bottom:60px;background:linear-gradient(180deg, rgba(18,13,31,0.0) 0%, rgba(18,13,31,0.92) 100%);border-top:1px solid var(--g-border)">
+  <div class="bg-word" style="bottom:-12%;left:-4%;font-size:14rem;opacity:0.04">LOUD</div>
+  <div class="section-inner" style="text-align:center;max-width:760px">
+    <div class="vf-card tilt-card" style="padding:42px 28px;--base:-0.6deg;text-align:center;transform:rotate(var(--base))">
+      <div style="position:absolute;top:-14px;right:22px;background:var(--accent);color:#fff;font-family:var(--font-display);font-weight:900;font-size:10px;letter-spacing:0.12em;padding:6px 12px;border-radius:100px;box-shadow:3px 3px 0 var(--deep);--base:1.5deg;transform:rotate(var(--base))">AVAILABLE FOR NEW PROJECTS</div>
+      <div class="ring dashed" style="width:180px;height:180px;top:-30px;right:-30px;opacity:0.35"></div>
+      <h2 class="h-2" style="margin-bottom:14px">Let’s create something<br><span class="accent-text">extraordinary</span> together.</h2>
+      <p class="lead" style="margin:0 auto 26px;text-align:center">Have a project in mind? We’d love to hear about it. Let’s talk about how we can bring your vision to life. In days, not months.</p>
+      <a href="contact.html" class="btn btn-magnetic btn-primary btn-lg glow">Start Your Project →</a>
+      <div style="margin-top:14px;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;color:var(--muted)">Responds within 24h • No templates • Premium only</div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="brand-mini" aria-hidden="true"><img src="white%20logo%20no%20bg.png" alt="" onerror="this.style.display='none'"> vortexflow media</div>
+  <p>&copy; 2026 VortexFlow Media. <a href="index.html">Home</a> · <a href="services.html">Services</a> · <a href="works.html">Our Portfolio</a> · <a href="contact.html">Contact</a> · <a href="team.html">Our Team</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="admin.html" class="admin-link" aria-label="Admin panel">⚙</a></p>
+  <span class="sr-only">VortexFlow Media is a creative digital agency founded by Yeluri Srivastav Sai, specializing in web design, video editing, thumbnail design, logo design, and social media content. Contact: +91 7815880701 • vortexflowmedia@gmail.com</span>
+</footer>
+
+<script>
+// STATS fetch (preserve backend)
+(function(){
+  var MAP={'stat-projects':'stat_projects_done','stat-satisfaction':'stat_client_satisfaction'};
+  fetch('/api/content').then(r=>r.json()).then(c=>{
+    Object.keys(MAP).forEach(id=>{
+      var el=document.getElementById(id);
+      if(el&&c[MAP[id]]!==undefined) el.textContent=c[MAP[id]];
+    });
+    // animate numbers after fetch
+    animateStats();
+  }).catch(()=>animateStats());
+  function animateStats(){
+    function animate(el){
+      var m=el.textContent.trim().match(/^([\d,]+)(.*)$/);
+      if(!m) return;
+      var target=parseInt(m[1].replace(/,/g,''),10),suffix=m[2],dur=1200,start=null;
+      function step(ts){
+        if(!start) start=ts;
+        var e=Math.min((ts-start)/dur,1),v=Math.round(target*(e<.5?2*e*e:1-Math.pow(-2*e+2,2)/2));
+        el.textContent=v+suffix;
+        if(e<1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    var obs=new IntersectionObserver(entries=>{
+      entries.forEach(en=>{if(en.isIntersecting){animate(en.target);obs.unobserve(en.target)}});
+    },{threshold:0.4});
+    document.querySelectorAll('.metric-num').forEach(el=>obs.observe(el));
+  }
+})();
+
+// SPLIT-LOGO PINNED SCROLL — C1 left / C2 right → WELCOME TO (pinned 300vh, GPU only)
+(function(){
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const welcome = document.getElementById('welcomeToHero');
+  const v = document.getElementById('halfVortex');
+  const m = document.getElementById('halfMedia');
+  const split = document.getElementById('heroSplit');
+  const hero = document.querySelector('.hero');
+  const outer = document.getElementById('heroPinOuter');
+  if(!v || !m || !split || !hero || !outer){
+    const revObs2=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs2.unobserve(e.target)}})},{threshold:0.12});
+    document.querySelectorAll('.vf-card, .metric').forEach(el=>{el.classList.add('reveal');revObs2.observe(el)});
+    return;
+  }
+  if(reduce){
+    v.style.transform='translate3d(0,0,0)'; m.style.transform='translate3d(0,0,0)'; v.style.opacity='1'; m.style.opacity='1';
+    if(welcome){ welcome.style.opacity='1'; welcome.style.transform='translate3d(0,0,0) rotate(-1.6deg)'; welcome.style.animation='none'; }
+    const revObsR=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObsR.unobserve(e.target)}})},{threshold:0.12});
+    document.querySelectorAll('.vf-card, .metric').forEach(el=>{el.classList.add('reveal');revObsR.observe(el)});
+    return;
+  }
+  hero.style.overflow='visible';
+  if(welcome){
+    welcome.style.animation='none';
+    welcome.style.opacity='0';
+    welcome.style.transform='translate3d(0, 18px, 0) scale(0.96) rotate(-1.6deg)';
+    welcome.style.willChange='transform, opacity';
+  }
+  v.style.willChange='transform, opacity';
+  m.style.willChange='transform, opacity';
+  const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
+  const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+  const easeInOutCubic = t => t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3)/2;
+  let ticking=false;
+  function update(){
+    ticking=false;
+    const rect = outer.getBoundingClientRect();
+    const total = Math.max(1, outer.offsetHeight - window.innerHeight);
+    const raw = clamp(-rect.top / total, 0, 1);
+    const logoT = clamp(raw / 0.4, 0, 1);
+    const eased = easeOutCubic(logoT);
+    const inv = 1 - eased;
+    const offV = (-105 * inv).toFixed(3);
+    const offM = (105 * inv).toFixed(3);
+    v.style.transform = `translate3d(${offV}%, 0, 0)`;
+    m.style.transform = `translate3d(${offM}%, 0, 0)`;
+    const op = clamp(eased * 1.55, 0, 1);
+    v.style.opacity = String(0.08 + op * 0.92);
+    m.style.opacity = String(0.08 + op * 0.92);
+    if(welcome){
+      const wRaw = clamp((raw - 0.5) / 0.25, 0, 1);
+      const wEased = easeInOutCubic(wRaw);
+      welcome.style.opacity = String(wEased);
+      const ty = (1 - wEased) * 18;
+      const sc = 0.96 + wEased * 0.04;
+      welcome.style.transform = `translate3d(0, ${ty.toFixed(1)}px, 0) scale(${sc.toFixed(3)}) rotate(-1.6deg)`;
+      welcome.style.pointerEvents = wRaw > 0.02 ? 'auto' : 'none';
+    }
+    split.style.setProperty('--converge', eased.toFixed(3));
+    outer.dataset.progress = raw.toFixed(3);
+    // ── NAV Dynamic Island — same raw as hero, scroll-driven, reversible ──
+    if(window.__vortexNavApply) window.__vortexNavApply(raw);
+    // below-hero reversible: only after WELCOME TO fully finished (raw>=0.75), fade in when in view; reverse when scrolling back below 0.75
+    const belowEls = document.querySelectorAll('.below-hero-reveal');
+    belowEls.forEach(el=>{
+      const r=el.getBoundingClientRect();
+      const inView = r.top < window.innerHeight * 0.86 && r.bottom > 0;
+      if(raw >= 0.75 && inView){
+        el.classList.add('visible');
+      } else if(raw < 0.75){
+        el.classList.remove('visible');
+      }
+    });
+  }
+  function onScroll(){ if(!ticking){ ticking=true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll, {passive:true});
+  window.addEventListener('orientationchange', ()=> setTimeout(update, 250));
+  update();
+  const revObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target)}})},{threshold:0.12});
+  document.querySelectorAll('.vf-card, .metric').forEach(el=>{el.classList.add('reveal');revObs.observe(el)});
+  // Scroll hint — plain centered, fades on first scroll
+  (function(){
+    const hint=document.getElementById('scrollHint');
+    const heroEls=document.querySelectorAll('.hero-scroll-reveal');
+    if(!hint) return;
+    const reduce2=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduce2){ hint.style.display='none'; heroEls.forEach(el=>el.classList.add('visible')); return; }
+    let revealed=false;
+    function onFirstScroll(){
+      const y=window.scrollY||window.pageYOffset||0;
+      if(y>16 && !revealed){
+        revealed=true;
+        hint.style.opacity='0';
+        setTimeout(()=>{ hint.style.display='none'; },520);
+        heroEls.forEach(el=> el.classList.add('visible'));
+        window.removeEventListener('scroll', onFirstScroll);
+      }
+    }
+    window.addEventListener('scroll', onFirstScroll, {passive:true});
+    // if already scrolled on reload, reveal immediately
+    if((window.scrollY||0)>16) onFirstScroll();
+  })();
+})();
+</script>
+<script src="assets/aurora.js"></script>
+<script>(function(){var el=document.getElementById('aurora-bg'); if(el && window.Aurora) new Aurora(el,{colorStops:['#7B2FFF','#9D5CFF','#FF3AF2'],amplitude:0.9,blend:0.42,speed:0.65}); })();</script>
+<script src="whatsapp-float.js"></script>
+<script src="assets/vortex-interactions.js"></script>
+<script>
+// Home: Welcome to Vortex scroll — fresh only on reload or logo click; hamburger return suppresses intro
+(function(){
+  try{
+    var KEY_DONE='vfm_home_welcome_done';
+    var KEY_SCROLL='vfm_home_scrollY';
+    var KEY_FORCE='vfm_logo_home';
+    var outer=document.getElementById('heroPinOuter');
+    // Detect reload vs normal navigation
+    var isReload=false;
+    try{
+      var navEntries=performance.getEntriesByType && performance.getEntriesByType('navigation');
+      if(navEntries && navEntries[0]) isReload = navEntries[0].type === 'reload';
+      else if(performance.navigation) isReload = performance.navigation.type === 1;
+    }catch(e){}
+    var forceFresh=false;
+    try{ forceFresh = sessionStorage.getItem(KEY_FORCE) === '1'; }catch(e){}
+    if(forceFresh){
+      try{ sessionStorage.removeItem(KEY_FORCE); }catch(e){}
+      try{ sessionStorage.removeItem(KEY_DONE); sessionStorage.removeItem(KEY_SCROLL); }catch(e){}
+      if('scrollRestoration' in history) history.scrollRestoration='auto';
+    } else if(isReload){
+      try{ sessionStorage.removeItem(KEY_DONE); sessionStorage.removeItem(KEY_SCROLL); }catch(e){}
+      if('scrollRestoration' in history) history.scrollRestoration='auto';
+    } else {
+      // Internal hamburger/back navigation: restore last scroll without intro
+      var done=null, saved=null;
+      try{ done=sessionStorage.getItem(KEY_DONE); saved=sessionStorage.getItem(KEY_SCROLL); }catch(e){}
+      if(done && saved!==null){
+        var y=parseInt(saved,10);
+        if(!isNaN(y) && y>0){
+          if('scrollRestoration' in history) history.scrollRestoration='manual';
+          requestAnimationFrame(function(){
+            requestAnimationFrame(function(){
+              window.scrollTo(0, y);
+              var hint=document.getElementById('scrollHint');
+              if(hint && y>16){ hint.style.opacity='0'; hint.style.display='none'; }
+              window.dispatchEvent(new Event('scroll'));
+            });
+          });
+        } else {
+          if('scrollRestoration' in history) history.scrollRestoration='manual';
+        }
+      } else {
+        if('scrollRestoration' in history) history.scrollRestoration='auto';
+      }
+    }
+    // Save scroll + mark done when Welcome completed (raw >=0.75) — only for future hamburger returns
+    var tick=false;
+    function save(){
+      try{ sessionStorage.setItem(KEY_SCROLL, String(window.scrollY||0)); }catch(e){}
+      if(outer){
+        var total=Math.max(1, outer.offsetHeight - window.innerHeight);
+        var raw=Math.max(0, Math.min(1, -outer.getBoundingClientRect().top / total));
+        if(raw >= 0.75){
+          try{ sessionStorage.setItem(KEY_DONE,'1'); }catch(e){}
+        }
+      }
+    }
+    window.addEventListener('scroll', function(){
+      if(tick) return;
+      tick=true;
+      requestAnimationFrame(function(){ tick=false; save(); });
+    }, {passive:true});
+    window.addEventListener('beforeunload', save);
+    window.addEventListener('pagehide', save);
+  }catch(e){}
+})();
+</script>
+</body>
+</html>
+

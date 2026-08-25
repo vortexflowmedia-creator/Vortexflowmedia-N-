@@ -1,0 +1,521 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services. VortexFlow Media</title>
+<meta name="description" content="Premium creative services: Web Design & Website Creation, Video Editing, Creative Writing & Editing, Thumbnail Design, Logo Design, Social Media Design. High end design. Bold visuals. Flawless execution.">
+<link rel="canonical" href="https://vortexflowmedia.vercel.app/services.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vortexflowmedia.vercel.app/services.html">
+<meta property="og:title" content="Services — VortexFlow Media">
+<meta property="og:description" content="Premium creative services: Web Design, Video Editing, Creative Writing, Thumbnail Design, Logo Design, Social Media Design.">
+<meta property="og:image" content="https://vortexflowmedia.vercel.app/assets/projects/vortex-1.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Creative Services","provider":{"@type":"Organization","name":"VortexFlow Media","url":"https://vortexflowmedia.vercel.app/"},"areaServed":"IN","hasOfferCatalog":{"@type":"OfferCatalog","name":"Creative Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Web Design & Website Creation"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Video Editing"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Creative Writing & Editing"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Thumbnail Design"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Logo Design"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Social Media Design"}}]}}</script>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@400;500;600;700;800;900&family=Unbounded:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vortex.css">
+<style>
+.svc-number{font-family:var(--font-display);font-weight:900;font-size:56px;line-height:0.9;letter-spacing:-0.04em;color:rgba(185,140,255,0.18);margin-bottom:8px}
+.svc-number em{font-style:normal;background:linear-gradient(135deg,var(--primary),var(--bright));-webkit-background-clip:text;-webkit-text-fill-color:transparent;opacity:0.55}
+.svc-title{font-family:var(--font-display);font-weight:800;letter-spacing:-0.03em;line-height:1.05;font-size:20px;margin-bottom:8px;transition:transform var(--fast), color var(--fast)}
+.vf-card:hover .svc-title{transform:translateX(3px);color:#fff}
+.svc-desc{font-size:14px;line-height:1.6;color:var(--muted);margin-bottom:12px}
+.svc-list{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 14px}
+.svc-list li{font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);background:rgba(9,7,15,0.7);border:1px solid rgba(123,47,255,0.14);padding:6px 10px;border-radius:100px;transition:all var(--fast)}
+.vf-card:hover .svc-list li{border-color:rgba(123,47,255,0.28);transform:translateY(-1px)}
+.svc-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.divider{height:1px;background:linear-gradient(90deg, var(--g-border), transparent);margin:12px 0}
+@media(max-width:768px){.svc-number{font-size:42px}.svc-title{font-size:18px}}
+
+/* FEATURED WEB DESIGNING — HERO CARD */
+.featured-web{
+  padding:0 !important;
+  min-height:460px;
+  overflow:hidden;
+  border-width:3.5px;
+  background:
+    radial-gradient(ellipse 520px 380px at 88% 18%, rgba(255,58,242,0.14), transparent 65%),
+    radial-gradient(ellipse 640px 420px at 12% 78%, rgba(123,47,255,0.18), transparent 68%),
+    radial-gradient(ellipse 500px 500px at 50% 50%, rgba(76,29,149,0.22), transparent 70%),
+    rgba(26,18,48,0.94);
+  box-shadow:12px 12px 0 var(--deep), 20px 20px 0 rgba(123,47,255,0.18), 0 0 60px rgba(123,47,255,0.28), 0 0 100px rgba(255,58,242,0.14);
+}
+.featured-web::before{opacity:0.95}
+.featured-web .bg-feature{
+  position:absolute;
+  font-family:var(--font-display);
+  font-weight:900;
+  font-size:15rem;
+  line-height:0.8;
+  letter-spacing:-0.06em;
+  color:var(--bright);
+  opacity:0.05;
+  top:18px;
+  left:-12px;
+  pointer-events:none;
+  user-select:none;
+  white-space:nowrap;
+  transform:rotate(-3deg);
+}
+.featured-web .featured-inner{
+  display:grid;
+  grid-template-columns:1.45fr 0.85fr;
+  min-height:460px;
+  position:relative;
+  z-index:1;
+}
+.featured-web .featured-left{
+  padding:38px 36px 32px;
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.featured-web .featured-right{
+  background:rgba(9,7,15,0.48);
+  border-left:1.5px solid var(--g-border);
+  padding:32px 28px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:16px;
+  position:relative;
+  backdrop-filter:blur(10px);
+}
+.featured-web .svc-title.featured-title{
+  font-size:clamp(32px,4vw,44px);
+  line-height:0.92;
+  letter-spacing:-0.04em;
+  margin-bottom:12px;
+}
+.featured-web .svc-desc.featured-desc{
+  font-size:15px;
+  line-height:1.65;
+  max-width:52ch;
+  margin-bottom:16px;
+}
+.featured-web .price-cut.featured{
+  margin:18px 0 8px;
+  padding:16px 18px;
+  background:rgba(9,7,15,0.55);
+  border:1.5px solid var(--g-border);
+  border-radius:20px;
+  backdrop-filter:blur(8px);
+}
+.featured-web .price-cut.featured .price-main .current{font-size:42px}
+.featured-web .eyebrow-feature{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-family:var(--font-display);
+  font-weight:900;
+  font-size:10px;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:#fff;
+  background:linear-gradient(135deg, var(--primary), var(--accent));
+  padding:7px 12px;
+  border-radius:100px;
+  border:1.5px solid rgba(255,255,255,0.6);
+  box-shadow:0 3px 16px rgba(255,58,242,0.3);
+  transform:rotate(-1deg);
+  margin-bottom:14px;
+}
+.remaining-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+  margin-top:22px;
+  perspective:1200px;
+}
+.remaining-grid .vf-card:last-child{
+  grid-column:1 / -1;
+  max-width:calc(50% - 10px);
+  margin:0 auto;
+  width:100%;
+}
+@media(max-width:900px){
+  .featured-web .featured-inner{grid-template-columns:1fr;min-height:auto}
+  .featured-web .featured-right{border-left:none;border-top:1.5px solid var(--g-border)}
+  .featured-web .bg-feature{font-size:9rem;top:8px;opacity:0.04}
+  .remaining-grid{grid-template-columns:1fr;gap:16px}
+  .remaining-grid .vf-card:last-child{grid-column:auto;max-width:100%;margin:0}
+}
+@media(max-width:768px){
+  .featured-web{min-height:auto}
+  .featured-web .featured-left{padding:28px 22px 24px}
+  .featured-web .featured-right{padding:24px 20px}
+  .featured-web .svc-title.featured-title{font-size:30px}
+}
+</style>
+</head>
+<body>
+<div class="bg-layers" aria-hidden="true"></div>
+<div id="aurora-bg" style="position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:0.45"></div>
+
+<div class="nav-shell">
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html" class="nav-brand" aria-label="Home">
+      <img src="new%20logo-Photoroom.png" alt="vortexflow media" width="220" height="32" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="nav-brand-fallback" style="display:none">vortexflow <em>media</em></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="works.html">Our Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="team.html">Our Team</a></li>
+    </ul>
+    <div class="nav-actions"><a href="contact.html" class="nav-cta btn-magnetic">Start a Project</a>
+    </div>
+    <button class="m-menu-btn" id="mMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mMenu"><span class="m-menu-btn__box" aria-hidden="true"><span class="m-menu-btn__line"></span><span class="m-menu-btn__line"></span><span class="m-menu-btn__line"></span></span></button>
+  </nav>
+</div>
+<div class="m-menu" id="mMenu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="m-menu__backdrop" data-close></div>
+  <div class="m-menu__panel" role="document">
+    <div class="m-menu__head"><span class="m-menu__eyebrow">Navigation</span><span class="m-menu__sub">VortexFlow Media • Premium Studio</span></div>
+    <nav class="m-menu__nav" aria-label="Mobile primary">
+      <a class="m-link" href="index.html"><span class="m-link__num">01</span><span class="m-link__text">Home</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link is-active" href="services.html"><span class="m-link__num">02</span><span class="m-link__text">Services</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="works.html"><span class="m-link__num">03</span><span class="m-link__text">Our Portfolio</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="contact.html"><span class="m-link__num">04</span><span class="m-link__text">Contact</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="team.html"><span class="m-link__num">05</span><span class="m-link__text">Our Team</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="privacy-policy.html"><span class="m-link__num">06</span><span class="m-link__text">Privacy Policy</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="terms.html"><span class="m-link__num">07</span><span class="m-link__text">Terms and Conditions</span><span class="m-link__arrow">↗</span></a>
+    </nav>
+    <div class="m-menu__foot"><a class="m-menu__cta" href="contact.html">Start a Project →</a><div class="m-menu__meta"><span>✦ 20+ Projects</span><span>✦ 98% Satisfaction</span><a href="https://wa.me/917815880701" target="_blank" rel="noopener">WhatsApp ↗</a></div></div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" style="min-height:62vh;padding-bottom:40px">
+  <div class="hero-bg" aria-hidden="true"><div class="hero-orb a"></div><div class="hero-orb b"></div></div>
+  <div class="bg-word" style="--base:-4deg;top:10%;left:50%;transform:translate(-50%,0) rotate(var(--base));text-align:center;width:90%;font-size:clamp(4rem,11vw,14rem);overflow:visible">SERVICES</div>
+  <div class="bg-word" style="--base:2deg;bottom:6%;right:-6%;font-size:11rem;opacity:0.032;transform:rotate(var(--base))">STUDIO</div>
+  <div class="cross" style="left:8%;top:18%"></div>
+  <div class="star" style="right:14%;top:16%">✦</div>
+  <div class="section-inner" style="text-align:center;max-width:780px">
+    <div class="eyebrow" style="margin-bottom:16px"><i></i> VortexFlow Media. What We Do</div>
+    <h1 class="h-1">SER<span class="accent-text">VICES</span></h1>
+    <p class="lead" style="margin:16px auto 0;text-align:center">Premium creative solutions for brands, creators, and businesses. <strong>High end design. Bold visuals. Flawless execution.</strong> No fluff. Just craft that converts.</p>
+    <div style="margin-top:18px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+      <span class="pill">✦ Edited to perfection</span>
+      <span class="pill">✦ Built for scale</span>
+      <span class="pill" style="border-style:dashed">✦ Price cut visuals live</span>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" style="padding-top:28px">
+  <div class="section-inner">
+    <div style="display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:28px">
+      <div>
+        <div class="eyebrow" style="margin-bottom:10px">Our Services</div>
+        <h2 class="h-2" style="font-size:clamp(28px,4vw,48px)">Everything you need<br>to <span class="accent-text">stand out</span></h2>
+      </div>
+      <p class="lead" style="max-width:420px;font-size:15px">Six core crafts. Each with a real price cut. Hover to feel the slash. Featured plan hits hardest.</p>
+    </div>
+
+    <!-- FEATURED: WEB DESIGNING — FULL WIDTH LANDSCAPE -->
+    <div class="vf-card tilt-card featured-price featured-web" data-original="5999" data-current="3799" style="--base:0deg;">
+      <div class="tilt-glow" aria-hidden="true"></div>
+      <div class="bg-feature" aria-hidden="true">WEB</div>
+      <div class="ring" style="width:220px;height:220px;top:-40px;right:18%;opacity:0.22;border-style:dashed"></div>
+      <div class="ring" style="width:140px;height:140px;bottom:-20px;right:36%;opacity:0.18"></div>
+      <div class="star" style="top:18px;right:24px;font-size:18px;opacity:0.7">✦</div>
+      <div class="star" style="bottom:22px;left:32%;font-size:10px">✦</div>
+      <div class="featured-inner">
+        <div class="featured-left">
+          <div class="tilt-content" style="display:flex;flex-direction:column;gap:0">
+            <div class="svc-number" style="font-size:64px;margin-bottom:6px"><em>01</em></div>
+            <div class="eyebrow-feature">Most Popular ★ Featured. Hero Service</div>
+            <h3 class="svc-title featured-title">Web Design &amp;<br>Website Creation</h3>
+            <p class="svc-desc featured-desc">Modern, responsive, UI focused websites built for brands that demand the best. Editorial layouts, fast loads, no bloat. We architect <strong style="color:#fff">premium digital experiences</strong> that convert visitors into believers. Not templates, but identities.</p>
+            <div class="divider" style="margin:16px 0"></div>
+            <ul class="svc-list" style="margin:8px 0 0">
+              <li>Business Websites</li><li>Portfolio</li><li>Landing Pages</li><li>Premium Modern</li><li>Responsive</li><li>UI Focused</li><li>Custom Creation</li>
+            </ul>
+          </div>
+        </div>
+        <div class="featured-right">
+          <div class="tilt-content" style="display:flex;flex-direction:column;gap:16px;width:100%">
+            <div style="display:flex;align-items:center;gap:8px">
+              <span style="width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent);display:inline-block"></span>
+              <span style="font-family:var(--font-display);font-weight:800;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--soft)">Starts at. Limited slots</span>
+            </div>
+            <div class="price-cut featured" style="margin:0">
+              <div class="price-top">
+                <span class="original-wrap"><span class="original">₹5,999</span><span class="slash"></span></span>
+                <span class="discount-badge pulse">-37% OFF</span>
+              </div>
+              <div class="price-main">
+                <span class="current" id="price-webdesign">₹3,799</span><small>onwards</small>
+                <span class="save">Save ₹2,200</span>
+                <span class="price-underline"></span>
+              </div>
+              <div style="font-size:11px;color:var(--muted);margin-top:6px;letter-spacing:0.04em">One time • Responsive • CMS ready • 14 day support</div>
+            </div>
+            <div class="svc-actions" style="margin-top:4px">
+              <a href="contact.html" class="btn btn-primary btn-magnetic" style="flex:1;justify-content:center">Learn More →</a>
+              <a href="works.html" class="btn btn-ghost btn-magnetic" style="flex:1;justify-content:center">Portfolio →</a>
+            </div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:2px">
+              <span class="pill" style="font-size:10px;padding:6px 10px">↗ Live preview</span>
+              <span class="pill" style="font-size:10px;padding:6px 10px;border-style:dashed">✦ Avg. 7 day delivery</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REMAINING 5 SERVICES -->
+    <div class="remaining-grid" id="servicesGrid" style="perspective:1200px">
+
+      <!-- 02 Video -->
+      <div class="vf-card tilt-card" data-original="999" data-current="499" style="--base:0.9deg;padding:28px 24px">
+        <div class="tilt-glow" aria-hidden="true"></div>
+        <div class="tilt-content">
+          <div class="svc-number">02</div>
+          <div class="svc-title">Video Editing</div>
+          <div class="svc-desc">Professional video editing for creators, brands, and businesses. Short & long form. Rhythm, story, punch.</div>
+          <div class="divider"></div>
+          <div class="price-cut">
+            <div class="price-top">
+              <span class="original-wrap"><span class="original">₹999</span><span class="slash"></span></span>
+              <span class="discount-badge">-50%</span>
+            </div>
+            <div class="price-main">
+              <span class="current" id="price-video">₹499</span><small>onwards</small>
+              <span class="save">Save ₹500</span>
+              <span class="price-underline"></span>
+            </div>
+          </div>
+          <ul class="svc-list">
+            <li>Long Form</li><li>Short Form</li><li>Social Media</li><li>Cinematic</li><li>Content</li><li>Creator & Brand</li>
+          </ul>
+          <a href="contact.html" class="btn btn-ghost btn-sm btn-magnetic" style="width:100%;justify-content:center">Learn More →</a>
+        </div>
+      </div>
+
+      <!-- 03 Creative Writing -->
+      <div class="vf-card tilt-card" data-original="599" data-current="299" style="--base:-0.5deg;padding:28px 24px;background:#1A1230">
+        <div class="tilt-glow" aria-hidden="true"></div>
+        <div class="tilt-content">
+          <div class="svc-number">03</div>
+          <div class="svc-title">Creative Writing<br>&amp; Editing</div>
+          <div class="svc-desc">Words that captivate. Editing that refines. Content that connects. Blogs, scripts, brand voice.</div>
+          <div class="divider"></div>
+          <div class="price-cut">
+            <div class="price-top">
+              <span class="original-wrap"><span class="original">₹599</span><span class="slash"></span></span>
+              <span class="discount-badge">-50%</span>
+            </div>
+            <div class="price-main">
+              <span class="current" id="price-writing">₹299</span><small>onwards</small>
+              <span class="save">Save ₹300</span>
+              <span class="price-underline"></span>
+            </div>
+          </div>
+          <ul class="svc-list">
+            <li>Blog Writing</li><li>Content Writing</li><li>Creative Writing</li><li>Editing & Refining</li><li>Digital Content</li>
+          </ul>
+          <a href="contact.html" class="btn btn-ghost btn-sm btn-magnetic" style="width:100%;justify-content:center">Learn More →</a>
+        </div>
+      </div>
+
+      <!-- 04 Thumbnail -->
+      <div class="vf-card tilt-card" data-original="249" data-current="99" style="--base:0.6deg;padding:28px 24px">
+        <div class="tilt-glow" aria-hidden="true"></div>
+        <div class="tilt-content">
+          <div class="svc-number">04</div>
+          <div class="svc-title">Thumbnail Design</div>
+          <div class="svc-desc">Bold thumbnails that stop the scroll and drive clicks. High contrast, high intent.</div>
+          <div class="divider"></div>
+          <div class="price-cut">
+            <div class="price-top">
+              <span class="original-wrap"><span class="original">₹249</span><span class="slash"></span></span>
+              <span class="discount-badge">-60%</span>
+            </div>
+            <div class="price-main">
+              <span class="current" id="price-thumbnail">₹99</span><small>onwards</small>
+              <span class="save">Save ₹150</span>
+              <span class="price-underline"></span>
+            </div>
+          </div>
+          <ul class="svc-list"><li>YouTube</li><li>Instagram</li></ul>
+          <a href="contact.html" class="btn btn-ghost btn-sm btn-magnetic" style="width:100%;justify-content:center">Learn More →</a>
+        </div>
+      </div>
+
+      <!-- 05 Logo -->
+      <div class="vf-card tilt-card" data-original="299" data-current="99" style="--base:-1deg;padding:28px 24px;border-color:var(--soft)">
+        <div class="tilt-glow" aria-hidden="true"></div>
+        <div class="tilt-content">
+          <div style="position:absolute;top:12px;right:12px;background:var(--accent);color:#fff;font-family:var(--font-display);font-weight:900;font-size:9px;letter-spacing:0.1em;padding:5px 10px;border-radius:100px;transform:rotate(2deg);z-index:2">NEW</div>
+          <div class="svc-number">05</div>
+          <div class="svc-title">Logo Design</div>
+          <div class="svc-desc">Distinctive logos that define your brand identity. Minimal to bold, always memorable.</div>
+          <div class="divider"></div>
+          <div class="price-cut">
+            <div class="price-top">
+              <span class="original-wrap"><span class="original">₹299</span><span class="slash"></span></span>
+              <span class="discount-badge" style="background:linear-gradient(135deg,#7B2FFF,#FF3AF2)">-67%</span>
+            </div>
+            <div class="price-main">
+              <span class="current" id="price-logo">₹99</span><small>onwards</small>
+              <span class="save">Save ₹200</span>
+              <span class="price-underline"></span>
+            </div>
+          </div>
+          <ul class="svc-list"><li>Minimal</li><li>Modern</li><li>Luxury</li><li>Gaming</li><li>Business</li><li>Mascot</li><li>Custom</li></ul>
+          <a href="contact.html" class="btn btn-primary btn-sm btn-magnetic" style="width:100%">Learn More →</a>
+        </div>
+      </div>
+
+      <!-- 06 Social -->
+      <div class="vf-card tilt-card soft" data-original="399" data-current="199" style="--base:0.3deg;padding:28px 24px">
+        <div class="tilt-glow" aria-hidden="true"></div>
+        <div class="tilt-content">
+          <div class="svc-number">06</div>
+          <div class="svc-title">Social Media<br>Design</div>
+          <div class="svc-desc">Scroll stopping social creatives that elevate your brand presence across every platform.</div>
+          <div class="divider"></div>
+          <div class="price-cut">
+            <div class="price-top">
+              <span class="original-wrap"><span class="original">₹399</span><span class="slash"></span></span>
+              <span class="discount-badge">-50%</span>
+            </div>
+            <div class="price-main">
+              <span class="current" id="price-social">₹199</span><small>onwards</small>
+              <span class="save">Save ₹200</span>
+              <span class="price-underline"></span>
+            </div>
+          </div>
+          <ul class="svc-list"><li>Instagram Posts</li><li>Social Creatives</li><li>Promotional</li><li>Brand Visuals</li></ul>
+          <a href="contact.html" class="btn btn-ghost btn-sm btn-magnetic" style="width:100%;justify-content:center">Learn More →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT STACK -->
+<section class="section" style="padding-top:24px">
+  <div class="bg-word" style="--base:2deg;top:12%;right:-2%;font-size:11rem;opacity:0.03;transform:rotate(var(--base))">CRAFT</div>
+  <div class="section-inner" style="max-width:780px;text-align:center">
+    <div class="eyebrow" style="margin-bottom:12px">About Our Services</div>
+    <h2 class="h-2" style="margin-bottom:14px">Built for <span class="accent-text">impact</span></h2>
+    <p class="lead" style="margin:0 auto 28px;text-align:center">VortexFlow Media delivers modern creative solutions with a premium, polished approach. Clean design, strong visuals, creative execution for creators, brands, and businesses.</p>
+    <div style="display:grid;gap:10px;max-width:520px;margin:0 auto;text-align:left">
+      <div class="vf-card tilt-card soft" style="--base:-0.4deg;padding:14px 18px;border-radius:100px;display:flex;align-items:center;gap:14px;transform:rotate(var(--base))"><span style="font-family:var(--font-display);font-weight:900;color:var(--soft)">01</span><span style="font-weight:700;font-size:14px;color:var(--muted)">Web Design & Website Creation</span><span style="margin-left:auto;color:var(--soft)">→</span></div>
+      <div class="vf-card tilt-card soft" style="--base:0.4deg;padding:14px 18px;border-radius:100px;display:flex;align-items:center;gap:14px;transform:rotate(var(--base))"><span style="font-family:var(--font-display);font-weight:900;color:var(--soft)">02</span><span style="font-weight:700;font-size:14px;color:var(--muted)">Video Editing</span><span style="margin-left:auto;color:var(--soft)">→</span></div>
+      <div class="vf-card tilt-card soft" style="--base:0deg;padding:14px 18px;border-radius:100px;display:flex;align-items:center;gap:14px;transform:rotate(var(--base))"><span style="font-family:var(--font-display);font-weight:900;color:var(--soft)">03</span><span style="font-weight:700;font-size:14px;color:var(--muted)">Creative Writing & Editing</span><span style="margin-left:auto;color:var(--soft)">→</span></div>
+      <div class="vf-card tilt-card soft" style="--base:-0.3deg;padding:14px 18px;border-radius:100px;display:flex;align-items:center;gap:14px;transform:rotate(var(--base))"><span style="font-family:var(--font-display);font-weight:900;color:var(--soft)">04</span><span style="font-weight:700;font-size:14px;color:var(--muted)">Thumbnail Design</span><span style="margin-left:auto;color:var(--soft)">→</span></div>
+      <div class="vf-card tilt-card soft" style="--base:0.3deg;padding:14px 18px;border-radius:100px;display:flex;align-items:center;gap:14px;transform:rotate(var(--base))"><span style="font-family:var(--font-display);font-weight:900;color:var(--soft)">05</span><span style="font-weight:700;font-size:14px;color:var(--muted)">Logo Design</span><span style="margin-left:auto;color:var(--soft)">→</span></div>
+      <div class="vf-card tilt-card soft" style="--base:0deg;padding:14px 18px;border-radius:100px;display:flex;align-items:center;gap:14px;transform:rotate(var(--base))"><span style="font-family:var(--font-display);font-weight:900;color:var(--soft)">06</span><span style="font-weight:700;font-size:14px;color:var(--muted)">Social Media Design</span><span style="margin-left:auto;color:var(--soft)">→</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust">
+  <div class="trust-inner">
+    <div class="trust-quote">Crafted with <span class="accent-text">precision</span>.<br>Designed to <span class="accent-text">stand out</span>.</div>
+    <div class="metrics" style="justify-content:center;max-width:440px;margin:0 auto">
+      <div class="metric tilt-card asym" style="--base:-0.9deg;transform:rotate(var(--base))"><div class="metric-num">20+</div><div class="metric-label">Projects Done</div></div>
+      <div class="metric tilt-card asym r" style="--base:0.9deg;transform:rotate(var(--base))"><div class="metric-num">98%</div><div class="metric-label">Client Satisfaction</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding:60px 24px;text-align:center;border-top:1px solid var(--g-border);background:linear-gradient(180deg, transparent, rgba(18,13,31,0.8))">
+  <div class="vf-card tilt-card" style="--base:-0.4deg;max-width:680px;margin:0 auto;padding:36px 24px;transform:rotate(var(--base))">
+    <div class="tilt-glow" aria-hidden="true"></div>
+    <div class="tilt-content">
+      <h2 class="h-2" style="font-size:clamp(28px,4vw,48px);margin-bottom:12px">Ready to elevate<br><span class="accent-text">your brand?</span></h2>
+      <p class="lead" style="margin:0 auto 22px;text-align:center">Let’s talk about your project and find the perfect approach for your vision.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg btn-magnetic">Start Your Project →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="brand-mini"><img src="white%20logo%20no%20bg.png" alt="" onerror="this.style.display='none'"> vortexflow media</div>
+  <p>&copy; 2026 VortexFlow Media. <a href="index.html">Home</a> · <a href="services.html">Services</a> · <a href="works.html">Our Portfolio</a> · <a href="contact.html">Contact</a> · <a href="team.html">Our Team</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="admin.html" class="admin-link" aria-label="Admin">⚙</a></p>
+</footer>
+
+<script>
+// pricing fetch (preserve) — update current price and recompute discount
+(function(){
+  var MAP={'price-webdesign':'service_webdesign_price','price-video':'service_video_price','price-writing':'service_writing_price','price-thumbnail':'service_thumbnail_price','price-logo':'service_logo_price','price-social':'service_social_price'};
+  var ORIG={'price-webdesign':5999,'price-video':999,'price-writing':599,'price-thumbnail':249,'price-logo':299,'price-social':399};
+  fetch('/api/content').then(r=>r.json()).then(c=>{
+    Object.keys(MAP).forEach(id=>{
+      var el=document.getElementById(id),key=MAP[id];
+      if(el&&c[key]!==undefined){
+        var p=c[key].split(' '),num=p[0].replace(/,/g,''),lab=p.slice(1).join(' ')||'onwards';
+        var n=parseInt(num,10);
+        el.innerHTML='₹'+Number(n).toLocaleString('en-IN')+' <small>'+lab+'</small>';
+        var card=el.closest('.price-cut');
+        if(card){
+          var orig=ORIG[id];
+          if(orig && n){
+            var pct=Math.round((1-n/orig)*100);
+            var save=orig-n;
+            var badge=card.querySelector('.discount-badge');
+            var saveEl=card.querySelector('.save');
+            var origEl=card.querySelector('.original');
+            if(badge) badge.textContent='-'+pct+'%';
+            if(saveEl) saveEl.textContent='Save ₹'+save.toLocaleString('en-IN');
+            if(origEl) origEl.textContent='₹'+orig.toLocaleString('en-IN');
+          }
+        }
+      }
+    });
+    setTimeout(()=>document.querySelectorAll('.original-wrap').forEach(w=>w.classList.add('sliced')), 300);
+  }).catch(()=>{
+    setTimeout(()=>document.querySelectorAll('.original-wrap').forEach(w=>w.classList.add('sliced')), 600);
+  });
+  setTimeout(()=>document.querySelectorAll('.original-wrap').forEach(w=>w.classList.add('sliced')), 900);
+})();
+// reveal
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.12});
+document.querySelectorAll('.vf-card, .metric').forEach(el=>{el.classList.add('reveal');obs.observe(el)});
+</script>
+<script src="assets/aurora.js"></script>
+<script>(function(){var el=document.getElementById('aurora-bg'); if(el && window.Aurora) new Aurora(el,{colorStops:['#7B2FFF','#9D5CFF','#FF3AF2'],amplitude:0.8,blend:0.38,speed:0.7});})();</script>
+<script src="whatsapp-float.js"></script>
+<script src="assets/vortex-interactions.js"></script>
+<script>
+// subtle auto-scroll: Services hero → Our Services on page open (no design change)
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const hero = document.querySelector('section.hero');
+  const target = document.querySelector('section.hero + section.section');
+  if(!hero || !target) return;
+  let cancelled = false;
+  const cancel = ()=>{ cancelled = true; };
+  window.addEventListener('wheel', cancel, {passive:true, once:true});
+  window.addEventListener('touchstart', cancel, {passive:true, once:true});
+  window.addEventListener('keydown', cancel, {once:true});
+  window.addEventListener('load', ()=>{
+    setTimeout(()=>{
+      if(cancelled) return;
+      if(window.scrollY > 40) return;
+      const navH = 68;
+      const top = target.getBoundingClientRect().top + window.scrollY - navH;
+      window.scrollTo({top, behavior:'smooth'});
+    }, 1100);
+  });
+})();
+</script>
+</body>
+</html>
+

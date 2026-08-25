@@ -1,0 +1,53 @@
+<!-- ============================================ -->
+<!-- Live Pricing — paste before </body> on any   -->
+<!-- page that should display live content from   -->
+<!-- Supabase (services.html for pricing,         -->
+<!-- index.html for stats, contact.html for info) -->
+<!-- ============================================ -->
+
+<!--
+  STEP 1: Add id attributes to your price/contact/stat elements.
+          For price elements, wrap the number:
+            <span id="price-webdesign">3799 onwards</span>
+          For contact/stats, add id directly:
+            <span id="contact-phone-text">+91 7815880701</span>
+
+  STEP 2: Paste this script before </body>. It handles both pricing
+          (formats "999 onwards" → "₹999 <small>onwards</small>")
+          and plain text values (phone, email, stats).
+-->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script>
+(function () {
+  const supabase = window.supabase.createClient(
+    'https://bucelcptyosulatkkpuw.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ1Y2VsY3B0eW9zdWxhdGtrcHV3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE3ODczODAsImV4cCI6MjA5NzM2MzM4MH0.ESuc1IPVr6HBgFZ492MyJdZKkij8Oev5HwrwNnDqfQE'
+  );
+
+  const PRICE_KEYS = ['service_webdesign_price','service_video_price','service_writing_price','service_thumbnail_price','service_logo_price','service_social_price'];
+  const PRICE_IDS = ['price-webdesign','price-video','price-writing','price-thumbnail','price-logo','price-social'];
+  const PLAIN_MAP = {
+    'contact-phone-text':'contact_phone','contact-email-text':'contact_email',
+    'stat-projects':'stat_projects_done','stat-satisfaction':'stat_client_satisfaction'
+  };
+
+  supabase.from('site_content').select('key,value').then(function(r){
+    if (r.error||!r.data) return;
+    var c={};r.data.forEach(function(row){c[row.key]=row.value});
+
+    PRICE_IDS.forEach(function(id,i){
+      var el=document.getElementById(id),key=PRICE_KEYS[i];
+      if (el&&c[key]!==undefined){
+        var p=c[key].split(' '),num=p[0],lab=p.slice(1).join(' ')||'onwards';
+        el.innerHTML='₹'+num+' <small>'+lab+'</small>';
+      }
+    });
+
+    Object.keys(PLAIN_MAP).forEach(function(id){
+      var el=document.getElementById(id),key=PLAIN_MAP[id];
+      if (el&&c[key]!==undefined) el.textContent=c[key];
+    });
+  });
+})();
+</script>

@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Team. VortexFlow Media</title>
+<meta name="description" content="Meet the VortexFlow Media team — creative minds behind premium web design, video editing, thumbnail design, and brand visuals.">
+<link rel="canonical" href="https://vortexflowmedia.vercel.app/team.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vortexflowmedia.vercel.app/team.html">
+<meta property="og:title" content="Our Team — VortexFlow Media">
+<meta property="og:description" content="Meet the VortexFlow Media team — creative minds behind premium web design, video editing, and brand visuals.">
+<meta property="og:image" content="https://vortexflowmedia.vercel.app/assets/projects/vortex-1.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@400;500;600;700;800;900&family=Unbounded:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vortex.css">
+<style>
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;max-width:900px;margin:0 auto}
+.team-card{padding:32px 24px;text-align:center;position:relative}
+.team-avatar{width:92px;height:92px;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;font-family:var(--font-display);font-weight:900;font-size:30px;color:#fff;letter-spacing:-0.04em;border:3px solid var(--soft);box-shadow:0 0 24px rgba(123,47,255,0.35), 4px 4px 0 var(--deep)}
+.team-name{font-family:var(--font-display);font-weight:800;letter-spacing:-0.03em;font-size:18px;color:#fff;margin-bottom:4px}
+.team-role{font-family:var(--font-display);font-weight:800;letter-spacing:0.14em;text-transform:uppercase;font-size:10px;color:var(--soft);margin-bottom:12px}
+.team-desc{font-size:13px;line-height:1.6;color:var(--muted);max-width:300px;margin:0 auto}
+.team-links{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.team-links a{width:40px;height:40px;border-radius:50%;background:rgba(26,18,48,0.9);border:1.5px solid var(--g-border);display:grid;place-items:center;transition:all var(--fast);text-decoration:none}
+.team-links a:hover{transform:translateY(-2px);border-color:var(--soft);box-shadow:0 6px 18px rgba(123,47,255,0.25)}
+@media(max-width:768px){.team-grid{grid-template-columns:1fr;gap:16px}.team-card{padding:26px 18px}}
+</style>
+</head>
+<body>
+<div class="bg-layers" aria-hidden="true"></div>
+<div id="aurora-bg" style="position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:0.45"></div>
+
+<div class="nav-shell">
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html" class="nav-brand"><img src="new%20logo-Photoroom.png" alt="vortexflow media" width="220" height="32" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="nav-brand-fallback" style="display:none">vortexflow <em>media</em></span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="works.html">Our Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="team.html" class="active">Our Team</a></li>
+    </ul>
+    <div class="nav-actions"><a href="contact.html" class="nav-cta">Start a Project</a>
+    </div>
+    <button class="m-menu-btn" id="mMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mMenu"><span class="m-menu-btn__box" aria-hidden="true"><span class="m-menu-btn__line"></span><span class="m-menu-btn__line"></span><span class="m-menu-btn__line"></span></span></button>
+  </nav>
+</div>
+<div class="m-menu" id="mMenu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="m-menu__backdrop" data-close></div>
+  <div class="m-menu__panel" role="document">
+    <div class="m-menu__head"><span class="m-menu__eyebrow">Navigation</span><span class="m-menu__sub">VortexFlow Media • Premium Studio</span></div>
+    <nav class="m-menu__nav" aria-label="Mobile primary">
+      <a class="m-link" href="index.html"><span class="m-link__num">01</span><span class="m-link__text">Home</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="services.html"><span class="m-link__num">02</span><span class="m-link__text">Services</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="works.html"><span class="m-link__num">03</span><span class="m-link__text">Our Portfolio</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="contact.html"><span class="m-link__num">04</span><span class="m-link__text">Contact</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link is-active" href="team.html"><span class="m-link__num">05</span><span class="m-link__text">Our Team</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="privacy-policy.html"><span class="m-link__num">06</span><span class="m-link__text">Privacy Policy</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="terms.html"><span class="m-link__num">07</span><span class="m-link__text">Terms and Conditions</span><span class="m-link__arrow">↗</span></a>
+    </nav>
+    <div class="m-menu__foot"><a class="m-menu__cta" href="contact.html">Start a Project →</a><div class="m-menu__meta"><span>✦ 20+ Projects</span><span>✦ 98% Satisfaction</span><a href="https://wa.me/917815880701" target="_blank" rel="noopener">WhatsApp ↗</a></div></div>
+  </div>
+</div>
+
+<section class="hero" style="min-height:52vh;padding-bottom:28px">
+  <div class="hero-bg" aria-hidden="true"><div class="hero-orb a"></div><div class="hero-orb b"></div></div>
+  <div class="bg-word" style="top:8%;left:-2%;--base:-3deg;transform:rotate(var(--base))">TEAM</div>
+  <div class="section-inner" style="text-align:center;max-width:760px">
+    <div class="eyebrow" style="margin-bottom:14px"><i></i> People Behind the Pixels</div>
+    <h1 class="h-1">MEET THE <span class="accent-text">TEAM</span></h1>
+    <p class="lead" style="margin:14px auto 0;text-align:center">The creative minds behind VortexFlow Media. <strong>Passionate about design, obsessed with quality.</strong> Small team, big outcomes.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:24px">
+  <div class="section-inner">
+    <div style="text-align:center;max-width:640px;margin:0 auto 32px">
+      <div class="eyebrow" style="margin-bottom:12px">Who We Are</div>
+      <h2 class="h-2" style="font-size:clamp(28px,4vw,48px)">Built by <span class="accent-text">creatives</span>,<br>driven by <span class="accent-text">purpose</span></h2>
+      <p class="lead" style="margin:12px auto 0;text-align:center;font-size:15px">A small team with big ideas. We craft digital experiences that leave a lasting impression.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="vf-card tilt-card team-card" style="--base:-0.6deg;transform:rotate(var(--base))">
+        <div class="ring dashed" style="width:120px;height:120px;top:-22px;right:-22px;opacity:0.35"></div>
+        <div class="team-avatar" style="background:linear-gradient(135deg,#7B2FFF,#9D5CFF)">SS</div>
+        <div class="team-name">Yeluri Srivastav Sai</div>
+        <div class="team-role">Founder & Creative Lead</div>
+        <div class="team-desc">Visionary behind VortexFlow Media. Specializes in web design, video editing, and brand strategy. Every pixel is intentional. Founder led, hands on.</div>
+        <div class="team-links">
+          <a href="https://instagram.com/srivastavsai_yeluri" target="_blank" rel="noopener" aria-label="Instagram"><svg viewbox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--soft)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="5"></circle><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"></circle></svg></a>
+          <a href="mailto:srivastavsaiyeluri@gmail.com" aria-label="Email"><svg viewbox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--muted)" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M2 4l10 8 10-8"></path></svg></a>
+        </div>
+        <div style="margin-top:14px;display:inline-flex;gap:6px;flex-wrap:wrap;justify-content:center">
+          <span class="pill" style="font-size:10px;padding:5px 10px">Web Design</span><span class="pill" style="font-size:10px;padding:5px 10px">Video Editing</span><span class="pill" style="font-size:10px;padding:5px 10px;border-style:dashed">Brand Strategy</span>
+        </div>
+      </div>
+
+      <div class="vf-card tilt-card team-card" style="--base:0.7deg;border-style:dashed;margin-top:14px;transform:rotate(var(--base))">
+        <div class="team-avatar" style="background:linear-gradient(135deg,#FF3AF2,#9D5CFF)">VF</div>
+        <div class="team-name">VortexFlow Collective</div>
+        <div class="team-role">Design & Development</div>
+        <div class="team-desc">A network of skilled creatives handling visual design, motion graphics, thumbnail art, and social media content. On demand brilliance.</div>
+        <div class="team-links">
+          <a href="https://instagram.com/vortexflowmedia" target="_blank" rel="noopener" aria-label="Instagram"><svg viewbox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--soft)" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="5"></circle><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"></circle></svg></a>
+          <a href="mailto:vortexflowmedia@gmail.com" aria-label="Email"><svg viewbox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--muted)" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M2 4l10 8 10-8"></path></svg></a>
+        </div>
+        <div style="margin-top:14px;display:inline-flex;gap:6px;flex-wrap:wrap;justify-content:center">
+          <span class="pill" style="font-size:10px;padding:5px 10px">Visual Design</span><span class="pill" style="font-size:10px;padding:5px 10px">Motion</span><span class="pill" style="font-size:10px;padding:5px 10px;border-style:dashed">Social</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="vf-card tilt-card" style="max-width:760px;margin:28px auto 0;padding:18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;--base:-0.3deg;transform:rotate(var(--base))">
+      <div style="font-family:var(--font-display);font-weight:900;font-size:22px;letter-spacing:-0.03em;color:var(--soft)">VF</div>
+      <div style="flex:1;min-width:200px">
+        <div style="font-family:var(--font-display);font-weight:800;font-size:14px">We work as one studio</div>
+        <div style="font-size:13px;color:var(--muted)">Founder led quality + collective scale. No bloated agency overhead, no junior roulette.</div>
+      </div>
+      <a href="contact.html" class="btn btn-magnetic btn-primary btn-sm">Work With Us →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding:48px 24px;text-align:center;border-top:1px solid var(--g-border);background:linear-gradient(180deg, transparent, rgba(18,13,31,0.82))">
+  <div class="vf-card tilt-card" style="max-width:640px;margin:0 auto;padding:32px 24px;--base:-0.4deg;transform:rotate(var(--base))">
+    <h2 class="h-2" style="font-size:clamp(26px,4vw,44px);margin-bottom:10px">Want to work<br><span class="accent-text">with us?</span></h2>
+    <p style="color:var(--muted);margin-bottom:18px">We’d love to hear about your next project. Let’s create something extraordinary together.</p>
+    <a href="contact.html" class="btn btn-magnetic btn-primary">Start Your Project →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="brand-mini"><img src="white%20logo%20no%20bg.png" alt="" onerror="this.style.display='none'"> vortexflow media</div>
+  <p>&copy; 2026 VortexFlow Media. <a href="index.html">Home</a> · <a href="services.html">Services</a> · <a href="works.html">Our Portfolio</a> · <a href="contact.html">Contact</a> · <a href="team.html">Our Team</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="admin.html" class="admin-link" aria-label="Admin">⚙</a></p>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.12});
+document.querySelectorAll('.vf-card').forEach(el=>{el.classList.add('reveal');obs.observe(el)});
+</script>
+<script src="assets/aurora.js"></script>
+<script>(function(){var el=document.getElementById('aurora-bg'); if(el && window.Aurora) new Aurora(el,{colorStops:['#7B2FFF','#9D5CFF','#FF3AF2'],amplitude:0.8,blend:0.38,speed:0.7});})();</script>
+<script src="whatsapp-float.js"></script>
+<script src="assets/vortex-interactions.js"></script>
+<script>
+// subtle auto-scroll: hero → next section on page open (same as Services)
+(function(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const hero = document.querySelector('section.hero');
+  const target = document.querySelector('section.hero + section.section');
+  if(!hero || !target) return;
+  let cancelled = false;
+  const cancel = ()=>{ cancelled = true; };
+  window.addEventListener('wheel', cancel, {passive:true, once:true});
+  window.addEventListener('touchstart', cancel, {passive:true, once:true});
+  window.addEventListener('keydown', cancel, {once:true});
+  window.addEventListener('load', ()=>{
+    setTimeout(()=>{
+      if(cancelled) return;
+      if(window.scrollY > 40) return;
+      const navH = 68;
+      const top = target.getBoundingClientRect().top + window.scrollY - navH;
+      window.scrollTo({top, behavior:'smooth'});
+    }, 1100);
+  });
+})();
+</script>
+</body>
+</html>
+

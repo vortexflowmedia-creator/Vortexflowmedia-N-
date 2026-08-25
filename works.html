@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Works. VortexFlow Media</title>
+<meta name="description" content="Explore VortexFlow Media's portfolio — VAS Edits, VortexFlow Media agency site, Sarees Web e-commerce, BA Flight 2363 case study, Mun video project, Plywood video project. View our live work.">
+<link rel="canonical" href="https://vortexflowmedia.vercel.app/works.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vortexflowmedia.vercel.app/works.html">
+<meta property="og:title" content="Works — VortexFlow Media">
+<meta property="og:description" content="Explore our portfolio: VAS Edits, VortexFlow Media, Sarees Web, BA Flight 2363, Mun, Plywood.">
+<meta property="og:image" content="https://vortexflowmedia.vercel.app/assets/projects/vas-1.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@400;500;600;700;800;900&family=Unbounded:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vortex.css">
+<style>
+.works-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;align-items:start}
+.work-card{position:relative;border-radius:24px;overflow:hidden;background:var(--elevated);border:3px solid var(--primary);box-shadow:8px 8px 0 var(--deep), 0 0 36px rgba(123,47,255,0.18);transition:transform var(--ease), box-shadow var(--ease)}
+.work-card:hover{transform:translate(-4px,-4px) rotate(-0.4deg);box-shadow:12px 12px 0 var(--deep), 0 0 52px rgba(123,47,255,0.24)}
+.work-card img,.work-card video{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.7s var(--ease)}
+.work-card:hover img,.work-card:hover video{transform:scale(1.04)}
+.work-overlay{position:absolute;inset:0;background:linear-gradient(to top, rgba(9,7,15,0.92) 0%, rgba(9,7,15,0.45) 38%, rgba(9,7,15,0.06) 66%, transparent 84%);pointer-events:none}
+.work-info{position:absolute;bottom:0;left:0;right:0;padding:18px 18px 16px;z-index:2}
+.work-label{font-family:var(--font-display);font-size:9px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,var(--primary),var(--bright));padding:6px 10px;border-radius:100px;display:inline-flex;margin-bottom:10px;box-shadow:0 2px 10px rgba(123,47,255,0.35)}
+.work-title{font-family:var(--font-display);font-weight:800;letter-spacing:-0.03em;line-height:0.95;font-size:20px;color:#fff;margin-bottom:6px}
+.work-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.work-actions a{font-family:var(--font-display);font-weight:800;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;padding:8px 14px;border-radius:100px;text-decoration:none;transition:all var(--fast)}
+.work-actions .primary{background:linear-gradient(135deg,var(--primary),var(--bright));color:#fff;border:2px solid var(--soft);box-shadow:3px 3px 0 var(--deep)}
+.work-actions .ghost{background:rgba(255,255,255,0.08);color:#fff;border:1.5px solid rgba(255,255,255,0.14);backdrop-filter:blur(8px)}
+.work-actions a:hover{transform:translateY(-1px)}
+.work-card.span-12{grid-column:span 12;aspect-ratio:16/7}
+.work-card.span-7{grid-column:span 7;aspect-ratio:4/3}
+.work-card.span-5{grid-column:span 5;aspect-ratio:4/3}
+.work-card.span-6{grid-column:span 6;aspect-ratio:16/10}
+.work-card.span-8{grid-column:span 8;aspect-ratio:16/9}
+.work-card.span-4{grid-column:span 4;aspect-ratio:3/4}
+.work-card.tall{aspect-ratio:3/4.2}
+@media(max-width:900px){
+  .works-grid{grid-template-columns:1fr;gap:16px}
+  .work-card.span-12,.work-card.span-7,.work-card.span-5,.work-card.span-6,.work-card.span-8,.work-card.span-4{grid-column:span 1;aspect-ratio:16/10}
+  .work-card.tall{aspect-ratio:16/10}
+}
+</style>
+</head>
+<body>
+<div class="bg-layers" aria-hidden="true"></div>
+<div id="aurora-bg" style="position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:0.45"></div>
+
+<div class="nav-shell">
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html" class="nav-brand"><img src="new%20logo-Photoroom.png" alt="vortexflow media" width="220" height="32" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="nav-brand-fallback" style="display:none">vortexflow <em>media</em></span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="works.html" class="active">Our Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="team.html">Our Team</a></li>
+    </ul>
+    <div class="nav-actions"><a href="contact.html" class="nav-cta">Start a Project</a>
+    </div>
+    <button class="m-menu-btn" id="mMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mMenu"><span class="m-menu-btn__box" aria-hidden="true"><span class="m-menu-btn__line"></span><span class="m-menu-btn__line"></span><span class="m-menu-btn__line"></span></span></button>
+  </nav>
+</div>
+<div class="m-menu" id="mMenu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="m-menu__backdrop" data-close></div>
+  <div class="m-menu__panel" role="document">
+    <div class="m-menu__head"><span class="m-menu__eyebrow">Navigation</span><span class="m-menu__sub">VortexFlow Media • Premium Studio</span></div>
+    <nav class="m-menu__nav" aria-label="Mobile primary">
+      <a class="m-link" href="index.html"><span class="m-link__num">01</span><span class="m-link__text">Home</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="services.html"><span class="m-link__num">02</span><span class="m-link__text">Services</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link is-active" href="works.html"><span class="m-link__num">03</span><span class="m-link__text">Our Portfolio</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="contact.html"><span class="m-link__num">04</span><span class="m-link__text">Contact</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="team.html"><span class="m-link__num">05</span><span class="m-link__text">Our Team</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="privacy-policy.html"><span class="m-link__num">06</span><span class="m-link__text">Privacy Policy</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="terms.html"><span class="m-link__num">07</span><span class="m-link__text">Terms and Conditions</span><span class="m-link__arrow">↗</span></a>
+    </nav>
+    <div class="m-menu__foot"><a class="m-menu__cta" href="contact.html">Start a Project →</a><div class="m-menu__meta"><span>✦ 20+ Projects</span><span>✦ 98% Satisfaction</span><a href="https://wa.me/917815880701" target="_blank" rel="noopener">WhatsApp ↗</a></div></div>
+  </div>
+</div>
+
+<section class="hero" style="min-height:58vh;padding-bottom:32px">
+  <div class="hero-bg" aria-hidden="true"><div class="hero-orb a"></div><div class="hero-orb b"></div></div>
+  <div class="bg-word" style="top:8%;left:-2%;--base:-3deg;transform:rotate(var(--base))">WORKS</div>
+  <div class="bg-word" style="bottom:2%;right:-4%;font-size:11rem;opacity:0.03">SHOWCASE</div>
+  <div class="cross" style="left:7%;top:20%"></div>
+  <div class="section-inner" style="text-align:center;max-width:780px">
+    <div class="eyebrow" style="margin-bottom:14px"><i></i> Portfolio. Live & Crafted</div>
+    <h1 class="h-1">OUR <span class="accent-text">PORTFOLIO</span></h1>
+    <p class="lead" style="margin:14px auto 0;text-align:center">A curated selection. 6 live sites + 2 cinematic video projects. Each one crafted with precision and purpose.</p>
+    <p style="margin-top:18px;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;font-weight:800;color:var(--muted);animation:fade 1.2s ease 1s both">↓ Scroll to explore. Broken grid, loud but controlled</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:18px">
+  <div class="section-inner">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px">
+      <div class="eyebrow">Live Projects. 6 deployed</div>
+      <div style="display:flex;gap:8px;align-items:center">
+        <span class="pill" style="font-size:11px">✦ All live • Click to view</span>
+        <span class="pill" style="border-style:dashed">Custom order preserved</span>
+      </div>
+    </div>
+
+    <div class="works-grid" id="worksGrid">
+
+      <!-- VAS Edits — FULL -->
+      <div class="work-card tilt-card span-12" style="--base:-0.4deg;transform:rotate(var(--base))">
+        <a href="project.html?project=vas-edits" aria-label="VAS Edits" style="position:absolute;inset:0;z-index:3"></a>
+        <img src="assets/projects/vas-1.png" alt="VAS Edits" loading="eager">
+        <div class="work-overlay"></div>
+        <div class="work-info">
+          <div class="work-label">01. Video Portfolio • Featured</div>
+          <div class="work-title">VAS Edits</div>
+          <div style="font-size:13px;color:rgba(255,255,255,0.72)">Professional video editing portfolio. High end editing for creators and brands.</div>
+          <div class="work-actions">
+            <a href="project.html?project=vas-edits" class="primary">View Project →</a>
+            <a href="https://vas-edits.vercel.app" target="_blank" rel="noopener" class="ghost">Visit Website ↗</a>
+          </div>
+        </div>
+        <div class="ring dashed" style="width:160px;height:160px;top:-22px;right:18%;opacity:0.45"></div>
+      </div>
+
+      <!-- VortexFlow — 7 cols -->
+      <div class="work-card tilt-card span-7" style="--base:0.6deg;transform:rotate(var(--base))">
+        <a href="project.html?project=vortex" aria-label="VortexFlow Media" style="position:absolute;inset:0;z-index:3"></a>
+        <img src="assets/projects/vortex-1.png" alt="VortexFlow Media" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-info">
+          <div class="work-label">02. Agency Site</div>
+          <div class="work-title">VortexFlow Media</div>
+          <div class="work-actions">
+            <a href="project.html?project=vortex" class="primary">View →</a>
+            <a href="https://vortexflowmedia.vercel.app" target="_blank" rel="noopener" class="ghost">Visit ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sarees Web — 5 cols -->
+      <div class="work-card tilt-card span-5" style="--base:-0.6deg;border-style:dashed;transform:rotate(var(--base))">
+        <a href="project.html?project=sarees-web" aria-label="Sarees Web" style="position:absolute;inset:0;z-index:3"></a>
+        <img src="assets/projects/SW%201.png" alt="Sarees Web" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-info">
+          <div class="work-label">03. Ecommerce</div>
+          <div class="work-title">Sarees Web</div>
+          <div class="work-actions">
+            <a href="project.html?project=sarees-web" class="primary">View →</a>
+            <a href="https://sareesweb.vercel.app" target="_blank" rel="noopener" class="ghost">Visit ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Epic Gym — 5 cols -->
+      <div class="work-card tilt-card span-5 tall" style="--base:-0.5deg;transform:rotate(var(--base))">
+        <a href="project.html?project=gym" aria-label="Epic Gym" style="position:absolute;inset:0;z-index:3"></a>
+        <img src="assets/projects/gym1.png" alt="Epic Gym" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-info">
+          <div class="work-label">04. Web Design</div>
+          <div class="work-title">Epic Gym</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.7)">Premium fitness destination. Memberships, trainers, transformations.</div>
+          <div class="work-actions">
+            <a href="project.html?project=gym" class="primary">View →</a>
+            <a href="https://gymvortexsample.vercel.app" target="_blank" rel="noopener" class="ghost">Visit ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SmileCare — 7 cols stacked -->
+      <div class="work-card tilt-card span-7" style="--base:0.7deg;transform:rotate(var(--base))">
+        <a href="project.html?project=dental" aria-label="SmileCare Dental" style="position:absolute;inset:0;z-index:3"></a>
+        <img src="assets/projects/den1.png" alt="SmileCare Dental" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-info">
+          <div class="work-label">05. Web Design</div>
+          <div class="work-title">SmileCare Dental</div>
+          <div class="work-actions">
+            <a href="project.html?project=dental" class="primary">View →</a>
+            <a href="https://dentalclinicvortex.vercel.app" target="_blank" rel="noopener" class="ghost">Visit ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BA Flight — 8 cols -->
+      <div class="work-card tilt-card span-8" style="--base:-0.3deg;border-color:var(--soft);transform:rotate(var(--base))">
+        <a href="project.html?project=ba-flight" aria-label="BA Flight 2363" style="position:absolute;inset:0;z-index:3"></a>
+        <img src="assets/projects/ba-1.png" alt="BA Flight 2363" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-info">
+          <div class="work-label">06. Case Study</div>
+          <div class="work-title">BA Flight 2363</div>
+          <div class="work-actions">
+            <a href="project.html?project=ba-flight" class="primary">View →</a>
+            <a href="https://ba-flight-2363.vercel.app" target="_blank" rel="noopener" class="ghost">Visit ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mun — 4 cols video -->
+      <div class="work-card tilt-card span-4" style="--base:0.9deg;background:#1A1230;transform:rotate(var(--base))">
+        <a href="project.html?project=mun" aria-label="Mun" style="position:absolute;inset:0;z-index:3"></a>
+        <video src="assets/projects/MUN%20SAMPLE%20WEBSITE.mp4" muted loop playsinline autoplay poster></video>
+        <div class="work-overlay" style="background:linear-gradient(to top, rgba(9,7,15,0.9) 0%, rgba(9,7,15,0.3) 50%, transparent 100%)"></div>
+        <div class="work-info">
+          <div class="work-label" style="background:var(--accent)">07. Video Project</div>
+          <div class="work-title">Mun</div>
+          <div class="work-actions"><a href="project.html?project=mun" class="primary">View Project →</a></div>
+        </div>
+        <div class="star" style="top:12px;right:14px;color:#fff">✦</div>
+      </div>
+
+      <!-- Plywood — 12 full video -->
+      <div class="work-card tilt-card span-12" style="--base:0.4deg;border-style:solid;transform:rotate(var(--base))">
+        <a href="project.html?project=plywood" aria-label="Plywood" style="position:absolute;inset:0;z-index:3"></a>
+        <video src="assets/projects/PLYWOOD%20WEBSITE%20SAMPLE.mp4" muted loop playsinline autoplay poster style="height:420px"></video>
+        <div class="work-overlay"></div>
+        <div class="work-info" style="display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap">
+          <div>
+            <div class="work-label" style="background:rgba(255,255,255,0.14);border:1px solid rgba(255,255,255,0.16)">08. Video Project</div>
+            <div class="work-title" style="font-size:28px">Plywood</div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.7)">Plywood themed website sample. Clean layout, material warmth.</div>
+          </div>
+          <div class="work-actions"><a href="project.html?project=plywood" class="primary">View Project →</a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="trust-inner">
+    <div class="trust-quote">Crafted with <span class="accent-text">precision</span>.<br>Designed to <span class="accent-text">stand out</span>.</div>
+    <div class="metrics" style="justify-content:center;max-width:440px;margin:0 auto">
+      <div class="metric tilt-card asym"><div class="metric-num">20+</div><div class="metric-label">Projects Done</div></div>
+      <div class="metric tilt-card asym r"><div class="metric-num">98%</div><div class="metric-label">Client Satisfaction</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding:60px 24px;text-align:center;border-top:1px solid var(--g-border);background:linear-gradient(180deg, transparent, rgba(18,13,31,0.85))">
+  <div class="vf-card tilt-card" style="max-width:680px;margin:0 auto;padding:36px 24px;--base:-0.4deg;transform:rotate(var(--base))">
+    <h2 class="h-2" style="font-size:clamp(26px,4vw,44px);margin-bottom:12px">Have a project<br><span class="accent-text">in mind?</span></h2>
+    <p class="lead" style="margin:0 auto 22px;text-align:center">Let’s create something extraordinary together. Your idea, our craft. Delivered premium.</p>
+    <a href="contact.html" class="btn btn-magnetic btn-primary btn-lg">Start Your Project →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="brand-mini"><img src="white%20logo%20no%20bg.png" alt="" onerror="this.style.display='none'"> vortexflow media</div>
+  <p>&copy; 2026 VortexFlow Media. <a href="index.html">Home</a> · <a href="services.html">Services</a> · <a href="works.html">Our Portfolio</a> · <a href="contact.html">Contact</a> · <a href="team.html">Our Team</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="admin.html" class="admin-link" aria-label="Admin">⚙</a></p>
+</footer>
+
+<script>
+
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.12});
+document.querySelectorAll('.work-card, .metric').forEach(el=>{el.classList.add('reveal');obs.observe(el)});
+// lazy video play
+const vObs=new IntersectionObserver(es=>{
+  es.forEach(en=>{
+    const v=en.target.querySelector('video');
+    if(!v) return;
+    if(en.isIntersecting){v.play().catch(()=>{})} else {v.pause()}
+  });
+},{threshold:0.25});
+document.querySelectorAll('.work-card').forEach(c=>vObs.observe(c));
+// trust numbers animate
+(function(){
+  function anim(el){var m=el.textContent.trim().match(/^([\d,]+)(.*)$/);if(!m)return;var t=parseInt(m[1].replace(/,/g,''),10),s=m[2],d=1200,st=null;function step(ts){if(!st) st=ts;var e=Math.min((ts-st)/d,1),v=Math.round(t*(e<.5?2*e*e:1-Math.pow(-2*e+2,2)/2));el.textContent=v+s;if(e<1)requestAnimationFrame(step)}requestAnimationFrame(step)}
+  var o2=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){anim(en.target);o2.unobserve(en.target)}})},{threshold:0.5});
+  document.querySelectorAll('.metric-num').forEach(el=>o2.observe(el));
+})();
+</script>
+<script src="assets/aurora.js"></script>
+<script>(function(){var el=document.getElementById('aurora-bg'); if(el && window.Aurora) new Aurora(el,{colorStops:['#7B2FFF','#9D5CFF','#FF3AF2'],amplitude:0.85,blend:0.38,speed:0.7});})();</script>
+<script src="whatsapp-float.js"></script>
+<script src="assets/vortex-interactions.js"></script>
+</body>
+</html>
+

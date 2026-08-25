@@ -1,0 +1,10 @@
+# VortexFlow Media - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://vortexflowmedia.vercel.app/sitemap.xml
+
+# Disallow admin and API
+Disallow: /admin.html
+Disallow: /api/

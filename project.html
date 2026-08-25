@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>Project. VortexFlow Media</title><meta name="description" content="View project details for VortexFlow Media portfolio projects including VAS Edits, VortexFlow Media, Sarees Web, BA Flight 2363, Mun, and Plywood."><link rel="canonical" href="https://vortexflowmedia.vercel.app/project.html"><meta property="og:type" content="website"><meta property="og:url" content="https://vortexflowmedia.vercel.app/project.html"><meta property="og:title" content="Project — VortexFlow Media"><meta property="og:description" content="View project details for VortexFlow Media portfolio projects."><meta property="og:image" content="https://vortexflowmedia.vercel.app/assets/projects/vortex-1.png"><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@400;500;600;700;800;900&family=Unbounded:wght@700;800;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/vortex.css"><style>
+.page-wrap{max-width:1040px;margin:0 auto;padding:118px 24px 80px;position:relative;z-index:1}
+.project-header{margin-bottom:36px;position:relative}
+.project-back{display:inline-flex;align-items:center;gap:8px;color:var(--muted);text-decoration:none;font-family:var(--font-display);font-weight:700;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;padding:8px 14px;border-radius:100px;background:rgba(26,18,48,0.6);border:1px solid var(--g-border);transition:all var(--fast);margin-bottom:18px}
+.project-back:hover{color:#fff;border-color:var(--soft);transform:translateX(-2px)}
+.project-cat{font-family:var(--font-display);font-weight:800;letter-spacing:0.16em;text-transform:uppercase;font-size:11px;color:var(--soft);margin-bottom:8px}
+.project-title{font-family:var(--font-display);font-weight:900;letter-spacing:-0.045em;line-height:0.92;font-size:clamp(32px,5vw,56px);color:#fff;margin-bottom:10px}
+.project-desc{font-size:16px;color:var(--muted);max-width:620px;line-height:1.6;margin-bottom:18px}
+.project-actions{display:flex;gap:10px;flex-wrap:wrap}
+.project-actions a{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:100px;font-family:var(--font-display);font-weight:800;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;transition:all var(--fast)}
+.btn-p{background:linear-gradient(135deg,#7B2FFF,#9D5CFF);color:#fff;border:2.5px solid var(--soft);box-shadow:4px 4px 0 var(--deep)}
+.btn-p:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--deep)}
+.btn-e{background:rgba(26,18,48,0.7);color:#fff;border:1.5px solid var(--g-border);backdrop-filter:blur(8px)}
+.btn-e:hover{border-color:var(--soft);transform:translateY(-2px)}
+.project-gallery{display:grid;gap:18px}
+.project-gallery img{width:100%;border-radius:20px;border:3px solid var(--primary);box-shadow:6px 6px 0 var(--deep), 0 0 28px rgba(123,47,255,0.14);cursor:zoom-in;transition:transform var(--ease), box-shadow var(--ease);background:var(--elevated)}
+.project-gallery img:hover{transform:translate(-2px,-2px) scale(1.01);box-shadow:8px 8px 0 var(--deep), 0 0 36px rgba(123,47,255,0.22)}
+.project-gallery .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.project-gallery video{width:100%;border-radius:20px;border:3px solid var(--primary);box-shadow:6px 6px 0 var(--deep);background:var(--elevated)}
+.viewer{position:fixed;inset:0;z-index:10000;background:rgba(9,7,15,0.92);backdrop-filter:blur(22px) saturate(1.4);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity var(--fast),visibility var(--fast);cursor:zoom-out;padding:24px}
+.viewer.open{opacity:1;visibility:visible}
+.viewer img{max-width:min(92vw,1100px);max-height:88vh;border-radius:20px;border:3px solid var(--soft);box-shadow:0 0 48px rgba(123,47,255,0.45), 8px 8px 0 var(--deep);transform:scale(0.96);transition:transform 0.5s var(--ease);object-fit:contain;background:var(--elevated)}
+.viewer.open img{transform:scale(1)}
+@media(max-width:768px){.page-wrap{padding:100px 16px 60px}.project-gallery .two-col{grid-template-columns:1fr}.project-title{font-size:30px}}
+</style></head><body>
+<div class="bg-layers" aria-hidden="true"></div>
+<div id="aurora-bg" style="position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:0.4"></div>
+
+<div class="nav-shell"><nav class="nav" aria-label="Primary"><a href="index.html" class="nav-brand"><img src="new%20logo-Photoroom.png" alt="vortexflow media" width="220" height="32" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="nav-brand-fallback" style="display:none">vortexflow <em>media</em></span></a><div class="nav-actions"><a href="works.html" class="project-back" style="margin:0">← All Works</a>
+    </div>
+    <button class="m-menu-btn" id="mMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mMenu"><span class="m-menu-btn__box" aria-hidden="true"><span class="m-menu-btn__line"></span><span class="m-menu-btn__line"></span><span class="m-menu-btn__line"></span></span></button>
+  </nav></div><div class="m-menu" id="mMenu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Navigation menu"><div class="m-menu__backdrop" data-close></div><div class="m-menu__panel" role="document"><div class="m-menu__head"><span class="m-menu__eyebrow">Navigation</span><span class="m-menu__sub">VortexFlow Media • Premium Studio</span></div><nav class="m-menu__nav" aria-label="Mobile primary">
+      <a class="m-link" href="index.html"><span class="m-link__num">01</span><span class="m-link__text">Home</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="services.html"><span class="m-link__num">02</span><span class="m-link__text">Services</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="works.html"><span class="m-link__num">03</span><span class="m-link__text">Our Portfolio</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="contact.html"><span class="m-link__num">04</span><span class="m-link__text">Contact</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="team.html"><span class="m-link__num">05</span><span class="m-link__text">Our Team</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="privacy-policy.html"><span class="m-link__num">06</span><span class="m-link__text">Privacy Policy</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="terms.html"><span class="m-link__num">07</span><span class="m-link__text">Terms and Conditions</span><span class="m-link__arrow">↗</span></a>
+    </nav><div class="m-menu__foot"><a class="m-menu__cta" href="contact.html">Start a Project →</a><div class="m-menu__meta"><span>✦ 20+ Projects</span><span>✦ 98% Satisfaction</span><a href="https://wa.me/917815880701" target="_blank" rel="noopener">WhatsApp ↗</a></div></div></div></div>
+
+<div class="bg-word" style="top:14%;left:-1%;--base:-3deg;transform:rotate(var(--base))">PROJECT</div>
+<div class="page-wrap" id="app">
+  <div class="project-header">
+    <a href="works.html" class="project-back">← Back to Portfolio</a>
+    <div class="project-cat" id="projCat"></div>
+    <h1 class="project-title" id="projTitle"></h1>
+    <p class="project-desc" id="projDesc"></p>
+    <div class="project-actions">
+      <a href="#" id="projVisitBtn" target="_blank" rel="noopener" class="btn btn-magnetic-p">Visit Website ↗</a>
+      <a href="contact.html" class="btn btn-magnetic-e">Start Similar →</a>
+    </div>
+    <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap"><span class="pill">✦ Premium build</span><span class="pill" style="border-style:dashed">✦ Live & responsive</span></div>
+  </div>
+  <div class="project-gallery" id="projGallery"></div>
+</div>
+
+<footer class="footer"><p>&copy; 2026 VortexFlow Media. <a href="index.html">Home</a> · <a href="services.html">Services</a> · <a href="works.html">Our Portfolio</a> · <a href="contact.html">Contact</a> · <a href="team.html">Our Team</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="admin.html" class="admin-link" aria-label="Admin">⚙</a></p></footer>
+
+<div class="viewer" id="viewer"><img id="viewerImg" src="" alt=""></div>
+
+<script>
+const PROJECTS={
+  'vas-edits':{title:'VAS Edits',slug:'vas-edits',cat:'Video Portfolio',desc:'Professional video editing portfolio showcasing high end editing work for creators and brands.',url:'https://vas-edits.vercel.app',imgs:['vas-1.png','vas-2.png','vas-3.png'],layout:[{type:'full',img:'vas-1.png'},{type:'two',imgs:['vas-2.png','vas-3.png']}]},
+  'vortex':{title:'VortexFlow Media',slug:'vortex',cat:'Agency Website',desc:'Our own agency website — a premium dark-themed creative studio site built with VortexFlow identity.',url:'https://vortexflowmedia.vercel.app',imgs:['vortex-1.png','vortex-2.png','vortex-3.png'],layout:[{type:'full',img:'vortex-1.png'},{type:'two',imgs:['vortex-2.png','vortex-3.png']}]},
+  'sarees-web':{title:'Sarees Web',slug:'sarees-web',cat:'Ecommerce',desc:'A modern e-commerce storefront for traditional sarees with a clean, shoppable experience.',url:'https://sareesweb.vercel.app',imgs:['SW 1.png','SW 2.png','SW 3.png','SW 4.png'],layout:[{type:'full',img:'SW%201.png'},{type:'two',imgs:['SW%202.png','SW%203.png']},{type:'full',img:'SW%204.png'}]},
+  'gym':{title:'Epic Gym',slug:'gym',cat:'Web Design',desc:"India's premium fitness destination — a modern, high-energy website for EPIC GYM with membership plans, trainer showcases, and transformation stories.",url:'https://gymvortexsample.vercel.app',imgs:['gym1.png','gym2.png','gym3.png','gym4.png'],layout:[{type:'full',img:'gym1.png'},{type:'two',imgs:['gym2.png','gym3.png']},{type:'full',img:'gym4.png'}]},
+  'dental':{title:'SmileCare Dental',slug:'dental',cat:'Web Design',desc:'A premium dental clinic website for SmileCare Dental featuring services, patient testimonials, gallery, and online booking.',url:'https://dentalclinicvortex.vercel.app',imgs:['den1.png','den2.png','den3.png','den4.png'],layout:[{type:'full',img:'den1.png'},{type:'two',imgs:['den2.png','den3.png']},{type:'full',img:'den4.png'}]},
+  'ba-flight':{title:'BA Flight 2363',slug:'ba-flight',cat:'Project Case Study',desc:'A detailed case study project site documenting BA Flight 2363 with interactive data and visuals.',url:'https://ba-flight-2363.vercel.app',imgs:['ba-1.png','ba-2.png'],layout:[{type:'full',img:'ba-1.png'},{type:'full',img:'ba-2.png'}]},
+  'mun':{title:'Mun',slug:'mun',cat:'Video Project',desc:'A sample website video project showcasing clean design and smooth interactions.',url:'',video:'MUN%20SAMPLE%20WEBSITE.mp4',layout:[{type:'video',video:'MUN%20SAMPLE%20WEBSITE.mp4'}]},
+  'plywood':{title:'Plywood',slug:'plywood',cat:'Video Project',desc:'A website sample video project demonstrating plywood-themed design and layout.',url:'',video:'PLYWOOD%20WEBSITE%20SAMPLE.mp4',layout:[{type:'video',video:'PLYWOOD%20WEBSITE%20SAMPLE.mp4'}]}
+};
+const BASE='assets/projects/';
+const params=new URLSearchParams(location.search);
+const slug=params.get('project')||'vas-edits';
+const p=PROJECTS[slug]||PROJECTS['vas-edits'];
+document.title=p.title+' — VortexFlow Media';
+document.getElementById('projTitle').textContent=p.title;
+document.getElementById('projCat').textContent=p.cat;
+document.getElementById('projDesc').textContent=p.desc;
+document.getElementById('projVisitBtn').href=p.url;
+if(!p.url) document.getElementById('projVisitBtn').style.display='none';
+const g=document.getElementById('projGallery');
+p.layout.forEach(item=>{
+  if(item.type==='full'){
+    const img=document.createElement('img');
+    img.src=BASE+item.img;img.alt=p.title;img.loading='lazy';
+    img.addEventListener('click',function(){document.getElementById('viewerImg').src=this.src;document.getElementById('viewer').classList.add('open')});
+    g.appendChild(img);
+  }else if(item.type==='two'){
+    const wrap=document.createElement('div');wrap.className='two-col';
+    item.imgs.forEach(src=>{
+      const img=document.createElement('img');
+      img.src=BASE+src;img.alt=p.title;img.loading='lazy';
+      img.addEventListener('click',function(){document.getElementById('viewerImg').src=this.src;document.getElementById('viewer').classList.add('open')});
+      wrap.appendChild(img);
+    });
+    g.appendChild(wrap);
+  }else if(item.type==='video'){
+    const vid=document.createElement('video');
+    vid.src=BASE+item.video;vid.muted=true;vid.loop=true;vid.playsInline=true;vid.controls=true;
+    g.appendChild(vid);
+  }
+});
+const viewer=document.getElementById('viewer'), viewerImg=document.getElementById('viewerImg');
+viewer.addEventListener('click',e=>{if(e.target===viewer){viewer.classList.remove('open');viewerImg.src=''}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&viewer.classList.contains('open')){viewer.classList.remove('open');viewerImg.src=''}});
+</script>
+<script src="assets/aurora.js"></script>
+<script>(function(){var el=document.getElementById('aurora-bg'); if(el && window.Aurora) new Aurora(el,{colorStops:['#7B2FFF','#9D5CFF','#FF3AF2'],amplitude:0.8,blend:0.35,speed:0.7});})();</script>
+<script src="whatsapp-float.js"></script>
+<script src="assets/vortex-interactions.js"></script>
+</body></html>
+

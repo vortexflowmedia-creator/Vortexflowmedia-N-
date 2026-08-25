@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rate Cards. VortexFlow Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#09070F;padding:40px;display:flex;flex-direction:column;align-items:center;gap:40px;font-family:'DM Sans',sans-serif;position:relative}
+body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background:
+  radial-gradient(ellipse 800px 600px at 20% 20%, rgba(123,47,255,0.14), transparent 65%),
+  radial-gradient(ellipse 700px 600px at 80% 80%, rgba(157,92,255,0.08), transparent 65%),
+  radial-gradient(circle, rgba(123,47,255,0.22) 1px, transparent 1px);
+  background-size:auto,auto,24px 24px; opacity:0.9}
+.card{
+  width:720px;height:900px;border-radius:32px;overflow:hidden;position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  background:rgba(26,18,48,0.88);backdrop-filter:blur(14px);
+  border:3px solid #7B2FFF;
+  box-shadow:8px 8px 0 #4C1D95, 16px 16px 0 rgba(123,47,255,0.18), 0 0 50px rgba(123,47,255,0.22);
+  padding:60px;transform-style:preserve-3d;transition:transform 0.18s ease-out, box-shadow 0.28s ease;
+}
+.card::before{content:'';position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(123,47,255,0.14),transparent 68%);top:-18%;right:-14%;pointer-events:none}
+.card::after{content:'';position:absolute;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(157,92,255,0.09),transparent 68%);bottom:-14%;left:-12%;pointer-events:none}
+.badge{font-family:'Outfit',sans-serif;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#fff;font-weight:800;margin-bottom:22px;background:linear-gradient(135deg,#7B2FFF,#9D5CFF);padding:8px 16px;border-radius:100px;border:2px solid #B98CFF;box-shadow:3px 3px 0 #4C1D95;z-index:1;transform:rotate(-0.6deg)}
+.service-number{font-family:'Outfit',sans-serif;font-size:90px;line-height:1;font-weight:900;letter-spacing:-0.04em;color:rgba(185,140,255,0.14);position:absolute;top:34px;left:36px;z-index:0}
+.service-name{font-family:'Outfit',sans-serif;font-size:42px;font-weight:900;letter-spacing:-0.04em;color:#fff;text-align:center;line-height:0.95;z-index:1;margin-bottom:14px}
+.service-desc{font-size:14px;color:#B8AEC8;text-align:center;max-width:460px;margin-bottom:22px;z-index:1;line-height:1.6}
+.price-cut{display:flex;flex-direction:column;align-items:center;gap:8px;z-index:1;position:relative}
+.price-top{display:flex;align-items:center;gap:10px}
+.original-wrap{position:relative;display:inline-flex;padding:2px 4px}
+.original{font-family:'Outfit',sans-serif;font-weight:700;font-size:16px;color:rgba(184,174,200,0.55)}
+.slash{position:absolute;left:-6%;right:-6%;top:50%;height:2.5px;background:linear-gradient(90deg, transparent, #FF3AF2 18%, #7B2FFF 52%, #FF3AF2 82%, transparent);transform:translateY(-50%) rotate(-11deg) scaleX(0);transform-origin:left;border-radius:2px;box-shadow:0 0 8px rgba(255,58,242,0.45);transition:transform 0.65s cubic-bezier(0.16,1,0.3,1) 0.3s}
+.card:hover .slash, .original-wrap.sliced .slash{transform:translateY(-50%) rotate(-11deg) scaleX(1)}
+.discount-badge{font-family:'Outfit',sans-serif;font-weight:900;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,#FF3AF2,#7B2FFF);padding:6px 10px;border-radius:100px;border:1.5px solid rgba(255,255,255,0.55);box-shadow:3px 3px 0 #4C1D95, 0 0 18px rgba(255,58,242,0.35);transform:rotate(3deg);position:relative;overflow:hidden}
+.discount-badge::before{content:'';position:absolute;inset:0;background:linear-gradient(100deg, transparent 30%, rgba(255,255,255,0.28) 50%, transparent 70%);transform:translateX(-120%);animation:shine 2.8s ease-in-out 1.2s infinite}
+@keyframes shine{45%,100%{transform:translateX(120%)}0%{transform:translateX(-120%)}}
+.price-main{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;justify-content:center}
+.price{font-family:'Outfit',sans-serif;font-size:64px;line-height:1;font-weight:900;letter-spacing:-0.03em;background:linear-gradient(135deg,#fff 30%,#B98CFF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 14px rgba(123,47,255,0.28));transition:all 0.28s}
+.card:hover .price{filter:drop-shadow(0 0 22px rgba(123,47,255,0.45));transform:translateY(-1px)}
+.price-label{font-size:11px;color:#B8AEC8;text-transform:uppercase;letter-spacing:0.14em;font-weight:700;margin-left:4px}
+.save{font-family:'Outfit',sans-serif;font-weight:800;font-size:11px;color:#4ade80;background:rgba(74,222,128,0.12);border:1px solid rgba(74,222,128,0.22);padding:5px 10px;border-radius:100px}
+.features{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:22px;z-index:1;max-width:520px}
+.features span{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#B8AEC8;padding:7px 12px;border-radius:100px;background:rgba(9,7,15,0.6);border:1.5px solid rgba(123,47,255,0.18)}
+.footer-brand{position:absolute;bottom:28px;z-index:1;font-family:'Outfit',sans-serif;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#fff;font-weight:800;display:flex;align-items:center;gap:8px}
+.footer-brand img{height:20px;filter:drop-shadow(0 0 10px rgba(123,47,255,0.4))}
+@media(max-width:768px){body{padding:20px 16px}.card{width:92vw;max-width:420px;height:auto;min-height:640px;padding:32px 20px}.service-number{font-size:64px;top:20px;left:20px}.service-name{font-size:28px}.price{font-size:48px}.features{max-width:100%}}
+@media(max-width:360px){.card{width:calc(100vw - 24px)}}
+@media(prefers-reduced-motion:reduce){.slash{transform:translateY(-50%) rotate(-11deg) scaleX(1) !important}.discount-badge::before{display:none}}
+</style>
+</head>
+<body>
+<div id="aurora-bg" style="position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:0.32"></div>
+
+<!-- 01 -->
+<div class="card" style="--base:-0.3deg;transform:perspective(900px) rotate(-0.3deg)">
+  <div class="badge">VortexFlow Media. Most Popular ★</div>
+  <div class="service-number">01</div>
+  <div class="service-name">Web Design &amp;<br>Website Creation</div>
+  <div class="service-desc">Modern, responsive, UI focused websites built for brands that demand the best.</div>
+  <div class="price-cut">
+    <div class="price-top"><span class="original-wrap sliced"><span class="original">₹5,999</span><span class="slash"></span></span><span class="discount-badge">-37% OFF</span></div>
+    <div class="price-main"><span class="price" id="price-webdesign">₹3,799</span><span class="price-label">onwards</span><span class="save">Save ₹2,200</span></div>
+  </div>
+  <div class="features"><span>Business Websites</span><span>Portfolio</span><span>Landing Pages</span><span>Premium Modern</span><span>Responsive</span><span>UI focused</span><span>Custom</span></div>
+  <div class="footer-brand"><img src="white%20logo%20no%20bg.png" alt="" onerror="this.style.display='none'"> vortexflow media</div>
+</div>
+
+<!-- 02 -->
+<div class="card" style="--base:0.4deg;transform:perspective(900px) rotate(0.4deg);border-style:dashed">
+  <div class="badge">VortexFlow Media</div>
+  <div class="service-number">02</div>
+  <div class="service-name">Video Editing</div>
+  <div class="service-desc">Professional video editing for creators, brands, and businesses, in short and long form.</div>
+  <div class="price-cut">
+    <div class="price-top"><span class="original-wrap sliced"><span class="original">₹999</span><span class="slash"></span></span><span class="discount-badge">-50%</span></div>
+    <div class="price-main"><span class="price" id="price-video">₹499</span><span class="price-label">onwards</span><span class="save">Save ₹500</span></div>
+  </div>
+  <div class="features"><span>Long Form</span><span>Short Form</span><span>Social Media</span><span>Cinematic</span><span>Content</span><span>Brand Video</span></div>
+  <div class="footer-brand"><img src="white%20logo%20no%20bg.png" alt="" onerror="this.style.display='none'"> vortexflow media</div>
+</div>
+
+<!-- 03 -->
+<div class="card" style="--base:-0.4deg;transform:perspective(900px) rotate(-0.4deg)">
+  <div class="badge">VortexFlow Media</div>
+  <div class="service-number">03</div>
+  <div class="service-name">Creative Writing<br>&amp; Editing</div>
+  <div class="service-desc">Words that captivate. Editing that refines. Content that connects.</div>
+  <div class="price-cut">
+    <div class="price-top"><span class="original-wrap sliced"><span class="original">₹599</span><span class="slash"></span></span><span class="discount-badge">-50%</span></div>
+    <div class="price-main"><span class="price" id="price-writing">₹299</span><span class="price-label">onwards</span><span class="save">Save ₹300</span></div>
+  </div>
+  <div class="features"><span>Blog Writing</span><span>Content Writing</span><span>Creative Writing</span><span>Editing</span><span>Digital Content</span><span>Creative Solutions</span></div>
+  <div class="footer-brand"><img src="white%20logo%20no%20bg.png" alt="" onerror="this.style.display='none'"> vortexflow media</div>
+</div>
+
+<!-- 04 -->
+<div class="card" style="--base:0.3deg;transform:perspective(900px) rotate(0.3deg)">
+  <div class="badge">VortexFlow Media</div>
+  <div class="service-number">04</div>
+  <div class="service-name">Thumbnail Design</div>
+  <div class="service-desc">Bold thumbnails that stop the scroll and drive clicks.</div>
+  <div class="price-cut">
+    <div class="price-top"><span class="original-wrap sliced"><span class="original">₹249</span><span class="slash"></span></span><span class="discount-badge">-60%</span></div>
+    <div class="price-main"><span class="price" id="price-thumbnail">₹99</span><span class="price-label">onwards</span><span class="save">Save ₹150</span></div>
+  </div>
+  <div class="features"><span>YouTube Thumbnails</span><span>Instagram Thumbnails</span></div>
+  <div class="footer-brand"><img src="white%20logo%20no%20bg.png" alt="" onerror="this.style.display='none'"> vortexflow media</div>
+</div>
+
+<!-- 05 -->
+<div class="card" style="--base:-0.5deg;transform:perspective(900px) rotate(-0.5deg);border-color:#B98CFF;box-shadow:8px 8px 0 #4C1D95, 16px 16px 0 rgba(255,58,242,0.14), 0 0 50px rgba(123,47,255,0.22)">
+  <div class="badge" style="background:linear-gradient(135deg,#FF3AF2,#9D5CFF);border-color:#FF8AF5">VortexFlow Media • Craft</div>
+  <div class="service-number">05</div>
+  <div class="service-name">Logo Design</div>
+  <div class="service-desc">Distinctive logos that define your brand identity, from minimal to bold.</div>
+  <div class="price-cut">
+    <div class="price-top"><span class="original-wrap sliced"><span class="original">₹299</span><span class="slash"></span></span><span class="discount-badge">-67%</span></div>
+    <div class="price-main"><span class="price" id="price-logo">₹99</span><span class="price-label">onwards</span><span class="save">Save ₹200</span></div>
+  </div>
+  <div class="features"><span>Minimal</span><span>Modern</span><span>Luxury</span><span>Gaming</span><span>Business</span><span>Mascot</span><span>Custom</span></div>
+  <div class="footer-brand"><img src="white%20logo%20no%20bg.png" alt="" onerror="this.style.display='none'"> vortexflow media</div>
+</div>
+
+<!-- 06 -->
+<div class="card" style="--base:0.5deg;transform:perspective(900px) rotate(0.5deg)">
+  <div class="badge">VortexFlow Media</div>
+  <div class="service-number">06</div>
+  <div class="service-name">Social Media<br>Design</div>
+  <div class="service-desc">Social creatives that stop the scroll and elevate your brand presence.</div>
+  <div class="price-cut">
+    <div class="price-top"><span class="original-wrap sliced"><span class="original">₹399</span><span class="slash"></span></span><span class="discount-badge">-50%</span></div>
+    <div class="price-main"><span class="price" id="price-social">₹199</span><span class="price-label">onwards</span><span class="save">Save ₹200</span></div>
+  </div>
+  <div class="features"><span>Instagram Posts</span><span>Social Creatives</span><span>Promotional</span><span>Brand Visuals</span></div>
+  <div class="footer-brand"><img src="white%20logo%20no%20bg.png" alt="" onerror="this.style.display='none'"> vortexflow media</div>
+</div>
+
+<!-- 07 — Premium Combo -->
+<div class="card" style="border-color:#9D5CFF;background:linear-gradient(145deg,#120D1F,#1A1230);--base:-0.2deg;transform:perspective(900px) rotate(-0.2deg)">
+  <div class="badge" style="background:#fff;color:#4C1D95;border-color:#fff">Featured. Custom</div>
+  <div class="service-number" style="color:rgba(255,255,255,0.08)">✦</div>
+  <div class="service-name" style="font-size:40px">Custom Project</div>
+  <div class="service-desc">Tell us your vision. We'll craft the perfect solution and quote accordingly.</div>
+  <div class="price-main"><span class="price" style="font-size:52px;background:linear-gradient(135deg,#9D5CFF,#FF3AF2);-webkit-background-clip:text;background-clip:text">Let's Talk</span></div>
+  <div class="features"><span>Tailored</span><span>Premium Quality</span><span>Dedicated Support</span><span>Fast Delivery</span></div>
+  <div class="footer-brand"><img src="white%20logo%20no%20bg.png" alt="" onerror="this.style.display='none'"> vortexflow media</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script>
+(function () {
+  const supabase = window.supabase.createClient(
+    'https://bucelcptyosulatkkpuw.supabase.co',
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ1Y2VsY3B0eW9zdWxhdGtrcHV3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE3ODczODAsImV4cCI6MjA5NzM2MzM4MH0.ESuc1IPVr6HBgFZ492MyJdZKkij8Oev5HwrwNnDqfQE'
+  );
+  var MAP = {
+    'price-webdesign':'service_webdesign_price','price-video':'service_video_price',
+    'price-writing':'service_writing_price','price-thumbnail':'service_thumbnail_price',
+    'price-logo':'service_logo_price','price-social':'service_social_price'
+  };
+  var ORIG={'price-webdesign':5999,'price-video':999,'price-writing':599,'price-thumbnail':249,'price-logo':299,'price-social':399};
+  supabase.from('site_content').select('key,value').then(function(r){
+    if (r.error||!r.data) return;
+    var c={};r.data.forEach(function(row){c[row.key]=row.value});
+    Object.keys(MAP).forEach(function(id){
+      var el=document.getElementById(id),key=MAP[id];
+      if (el&&c[key]!==undefined){
+        var n=parseInt(c[key].split(' ')[0].replace(/,/g,''),10);
+        el.textContent='₹'+n.toLocaleString('en-IN');
+        var card=el.closest('.card');
+        if(card){
+          var orig=ORIG[id];
+          var pct=Math.round((1-n/orig)*100);
+          var badge=card.querySelector('.discount-badge');
+          var saveEl=card.querySelector('.save');
+          var origEl=card.querySelector('.original');
+          if(badge) badge.textContent='-'+pct+'%'+(pct>40?' OFF':'');
+          if(saveEl) saveEl.textContent='Save ₹'+(orig-n).toLocaleString('en-IN');
+          if(origEl) origEl.textContent='₹'+orig.toLocaleString('en-IN');
+        }
+      }
+    });
+  });
+})();
+</script>
+<script src="assets/aurora.js"></script>
+<script>(function(){var el=document.getElementById('aurora-bg'); if(el && window.Aurora) new Aurora(el,{colorStops:['#7B2FFF','#9D5CFF','#FF3AF2'],amplitude:0.8,blend:0.35,speed:0.7});})();</script>
+<script>
+// subtle tilt for rate cards
+document.querySelectorAll('.card').forEach(card=>{
+  const base = getComputedStyle(card).getPropertyValue('--base')||'0deg';
+  card.addEventListener('mousemove', e=>{
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const r=card.getBoundingClientRect();
+    const x=(e.clientX - r.left)/r.width -0.5;
+    const y=(e.clientY - r.top)/r.height -0.5;
+    card.style.transform=`perspective(900px) rotate(${base}) rotateY(${x*8}deg) rotateX(${-y*8}deg)`;
+  });
+  card.addEventListener('mouseleave', ()=>{card.style.transform=`perspective(900px) rotate(${base})`;});
+});
+</script>
+<script src="assets/vortex-interactions.js"></script>
+</body>
+</html>
