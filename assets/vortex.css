@@ -1014,6 +1014,6 @@ html.m-menu-open .nav-shell{z-index:1001}
 }
 /* ── CUSTOM CURSOR — vector recreation of cursor.png (global, pointer devices only) ── */
 @media (pointer: fine) and (hover: hover){
-  html{cursor:url('cursor.svg') 31 22, auto}
-  a,button,.btn,.nav-cta,.m-menu-btn,input,textarea,select,[role="button"]{cursor:url('cursor.svg') 31 22, pointer}
+  html{cursor:url('cursor.svg') 2 1, auto}
+  a,button,.btn,.nav-cta,.m-menu-btn,input,textarea,select,[role="button"]{cursor:url('cursor.svg') 2 1, pointer}
 }
