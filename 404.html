@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — VortexFlow Media</title>
+<meta name="description" content="Looks like this flow went off track — the page you’re looking for doesn’t exist. Return to VortexFlow Media.">
+<link rel="canonical" href="https://vortexflowmedia.vercel.app/404.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://vortexflowmedia.vercel.app/404.html">
+<meta property="og:title" content="404 — VortexFlow Media">
+<meta property="og:description" content="Looks like this flow went off track.">
+<meta property="og:image" content="https://vortexflowmedia.vercel.app/assets/projects/vortex-1.png">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@400;500;600;700;800;900&family=Unbounded:wght@700;800;900&family=Lobster&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/vortex.css">
+<style>
+/* 404 — premium extension of Vortex language */
+.nf-wrap{
+  position:relative;
+  min-height:100vh;
+  min-height:100dvh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:calc(var(--nav-h,48px) + 32px) 24px 40px;
+  overflow:hidden;
+}
+.nf-inner{
+  position:relative;
+  z-index:1;
+  width:100%;
+  max-width:720px;
+  margin:0 auto;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:0;
+}
+.nf-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-family:var(--font-display);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--soft);
+  background:rgba(123,47,255,0.11);
+  border:1px solid rgba(123,47,255,0.22);
+  padding:7px 12px;
+  border-radius:100px;
+}
+.nf-badge i{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent);display:inline-block}
+.nf-404-outer{
+  position:relative;
+  margin:18px auto 8px;
+  padding:18px 28px 14px;
+  border-radius:32px;
+  background:linear-gradient(180deg, rgba(26,18,48,0.42), rgba(26,18,48,0.18));
+  border:1.5px solid rgba(123,47,255,0.16);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  overflow:visible;
+  isolation:isolate;
+}
+.nf-404-outer::before{
+  content:'';
+  position:absolute;
+  inset:-1.5px;
+  border-radius:inherit;
+  background:linear-gradient(135deg, rgba(123,47,255,0.22), transparent 38%, rgba(255,58,242,0.14) 78%, transparent);
+  opacity:0.9;
+  pointer-events:none;
+  z-index:-1;
+}
+.nf-404{
+  font-family:var(--font-display);
+  font-weight:900;
+  letter-spacing:-0.065em;
+  line-height:0.84;
+  font-size:clamp(110px, 22vw, 264px);
+  color:#fff;
+  text-shadow:3px 3px 0 #7B2FFF, 6px 6px 0 #FF3AF2;
+  position:relative;
+  display:block;
+  transform:rotate(-1.1deg);
+  transform-origin:center;
+  filter:drop-shadow(0 8px 28px rgba(123,47,255,0.22));
+}
+.nf-404 span{
+  background:linear-gradient(135deg, #fff 18%, #B98CFF 52%, #fff 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  background-size:200% 100%;
+  background-position:0% 0%;
+  animation:nfShimmer 4.2s ease-in-out infinite;
+}
+@keyframes nfShimmer{0%,100%{background-position:0% 0%}50%{background-position:100% 0%}}
+.nf-404-glow{
+  position:absolute;
+  inset:-12px;
+  border-radius:inherit;
+  background:
+    radial-gradient(ellipse 520px 280px at 28% 18%, rgba(123,47,255,0.16), transparent 62%),
+    radial-gradient(ellipse 420px 320px at 82% 72%, rgba(255,58,242,0.10), transparent 60%),
+    radial-gradient(ellipse 420px 220px at 50% 50%, rgba(76,29,149,0.18), transparent 66%);
+  filter:blur(14px);
+  opacity:0.95;
+  pointer-events:none;
+  z-index:-2;
+  animation:nfGlow 7s ease-in-out infinite;
+}
+@keyframes nfGlow{0%,100%{opacity:0.9; transform:scale(1)}50%{opacity:1; transform:scale(1.02)}}
+/* orbit — path-following comet around 404 card */
+.nf-orbit{position:absolute; inset:-4px; border-radius:32px; pointer-events:none; overflow:visible}
+.nf-orbit-dot{
+  position:absolute;
+  width:6px;height:6px;
+  background:#FF8AF5;
+  border-radius:50%;
+  box-shadow:0 0 6px #FF8AF5, 0 0 12px rgba(255,138,245,0.55), 0 0 18px rgba(255,138,245,0.30);
+  offset-path:inset(0 round 32px);
+  offset-rotate:auto;
+  animation:nfOrbit 7.2s linear infinite;
+  will-change:offset-distance;
+  z-index:2;
+}
+.nf-orbit-tail{position:absolute;inset:0;pointer-events:none;z-index:1}
+.nf-orbit-tail .seg{
+  position:absolute;
+  border-radius:50%;
+  background:#FF8AF5;
+  offset-path:inset(0 round 32px);
+  offset-rotate:auto;
+  animation:nfOrbit 7.2s linear infinite;
+  will-change:offset-distance;
+}
+.nf-orbit-tail .s1{width:5px;height:5px;opacity:0.68;box-shadow:0 0 5px #FF8AF5;animation-delay:-0.22s}
+.nf-orbit-tail .s2{width:4.4px;height:4.4px;opacity:0.52;box-shadow:0 0 5px rgba(255,138,245,0.9);animation-delay:-0.44s}
+.nf-orbit-tail .s3{width:3.8px;height:3.8px;opacity:0.38;box-shadow:0 0 4px rgba(255,138,245,0.8);animation-delay:-0.66s}
+.nf-orbit-tail .s4{width:3.2px;height:3.2px;opacity:0.26;box-shadow:0 0 4px rgba(255,138,245,0.7);animation-delay:-0.88s}
+.nf-orbit-tail .s5{width:2.6px;height:2.6px;opacity:0.17;box-shadow:0 0 3px rgba(255,138,245,0.6);animation-delay:-1.10s}
+.nf-orbit-tail .s6{width:2px;height:2px;opacity:0.10;box-shadow:0 0 3px rgba(255,138,245,0.5);animation-delay:-1.32s}
+.nf-orbit-tail .s7{width:1.5px;height:1.5px;opacity:0.06;box-shadow:0 0 2px rgba(255,138,245,0.4);animation-delay:-1.54s}
+@keyframes nfOrbit{0%{offset-distance:0%}100%{offset-distance:100%}}
+/* subtle flowing line inside */
+.nf-line{
+  position:absolute;
+  left:8%;
+  right:8%;
+  bottom:10px;
+  height:1px;
+  background:linear-gradient(90deg, transparent, rgba(185,140,255,0.28), transparent);
+  opacity:0.9;
+  overflow:hidden;
+}
+.nf-line::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg, transparent, rgba(255,138,245,0.55), transparent);
+  transform:translateX(-100%);
+  animation:nfSweep 3.4s ease-in-out infinite;
+}
+@keyframes nfSweep{0%{transform:translateX(-100%)}55%{transform:translateX(100%)}100%{transform:translateX(100%)}}
+.nf-title{
+  font-family:var(--font-display);
+  font-weight:800;
+  letter-spacing:-0.03em;
+  line-height:1.05;
+  font-size:clamp(18px, 2.8vw, 22px);
+  color:#fff;
+  margin-top:14px;
+}
+.nf-sub{
+  font-family:var(--font-body);
+  font-size:14px;
+  line-height:1.6;
+  color:var(--muted);
+  max-width:420px;
+  margin:8px auto 0;
+}
+.nf-cta{margin-top:22px}
+.nf-cta .btn{will-change:transform}
+.nf-foot-note{
+  margin-top:14px;
+  font-family:var(--font-display);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--muted);
+  opacity:0.9;
+}
+@media(max-width:768px){
+  .nf-wrap{padding:calc(var(--nav-h,48px) + 18px) 16px 28px; min-height:100vh; min-height:100dvh}
+  .nf-404-outer{margin:14px auto 6px; padding:14px 18px 10px; border-radius:26px}
+  .nf-404{font-size:clamp(96px, 28vw, 176px); letter-spacing:-0.06em}
+  .nf-title{font-size:17px; margin-top:12px}
+  .nf-sub{font-size:13px; max-width:300px}
+  .nf-cta{margin-top:18px}
+  .nf-cta .btn{padding:14px 22px !important; font-size:13px !important}
+  .nf-orbit{inset:-3px}
+  .nf-orbit-dot{width:5px;height:5px}
+}
+@media(max-width:385px){
+  .nf-404-outer{padding:12px 14px 8px}
+  .nf-404{font-size:clamp(88px, 26vw, 148px)}
+  .nf-title{font-size:16px}
+  .nf-sub{font-size:12.5px}
+}
+@media(max-width:360px){
+  .nf-404{font-size:88px}
+}
+@media(prefers-reduced-motion:reduce){
+  .nf-404 span,.nf-404-glow,.nf-line::after,.nf-orbit-dot,.nf-orbit-tail .seg{animation:none !important}
+}
+</style>
+</head>
+<body>
+<div class="bg-layers" aria-hidden="true"></div>
+<div id="aurora-bg" style="position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:0.68"></div>
+
+<div class="nav-shell">
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html" class="nav-brand" aria-label="VortexFlow Media Home">
+      <img src="new%20logo-Photoroom.png" alt="vortexflow media" width="220" height="32" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="nav-brand-fallback" style="display:none">vortexflow <em>media</em></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="works.html">Our Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="team.html">Our Team</a></li>
+    </ul>
+    <div class="nav-actions"><a href="contact.html" class="nav-cta">Start a Project</a></div>
+    <button class="m-menu-btn" id="mMenuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mMenu"><span class="m-menu-btn__box" aria-hidden="true"><span class="m-menu-btn__line"></span><span class="m-menu-btn__line"></span><span class="m-menu-btn__line"></span></span></button>
+  </nav>
+</div>
+<div class="m-menu" id="mMenu" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <div class="m-menu__backdrop" data-close></div>
+  <div class="m-menu__panel" role="document">
+    <div class="m-menu__head"><span class="m-menu__eyebrow">Navigation</span><span class="m-menu__sub">VortexFlow Media • Premium Studio</span></div>
+    <nav class="m-menu__nav" aria-label="Mobile primary">
+      <a class="m-link" href="index.html"><span class="m-link__num">01</span><span class="m-link__text">Home</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="services.html"><span class="m-link__num">02</span><span class="m-link__text">Services</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="works.html"><span class="m-link__num">03</span><span class="m-link__text">Our Portfolio</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="contact.html"><span class="m-link__num">04</span><span class="m-link__text">Contact</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="team.html"><span class="m-link__num">05</span><span class="m-link__text">Our Team</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="privacy-policy.html"><span class="m-link__num">06</span><span class="m-link__text">Privacy Policy</span><span class="m-link__arrow">↗</span></a>
+      <a class="m-link" href="terms.html"><span class="m-link__num">07</span><span class="m-link__text">Terms and Conditions</span><span class="m-link__arrow">↗</span></a>
+    </nav>
+    <div class="m-menu__foot"><a class="m-menu__cta" href="contact.html">Start a Project →</a><div class="m-menu__meta"><span>✦ 20+ Projects</span><span>✦ 98% Satisfaction</span><a href="https://wa.me/917815880701" target="_blank" rel="noopener">WhatsApp ↗</a></div></div>
+  </div>
+</div>
+
+<section class="nf-wrap">
+  <div class="bg-word" style="top:10%;left:-2%;transform:rotate(-3deg);font-size:14rem;opacity:0.04">LOST</div>
+  <div class="bg-word" style="bottom:6%;right:-2%;transform:rotate(2deg);font-size:12rem;opacity:0.035">FLOW</div>
+  <div class="ring" style="width:320px;height:320px;left:-60px;top:14%;border-color:rgba(123,47,255,0.08)"></div>
+  <div class="ring dashed" style="width:200px;height:200px;right:10%;top:8%;opacity:0.45"></div>
+  <div class="cross" style="right:12%;top:18%"></div>
+  <div class="cross" style="left:14%;bottom:22%;opacity:0.5"></div>
+  <div class="star" style="left:6%;top:58%">✦</div>
+  <div class="star" style="right:16%;top:68%;font-size:10px">✦</div>
+
+  <div class="nf-inner">
+    <div class="nf-badge"><i></i> 404 — Not Found</div>
+
+    <div class="nf-404-outer" aria-label="404">
+      <div class="nf-404-glow" aria-hidden="true"></div>
+      <div class="nf-orbit" aria-hidden="true">
+        <span class="nf-orbit-dot"></span>
+        <span class="nf-orbit-tail" aria-hidden="true">
+          <span class="seg s1"></span><span class="seg s2"></span><span class="seg s3"></span><span class="seg s4"></span><span class="seg s5"></span><span class="seg s6"></span><span class="seg s7"></span>
+        </span>
+      </div>
+      <div class="nf-404"><span>404</span></div>
+      <div class="nf-line" aria-hidden="true"></div>
+    </div>
+
+    <h1 class="nf-title">Looks like this flow went off track.</h1>
+    <p class="nf-sub">The page you’re looking for doesn’t exist or has moved somewhere else.</p>
+
+    <div class="nf-cta">
+      <a href="index.html" class="btn btn-magnetic btn-primary">Back to Home →</a>
+    </div>
+    <div class="nf-foot-note">No templates • Premium only • VortexFlow Media</div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="brand-mini" aria-hidden="true"><img src="white%20logo%20no%20bg.png" alt="" onerror="this.style.display='none'"> vortexflow media</div>
+  <p>&copy; 2026 VortexFlow Media. <a href="index.html">Home</a> · <a href="services.html">Services</a> · <a href="works.html">Our Portfolio</a> · <a href="contact.html">Contact</a> · <a href="team.html">Our Team</a> · <a href="privacy-policy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="admin.html" class="admin-link" aria-label="Admin panel">⚙</a></p>
+</footer>
+
+<script src="assets/aurora.js"></script>
+<script>(function(){var el=document.getElementById('aurora-bg'); if(el && window.Aurora) new Aurora(el,{colorStops:['#7B2FFF','#9D5CFF','#FF3AF2'],amplitude:0.9,blend:0.42,speed:0.65}); })();</script>
+<script src="whatsapp-float.js"></script>
+<script src="assets/vortex-interactions.js"></script>
+</body>
+</html>
