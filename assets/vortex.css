@@ -278,18 +278,53 @@ a{color:inherit}
 .hero-thumb img{width:100%;height:100%;object-fit:cover}
 .hero-thumb video{width:100%;height:100%;object-fit:cover}
 
-/* ── MARQUEE ── */
-.marquee{
-  border-top:1.5px solid var(--g-border);border-bottom:1.5px solid var(--g-border);
-  background:rgba(18,13,31,0.92);overflow:hidden;padding:14px 0;
+/* ── TEXTLOOP — React Bits TextLoop — Full viewport width, large premium, no box/ribbon/band — fixed clipping & spacing — mobile optimized ── */
+.text-loop{
   position:relative;
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  left:0; right:0;
+  overflow-x:clip;
+  overflow-y:visible;
+  background:none;
+  background-color:transparent;
+  border:none;
+  border-top:none;
+  border-bottom:none;
+  padding:10px 0;
+  display:block;
+  max-width:100vw;
+  box-sizing:border-box;
 }
-.marquee-track{display:flex;gap:32px;animation:marq 22s linear infinite;white-space:nowrap;will-change:transform;width:max-content;flex-shrink:0}
-.marquee-track span{font-family:var(--font-display);font-weight:900;letter-spacing:0.12em;text-transform:uppercase;font-size:13px;color:var(--muted);flex-shrink:0}
-.marquee-track span i{color:var(--primary);margin-right:8px}
-@keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-/* mobile: same seamless loop but faster */
-@media(max-width:768px){ .marquee-track{animation-duration:12s} }
+.text-loop-svg{
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:440px;
+  overflow:visible;
+}
+.text-loop-text{
+  user-select:none;
+  font-family:var(--font-display);
+}
+.text-loop-measure{
+  visibility:hidden;
+  pointer-events:none;
+}
+@media(max-width:1024px){
+  .text-loop-svg{height:340px}
+}
+@media(max-width:768px){
+  .text-loop{padding:8px 0}
+  .text-loop-svg{height:260px}
+}
+@media(max-width:385px){
+  .text-loop-svg{height:200px}
+}
+@media(max-width:360px){
+  .text-loop-svg{height:180px}
+}
 
 /* ── METRICS ── */
 .metrics{display:flex;gap:18px;flex-wrap:wrap}
@@ -644,7 +679,7 @@ a{color:inherit}
 /* ── REDUCED MOTION ── */
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important}
-  .marquee-track{animation:none}
+  .text-loop-svg{animation:none}
   .bg-layers::before,.bg-layers::after{opacity:0.35}
 }
 /* ── FOCUS ── */

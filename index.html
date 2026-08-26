@@ -561,11 +561,18 @@
 </div>
 </div>
 
-<div class="marquee below-hero-reveal" aria-hidden="true" style="margin-top:500px">
-  <div class="marquee-track">
-    <span><i>✦</i> Web Design</span><span>•</span><span><i>✦</i> Video Editing</span><span>•</span><span><i>✦</i> Thumbnail Design</span><span>•</span><span><i>✦</i> Logo Design</span><span>•</span><span><i>✦</i> Social Media</span><span>•</span><span><i>✦</i> Creative Writing</span><span>•</span>
-    <span><i>✦</i> Web Design</span><span>•</span><span><i>✦</i> Video Editing</span><span>•</span><span><i>✦</i> Thumbnail Design</span><span>•</span><span><i>✦</i> Logo Design</span><span>•</span><span><i>✦</i> Social Media</span><span>•</span><span><i>✦</i> Creative Writing</span><span>•</span>
-  </div>
+<!-- TEXTLOOP — React Bits <TextLoop /> Official Reference — Full width, no box/ribbon, premium curved flow -->
+<div class="text-loop below-hero-reveal" id="textLoopRoot" aria-hidden="true" style="margin-top:500px">
+  <svg class="text-loop-svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Services">
+    <path id="text-loop-path" d="" fill="none" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" />
+    <text id="text-loop-measure" class="text-loop-measure" aria-hidden="true">M</text>
+    <text class="text-loop-text" fill="#B8AEC8" dominant-baseline="central" aria-hidden="true">
+      <textPath id="text-loop-head" href="#text-loop-path" startOffset="0"></textPath>
+    </text>
+    <text class="text-loop-text" fill="#B8AEC8" dominant-baseline="central" aria-hidden="true">
+      <textPath id="text-loop-tail" href="#text-loop-path" startOffset="0"></textPath>
+    </text>
+  </svg>
 </div>
 
 <!-- TRUST -->
@@ -756,6 +763,136 @@
 <script>(function(){var el=document.getElementById('aurora-bg'); if(el && window.Aurora) new Aurora(el,{colorStops:['#7B2FFF','#9D5CFF','#FF3AF2'],amplitude:0.9,blend:0.42,speed:0.65}); })();</script>
 <script src="whatsapp-float.js"></script>
 <script src="assets/vortex-interactions.js"></script>
+<!-- GSAP for TextLoop -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script>
+// TEXTLOOP — Vanilla port of React Bits <TextLoop /> — Official Reference (https://reactbits.dev + https://reactbits.dev/llms.txt) — Primary source TextLoop.jsx/.css — Full width, no box/ribbon/band, premium curved flow
+(function(){
+  const VIEW_W = 1200, VIEW_H = 520, CX = VIEW_W/2, CY = VIEW_H/2, EDGE_PAD = 6;
+  // Responsive premium scale — balanced across mobile/tablet/desktop (not microscopic, not dominating)
+  const getResponsive = () => {
+    const w = window.innerWidth;
+    if (w <= 360) return { fontSize: 22, letterSpacing: 1.4, curviness: 38 };
+    if (w <= 385) return { fontSize: 24, letterSpacing: 1.5, curviness: 40 };
+    if (w <= 768) return { fontSize: 28, letterSpacing: 1.8, curviness: 44 };
+    if (w <= 1024) return { fontSize: 32, letterSpacing: 2.0, curviness: 50 };
+    return { fontSize: 36, letterSpacing: 2.2, curviness: 54 };
+  };
+  const baseCfg = {
+    text: 'WEB DESIGN \u2022 VIDEO EDITING \u2022 THUMBNAIL DESIGN \u2022 LOGO DESIGN \u2022 SOCIAL MEDIA \u2022 CREATIVE WRITING',
+    shape: 'wave',
+    speed: 52,
+    direction: 'forward',
+    separator: '\u2726',
+    fontWeight: 800,
+    uppercase: true,
+    color: '#FFFFFF',
+    ribbon: false,
+    ribbonColor: 'transparent',
+    ribbonWidth: 0
+  };
+  let responsive = getResponsive();
+  const cfg = { ...baseCfg, ...responsive };
+  const buildPath = (shape, curviness, ribbonWidth) => {
+    const c = Math.max(0, curviness);
+    const room = Math.max(20, CY - Math.max(0, ribbonWidth)/2 - EDGE_PAD);
+    switch(shape){
+      case 'circle': { const r = Math.min(90 + c*0.95, room); return `M ${CX - r} ${CY} A ${r} ${r} 0 1 1 ${CX + r} ${CY} A ${r} ${r} 0 1 1 ${CX - r} ${CY} Z`; }
+      case 'infinity': { const r = 150 + c*1.4; const h = Math.min(60 + c*0.95, room); return [`M ${CX} ${CY}`,`C ${CX+r*0.55} ${CY-h} ${CX+r} ${CY-h} ${CX+r} ${CY}`,`C ${CX+r} ${CY+h} ${CX+r*0.55} ${CY+h} ${CX} ${CY}`,`C ${CX-r*0.55} ${CY-h} ${CX-r} ${CY-h} ${CX-r} ${CY}`,`C ${CX-r} ${CY+h} ${CX-r*0.55} ${CY+h} ${CX} ${CY}`,'Z'].join(' '); }
+      case 'arch': { const rise = Math.min(120 + c*1.1, room*2); return `M 120 ${CY + rise/2} Q ${CX} ${CY - rise*1.5} ${VIEW_W-120} ${CY + rise/2}`; }
+      case 'line': return `M -320 ${CY} L ${VIEW_W+320} ${CY}`;
+      case 'wave': default: { const a = Math.min(c*2.2, room*2); return `M -320 ${CY} Q -160 ${CY-a} 0 ${CY} T 320 ${CY} T 640 ${CY} T 960 ${CY} T 1280 ${CY} T ${VIEW_W+320} ${CY}`; }
+    }
+  };
+  const root = document.getElementById('textLoopRoot');
+  const pathEl = document.getElementById('text-loop-path');
+  const measureEl = document.getElementById('text-loop-measure');
+  const head = document.getElementById('text-loop-head');
+  const tail = document.getElementById('text-loop-tail');
+  if(!root || !pathEl || !measureEl || !head || !tail) return;
+  let unit = '';
+  const refreshResponsive = () => {
+    responsive = getResponsive();
+    Object.assign(cfg, responsive);
+    const d = buildPath(cfg.shape, cfg.curviness, cfg.ribbonWidth);
+    pathEl.setAttribute('d', d);
+    pathEl.setAttribute('stroke', cfg.ribbon ? cfg.ribbonColor : 'none');
+    pathEl.setAttribute('stroke-width', cfg.ribbon ? cfg.ribbonWidth : 0);
+    const base = cfg.uppercase ? String(cfg.text).toUpperCase() : String(cfg.text);
+    const gap = cfg.separator ? `\u00A0${cfg.separator}\u00A0` : '\u00A0\u00A0\u00A0';
+    unit = `${base}${gap}`;
+    const textStyle = `font-size:${cfg.fontSize}px;font-weight:${cfg.fontWeight};letter-spacing:${cfg.letterSpacing}px;font-family:var(--font-display);`;
+    measureEl.setAttribute('style', textStyle);
+    measureEl.textContent = unit;
+    const textEls = root.querySelectorAll('.text-loop-text');
+    textEls.forEach(el => { el.setAttribute('style', `font-size:${cfg.fontSize}px;font-weight:${cfg.fontWeight};letter-spacing:${cfg.letterSpacing}px;font-family:var(--font-display);`); el.setAttribute('fill', cfg.color); });
+  };
+  refreshResponsive();
+  // Performance hint — promote to compositor without changing design
+  try { root.style.willChange = 'transform'; root.style.transform = 'translateZ(0)'; } catch(e){}
+  let metrics = { length:0, reps:1 };
+  let resizeTimer = null;
+  let tween = null;
+  // No pauseOnHover — animation must never pause on pointer interaction
+  const apply = (off, length) => {
+    const partner = off >= 0 ? off - length : off + length;
+    head.setAttribute('startOffset', String(off));
+    tail.setAttribute('startOffset', String(partner));
+  };
+  const killTween = () => {
+    if (tween) { try { tween.kill(); } catch(e){} tween = null; }
+  };
+  // Continuous animation — IMPORTANT: No pointerenter/pointerleave handlers
+  const start = () => {
+    killTween();
+    const length = metrics.length;
+    if (!length) return;
+    const prefersReduced = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReduced || cfg.speed <= 0) { apply(0, length); return; }
+    apply(0, length);
+    const state = { offset: 0 };
+    tween = gsap.to(state, {
+      offset: cfg.direction === 'reverse' ? -length : length,
+      duration: length / cfg.speed,
+      ease: 'none',
+      repeat: -1,
+      onUpdate: () => apply(state.offset, length)
+    });
+  };
+  const measure = () => {
+    let length = 0, unitWidth = 0;
+    try { length = pathEl.getTotalLength(); unitWidth = measureEl.getComputedTextLength(); } catch(e){ return; }
+    if(!length || !unitWidth) return;
+    // Use Math.round without extra buffer to avoid aggressive compression that causes overlapping letters
+    const reps = Math.max(1, Math.round(length / unitWidth));
+    metrics = { length, reps };
+    const loopText = unit.repeat(reps);
+    head.textContent = loopText;
+    tail.textContent = loopText;
+    // Apply textLength with spacing only to distribute residual gap evenly, not compress aggressively
+    try {
+      head.setAttribute('textLength', String(length));
+      tail.setAttribute('textLength', String(length));
+      head.setAttribute('lengthAdjust','spacing');
+      tail.setAttribute('lengthAdjust','spacing');
+    } catch(e){}
+    // If overlapping still detected, fallback to natural spacing (remove textLength)
+    // Check computed spacing: if unitWidth*reps is significantly larger than length, remove forced fitting
+    if (unitWidth * reps > length * 1.12) {
+      try { head.removeAttribute('textLength'); tail.removeAttribute('textLength'); } catch(e){}
+    }
+    start();
+  };
+  const onResize = () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => { refreshResponsive(); measure(); }, 120); };
+  // No visibility pause — keep animation continuously running; GSAP handles tab throttling
+  // initial
+  if(document.fonts && document.fonts.ready){ document.fonts.ready.then(measure).catch(measure); } else { measure(); }
+  // fallback if fonts not loaded yet
+  setTimeout(measure, 80);
+  window.addEventListener('resize', onResize, { passive: true });
+  window.addEventListener('orientationchange', () => setTimeout(() => { refreshResponsive(); measure(); }, 250), { passive: true });
+})();
+</script>
 <script>
 // Scroll animation persistence removed — animation now plays on every fresh page load
 if('scrollRestoration' in history) history.scrollRestoration='auto';
