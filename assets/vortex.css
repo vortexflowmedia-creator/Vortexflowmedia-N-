@@ -132,8 +132,10 @@ a{color:inherit}
 /* Desktop maximalism — thicker/taller bar (mobile untouched) */
 @media(min-width:901px){
   :root{--nav-h:58px}
-  .nav{min-height:58px;padding:6px 14px 6px 18px;gap:14px}
+  .nav{min-height:58px;padding:6px 14px 6px 18px;gap:14px;justify-content:flex-start}
   .nav-brand img{height:48px}
+  .nav-links{margin-left:auto !important;margin-right:auto !important;justify-content:center}
+  .nav-actions{margin-left:0 !important}
   .nav-links a{padding:8px 13px;font-size:13px}
   .nav-cta{padding:9px 18px;font-size:12.5px}
 }
