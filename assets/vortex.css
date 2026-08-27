@@ -317,13 +317,29 @@ a{color:inherit}
 }
 @media(max-width:768px){
   .text-loop{padding:8px 0}
-  .text-loop-svg{height:260px}
+  .text-loop-svg{
+    height:260px;
+    transform:scale(1.22);
+    transform-origin:center center;
+  }
+  /* Reduce gap TextLoop → Why VortexFlow by another ~20px (total ~60px) on mobile only */
+  .trust{margin-top:-28px !important;}
+  /* Reduce gap Let's Build → TextLoop by another 40px (total 100px) on mobile only */
+  #textLoopRoot{margin-top:400px !important;}
 }
 @media(max-width:385px){
-  .text-loop-svg{height:200px}
+  .text-loop-svg{
+    height:200px;
+    transform:scale(1.26);
+    transform-origin:center center;
+  }
 }
 @media(max-width:360px){
-  .text-loop-svg{height:180px}
+  .text-loop-svg{
+    height:180px;
+    transform:scale(1.30);
+    transform-origin:center center;
+  }
 }
 
 /* ── METRICS ── */
@@ -727,7 +743,12 @@ html:has(#heroPinOuter){ --nav-progress:0; } /* home: starts as circle at top */
 
   html:has(#heroPinOuter) .nav-brand{
     will-change:transform, opacity;
-    transform:translate3d(calc((1 - var(--nav-progress,0)) * (var(--nav-w) / 2 - 14px - 50%)), 0, 0);
+    transform:translate3d(calc((1 - var(--nav-progress,0)) * (var(--nav-w) / 2 - 16px - 50%)), 0, 0);
+  }
+  @media(max-width:768px){
+    html:has(#heroPinOuter) .nav-brand{
+      transform:translate3d(calc((1 - var(--nav-progress,0)) * (var(--nav-w) / 2 - 11px - 50%)), 0, 0);
+    }
   }
   html:has(#heroPinOuter) .nav-brand img{
     transform:scale(calc(0.96 + var(--nav-progress,0) * 0.04));

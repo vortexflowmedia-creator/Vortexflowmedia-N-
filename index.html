@@ -769,12 +769,12 @@
 // TEXTLOOP — Vanilla port of React Bits <TextLoop /> — Official Reference (https://reactbits.dev + https://reactbits.dev/llms.txt) — Primary source TextLoop.jsx/.css — Full width, no box/ribbon/band, premium curved flow
 (function(){
   const VIEW_W = 1200, VIEW_H = 520, CX = VIEW_W/2, CY = VIEW_H/2, EDGE_PAD = 6;
-  // Responsive premium scale — balanced across mobile/tablet/desktop (not microscopic, not dominating)
+  // Mobile: 2-3 words visible (was 4-5) — larger TextLoop only, no container change
   const getResponsive = () => {
     const w = window.innerWidth;
-    if (w <= 360) return { fontSize: 22, letterSpacing: 1.4, curviness: 38 };
-    if (w <= 385) return { fontSize: 24, letterSpacing: 1.5, curviness: 40 };
-    if (w <= 768) return { fontSize: 28, letterSpacing: 1.8, curviness: 44 };
+    if (w <= 360) return { fontSize: 30, letterSpacing: 1.4, curviness: 38 };
+    if (w <= 385) return { fontSize: 32, letterSpacing: 1.5, curviness: 40 };
+    if (w <= 768) return { fontSize: 34, letterSpacing: 1.8, curviness: 44 };
     if (w <= 1024) return { fontSize: 32, letterSpacing: 2.0, curviness: 50 };
     return { fontSize: 36, letterSpacing: 2.2, curviness: 54 };
   };
@@ -835,7 +835,9 @@
   let tween = null;
   // No pauseOnHover — animation must never pause on pointer interaction
   const apply = (off, length) => {
-    const partner = off >= 0 ? off - length : off + length;
+    const isMobile = window.innerWidth <= 768;
+    const gap = isMobile ? 64 : 0;
+    const partner = off >= 0 ? off - length - gap : off + length + gap;
     head.setAttribute('startOffset', String(off));
     tail.setAttribute('startOffset', String(partner));
   };
