@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=4096, initial-scale=1.0">
+<title>MAXIMALISM — 4096x4096 Ultra HD 1:1</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@900&family=Lobster&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#09070F;
+    --primary:#7B2FFF;
+    --deep:#4C1D95;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#0a0814;margin:0;padding:0}
+  body{display:flex;align-items:center;justify-content:center;min-height:100vh;background:#0d0b14}
+  .post{
+    width:4096px;
+    height:4096px;
+    background:var(--bg);
+    position:relative;
+    overflow:hidden;
+    isolation:isolate;
+    font-family:'Outfit',system-ui,sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .post::before{
+    content:'';
+    position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(ellipse 2580px 1680px at 24% 16%, rgba(123,47,255,0.16) 0%, transparent 62%),
+      radial-gradient(ellipse 2280px 2040px at 86% 82%, rgba(76,29,149,0.14) 0%, transparent 64%),
+      radial-gradient(ellipse 2100px 1740px at 48% 42%, rgba(91,33,182,0.12) 0%, transparent 66%),
+      var(--bg);
+  }
+  .dots{
+    position:absolute;inset:0;z-index:0;pointer-events:none;
+    background-image: radial-gradient(circle, rgba(123,47,255,0.20) 3.3px, transparent 3.3px);
+    background-size:78px 78px;
+    opacity:0.24;
+    mask-image: radial-gradient(ellipse at 50% 30%, black 45%, transparent 85%);
+    -webkit-mask-image: radial-gradient(ellipse at 50% 30%, black 45%, transparent 85%);
+  }
+  .stripes{
+    position:absolute;inset:0;z-index:0;pointer-events:none;
+    background-image: repeating-linear-gradient(44deg, transparent, transparent 39px, rgba(123,47,255,0.04) 39px, rgba(123,47,255,0.04) 78px);
+    opacity:0.28;
+  }
+  .orbs{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+  .orb{position:absolute;border-radius:50%;filter:blur(186px);opacity:0.36}
+  .orb.a{width:2040px;height:2040px;background:radial-gradient(circle, rgba(123,47,255,0.18), transparent 70%);left:-420px;top:-270px}
+  .orb.b{width:1860px;height:1860px;background:radial-gradient(circle, rgba(91,33,182,0.11), transparent 70%);right:-330px;bottom:-210px}
+  .orb.c{width:1260px;height:1260px;background:radial-gradient(circle, rgba(185,140,255,0.09), transparent 70%);left:52%;top:58%;transform:translate(-50%,-50%)}
+  .stage{
+    width:3240px;
+    height:4320px;
+    position:relative;
+    flex-shrink:0;
+    transform:scale(0.948148);
+    transform-origin:center center;
+  }
+  .composition{
+    position:absolute;
+    z-index:2;
+    left:144px;
+    right:168px;
+    top:50%;
+    transform:translateY(-50%) rotate(-0.9deg);
+    transform-origin:left center;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0;
+  }
+  .word-max{
+    font-family:'Outfit',sans-serif;
+    font-weight:900;
+    font-size:1314px;
+    line-height:0.82;
+    letter-spacing:-0.065em;
+    color:#fff;
+    white-space:nowrap;
+    text-shadow:
+      15px 15px 0 #7B2FFF,
+      30px 30px 0 #4C1D95,
+      0 30px 108px rgba(123,47,255,0.28);
+    display:flex;
+    align-items:center;
+    gap:30px;
+    margin:0;
+    padding-right:42px;
+  }
+  .hyphen{
+    font-family:'Outfit',sans-serif;
+    font-weight:900;
+    font-size:216px;
+    line-height:1;
+    letter-spacing:0;
+    color:#fff;
+    text-shadow: 6px 6px 0 #7B2FFF;
+    opacity:0.92;
+    display:inline-block;
+    transform:none;
+  }
+  .word-malism-wrap{
+    position:relative;
+    display:inline-block;
+    width:fit-content;
+    margin-top:-36px;
+    line-height:0.82;
+  }
+  .word-malism-shadow{
+    position:absolute;inset:0;
+    font-family:'Outfit',sans-serif;font-weight:900;
+    font-size:816px;letter-spacing:-0.065em;line-height:0.82;white-space:nowrap;
+    color:var(--deep);
+    transform:translate(15px,15px);
+    opacity:0.98;
+    pointer-events:none;
+    text-shadow:0 0 84px rgba(123,47,255,0.32), 0 0 168px rgba(91,33,182,0.14);
+  }
+  .word-malism{
+    position:relative;
+    font-family:'Outfit',sans-serif;font-weight:900;
+    font-size:816px;
+    line-height:0.82;
+    letter-spacing:-0.065em;
+    white-space:nowrap;
+    background:linear-gradient(135deg, #B98CFF 0%, #9D5CFF 22%, #7B2FFF 56%, #6D28D9 88%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-clip:text;
+    filter:drop-shadow(0 0 48px rgba(123,47,255,0.32));
+    display:block;
+    padding-right:48px;
+  }
+  .soon{
+    position:absolute;
+    left:50%;
+    top:100%;
+    transform:translateX(-50%);
+    margin-top:108px;
+    font-family:'Outfit',sans-serif;
+    font-weight:600;
+    font-size:66px;
+    letter-spacing:0.42em;
+    line-height:1;
+    color:rgba(232,224,248,0.62);
+    white-space:nowrap;
+    text-transform:uppercase;
+    pointer-events:none;
+    user-select:none;
+  }
+</style>
+</head>
+<body>
+  <div class="post" id="post">
+    <div class="dots" aria-hidden="true"></div>
+    <div class="stripes" aria-hidden="true"></div>
+    <div class="orbs" aria-hidden="true">
+      <div class="orb a"></div>
+      <div class="orb b"></div>
+      <div class="orb c"></div>
+    </div>
+    <div class="stage">
+      <div class="composition" aria-label="MAX MALISM">
+        <div class="word-max">MAX<span class="hyphen" aria-hidden="true">–</span></div>
+        <div class="word-malism-wrap">
+          <div class="word-malism-shadow" aria-hidden="true">MALISM</div>
+          <div class="word-malism">MALISM</div>
+          <div class="soon" aria-label="THE NEW STYLE">THE NEW STYLE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
